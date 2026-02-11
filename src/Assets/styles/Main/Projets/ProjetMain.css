@@ -1,0 +1,200 @@
+p{
+  font-family: "calibri";
+  color: black;
+  text-align: justify;
+}
+
+.introduction {
+  color: rgb(243, 162, 124);
+  text-align: center;
+  font-size: 17px;
+  margin-left: 31px;
+  margin-right: 31px;
+  text-align: center;
+}
+
+.projets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center; 
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.cell {
+  position: relative;        
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: rgb(243, 162, 124);
+  min-width: 0;
+  min-height: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;                
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;
+  padding-inline: 18px;  
+  padding-top: 0 !important;           
+  box-sizing: border-box;    
+  background: rgb(243, 162, 124);
+  transition: opacity 0.4s ease;
+  opacity: 1;
+  gap: 0.4rem;
+}
+
+.overlay h3,
+.overlay .date,
+.overlay .desc,
+.overlay .desc9 {
+  margin: 0;                 
+  padding: 0;
+  line-height: 1.3;
+}
+
+.overlay h3 {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.overlay .date {
+  font-size: 0.95rem;
+}
+
+.overlay .desc,
+.overlay .desc9 {
+  font-size: 14px;
+}
+
+.desc9 {
+    text-align: left !important;
+  }
+
+/* Image invisible au départ */
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Lien autour de l’image */
+.cell a {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.cell:hover .overlay {
+  opacity: 0;
+}
+.cell:hover img {
+  opacity: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 756px) {
+  .overlay h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .introduction {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 680px) {
+  .overlay .desc, 
+  .overlay .desc9 {
+    font-size: 14px;
+  }
+  .overlay .date {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 645px) {
+  .overlay .desc, 
+  .overlay .desc9 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 605px) {
+  .overlay h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .overlay h3 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 528px) {
+  .introduction {
+    font-size: 13px;
+  }
+
+  .overlay .date {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 461px) {
+  .overlay .desc {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 440px) {
+  .overlay .desc,
+  .overlay .desc9 {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 435px) {
+  .overlay h3 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .overlay {
+    padding-inline: 13px;
+  }
+  .overlay h3 {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .overlay {
+    gap: 0.1rem;
+    padding-inline: 12px;
+  }
+}

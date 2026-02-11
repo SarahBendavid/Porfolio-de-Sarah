@@ -1,0 +1,53 @@
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 1rem;
+  border-radius: 9px; 
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: rgb(243, 162, 124);
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  background-color: #111;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.social-icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1100px) {
+  .social-btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.80rem;
+    font-weight: 500;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 490px) {
+  
+  .social-btn {
+    font-size: 0.70rem;
+  }
+
+  .social-icon {
+    font-size: 0.70rem;
+  }
+}

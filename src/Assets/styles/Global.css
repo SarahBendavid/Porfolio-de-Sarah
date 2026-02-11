@@ -1,0 +1,23 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.accueil-page,
+.projet-page {
+  background-color: black;
+  color: rgb(243, 162, 124);
+  position: relative; 
+  overflow-x: hidden;
+}
+
+
+
+
+

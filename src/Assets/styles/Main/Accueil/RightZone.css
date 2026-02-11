@@ -1,0 +1,59 @@
+.rightZone {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 15px;
+}
+
+.accueil-page p {
+  font-family: "calibri";
+  color: rgb(243, 162, 124);
+  text-align: justify;
+  padding-inline: 10%;
+}
+
+.accueil-page h3 {
+  font-size: 4vw;
+  font-family: "Brush Script MT", cursive;
+  text-align: center;
+}
+
+@media (max-width: 1161px) {
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .rightZone {
+    gap: 20px;
+    padding-bottom: 0;
+  }
+  .accueil-page h3 {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 523px) {
+
+  .accueil-page h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 490px) {
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 417px) {
+
+  .description {
+    font-size: 12px;
+  }
+}

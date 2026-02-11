@@ -1,0 +1,119 @@
+.bloc-gauche {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  align-self: center;      
+  justify-content: flex-start;
+  gap: 20px;
+  color: black;
+}
+
+.bloc-gauche .titre2 {
+  display: flex;
+  align-items: center;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  height: 100%;
+}
+
+.bloc-gauche .titre2 h2 {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.bloc-gauche .coordonees {
+   display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: bold;
+  gap: 0.75rem;
+  align-self: flex-end;
+}
+
+.bloc-gauche .titre2,
+.bloc-gauche .coordonees {
+  width: 100%;
+  text-align: left;
+  height: auto;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.span-tel,
+.span-mail {
+  color: inherit;
+}
+
+@media (max-width: 950px) {
+  .bloc-gauche .coordonees {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .bloc-gauche {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .bloc-gauche {
+    gap: 13px;
+    padding-top: 5px;
+  }
+  
+  .bloc-gauche .coordonees {
+    line-height: 1;
+    display: flex;            
+    flex-direction: column;     
+    align-items: flex-start;        
+  }
+
+  .bloc-gauche .coordonees .span-mail {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bloc-gauche .coordonees {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 470px) {
+
+  .bloc-gauche .titre2 {
+    font-size: 18px;
+  }
+
+  .bloc-gauche .coordonees {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .bloc-gauche {
+    padding-top: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .bloc-gauche {
+    gap: 10px;
+  }
+
+  .bloc-gauche .titre2 {
+    font-size: 17px;
+  }
+}

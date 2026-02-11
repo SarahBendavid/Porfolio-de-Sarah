@@ -1,0 +1,73 @@
+.accueil-page .language-switcher,
+.projet-page .language-switcher {
+  bottom: 3rem;
+  right: 2rem;
+}
+
+.accueil-page .language-switcher .btn,
+.projet-page .language-switcher .btn {
+  background-color: #f3a27c;
+  color: black;
+  border: none;
+  font-size: 16px;
+  padding: 6px 10px;
+}
+
+.accueil-page .language-switcher .dropdown-menu,
+.projet-page .language-switcher .dropdown-menu
+ {
+  background:rgb(243, 162, 124);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  bottom: auto;
+  transform: none;
+  min-width: 0 !important;       
+  width: auto !important; 
+}
+
+.language-switcher .dropdown-item {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 950px) {
+
+  .accueil-page .language-switcher .btn,
+  .projet-page .language-switcher .btn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  .accueil-page .language-switcher,
+  .projet-page .language-switcher {
+    position: absolute;
+    bottom: 12rem;
+    right: 2rem;
+  }
+}
+
+@media (max-width: 635px) {
+
+  .accueil-page .language-switcher .btn,
+  .projet-page .language-switcher .btn {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+  .dropdown-menu {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 452px) {
+  
+  .accueil-page .language-switcher,
+  .projet-page .language-switcher {
+    top: 15px;
+    right: 16px;
+  }
+}
+

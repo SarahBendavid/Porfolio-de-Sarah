@@ -1,0 +1,23 @@
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.accueil-page footer,
+.projet-page footer {
+  background-color: rgb(243, 162, 124);
+}
+
+.projet-page footer {
+  position: static;
+}
+
+.footer-cv  {
+  background-color:  #A6A6A6;
+}
+
+

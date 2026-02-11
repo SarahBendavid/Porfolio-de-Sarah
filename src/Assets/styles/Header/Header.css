@@ -1,0 +1,95 @@
+.accueil-page .header,
+.projet-page .header {
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.accueil-page h1,
+.projet-page h1 {
+  font-size: 3rem;
+  font-family: "Brush Script MT", cursive;
+  color: rgb(243, 162, 124);
+}
+
+.accueil-page header h2,
+.projet-page header h2 {
+  font-size: 1.5rem;
+}
+
+.accueil-page header .titre3,
+.projet-page header .titre3 {
+  font-family: "Calibri";
+  font-size: 1.2rem;
+  font-style: italic ;
+  text-align: start;
+}
+
+.headerLeft {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.headerRight {
+  position: static;
+  display: flex;
+  align-items: flex-end; 
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .accueil-page header h2,
+  .projet-page header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 562px) {
+
+  .accueil-page .header,
+  .projet-page .header {
+    padding: 1rem 1rem;
+  }
+  .headerLeft {
+    padding-left: 30px;
+  }
+  .accueil-page header h2, 
+  .projet-page header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 490px) {
+
+.headerLeft {
+  padding-left: 30px;
+ }
+.accueil-page header h2, 
+.projet-page header h2 {
+  font-size: 1rem;
+ }
+.accueil-page header .titre3,
+.projet-page header .titre3 {
+  font-size: 1rem;
+ }
+}
+
+@media (max-width: 450px) {
+  .headerLeft {
+     padding-left: 10px;
+  }
+}
+
+@media (max-width: 389px) {
+  .accueil-page header h2, 
+  .projet-page header h2 {
+    font-size: 0.8rem;
+  }
+  .accueil-page header .titre3,
+  .projet-page header .titre3 {
+  font-size: 0.8rem;
+ }
+}
+
