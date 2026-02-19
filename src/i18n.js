@@ -50,37 +50,37 @@ const resources = {
           4: {
             title: "Portfolio de Catherine",
             date: "Janvier 2023",
-            desc: "Portfolio Style annees 90.",
+            desc: "Site Style annees 90.",
           },
 
           5: {
             title: "Jeu du Morpion",
             date: "Octobre 2022",
-            desc: "Jeu classique que tout le monde connait (React.js)",
+            desc: "Concu avec React",
           },
 
           6: {
             title: "AzerType",
             date: "Mai 2022",
-            desc: "Entrainez vous a taper plus vite sur le clavier!",
+            desc: "Entrainez vous a taper plus vite sur le clavier !",
           },
 
           7: {
             title: "TotalTip",
             date: "Mars 2022",
-            desc: "Calcule rapide de vos pourboires.",
+            desc: "Calculez vos pourboires.",
           },
 
           8: {
             title: "Quizz",
             date: "Créé en 2021",
-            desc: "Quizz dérisoire. Conçu dans mes debuts avec js. ",
+            desc: "Quizz dérisoire (js). ",
           },
 
           9: {
             title: "Coeur des mamans",
             date: "Créé en 2021",
-            desc: "Site vitrine: Premier projet.",
+            desc: "Premier projet : Site d'une association.",
           },
         },
       },
@@ -136,13 +136,13 @@ const resources = {
           4: {
             title: "Catherine's Portfolio",
             date: "In January 2023",
-            desc: "1990s Style Portfolio",
+            desc: "1990s Style website",
           },
 
           5: {
             title: "Tic-Tac-Toe",
             date: "In October 2022",
-            desc: "A classic game that everyone knows. (React.js)",
+            desc: "Designed with React",
           },
 
           6: {
@@ -166,7 +166,7 @@ const resources = {
           9: {
             title: "Hearts of mothers",
             date: "Created in 2021",
-            desc: "Showcase website: First project.",
+            desc: "First project : Showcase website.",
           },
         },
       },

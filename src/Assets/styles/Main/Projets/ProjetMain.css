@@ -54,7 +54,7 @@ p{
   background: rgb(243, 162, 124);
   transition: opacity 0.4s ease;
   opacity: 1;
-  gap: 0.4rem;
+  gap: 1rem;
 }
 
 .overlay h3,
@@ -78,7 +78,7 @@ p{
 
 .overlay .desc,
 .overlay .desc9 {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .desc9 {
@@ -145,6 +145,10 @@ p{
   .overlay h3 {
     font-size: 15px;
   }
+  .overlay .desc, 
+  .overlay .desc9 {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -158,14 +162,12 @@ p{
     font-size: 13px;
   }
 
+  .overlay {
+    gap: 0.5rem;
+  }
+
   .overlay .date {
     font-size: 10px;
-  }
-}
-
-@media (max-width: 461px) {
-  .overlay .desc {
-    font-size: 11px;
   }
 }
 

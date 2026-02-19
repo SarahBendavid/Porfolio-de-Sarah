@@ -64,26 +64,28 @@ export default function Presentation() {
       const data = frame.data;
 
       for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
+  const r = data[i];
+  const g = data[i + 1];
+  const b = data[i + 2];
 
-        const [h, s, v] = rgbToHsv(r, g, b);
+  const [h, s, v] = rgbToHsv(r, g, b);
 
-        // ===== CHROMA KEY VERT =====
-        const isGreenHue = h > 70 && h < 160;
-        const greenDominant = g > r + 30 && g > b + 30;
+  const isGreenHue = h > 85 && h < 140;
+  const greenAmount = g - Math.max(r, b);
 
-        if (isGreenHue && greenDominant && s > 0.25 && v > 0.25) {
-          const strength = Math.min(
-            (g - Math.max(r, b)) / 100,
-            1
-          );
+  if (isGreenHue && s > 0.25 && v > 0.25) {
 
-          // Suppression progressive
-          data[i + 3] = data[i + 3] * (1 - strength);
-        }
-      }
+    if (greenAmount > 60) {
+      // fond vert fort → suppression totale
+      data[i + 3] = 0;
+
+    } else if (greenAmount > 25) {
+      // zone de transition → alpha progressif
+      const alphaFactor = 1 - (greenAmount - 25) / 35;
+      data[i + 3] = data[i + 3] * alphaFactor;
+    }
+  }
+}
 
       ctx.putImageData(frame, 0, 0);
       requestAnimationFrame(draw);
