@@ -45,7 +45,29 @@
   background-color: rgb(243, 162, 124);
   color: black;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.25s ease;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.buttons .cv-btn {
+  padding: 0.5rem 1.2rem;
+}
+
+.buttons .cv-btn:hover {
+  transform: translateY(3px) scale(0.98);
+  background-color: rgb(243, 162, 124) !important;
+  color: black;
+}
+
+.buttons .pj-btn {
+  padding: 0.5rem 0.7rem;
+}
+
+.buttons .pj-btn:hover {
+  transform: translateY(3px) scale(0.98);
+  background-color: rgb(243, 162, 124) !important;
+  color: black;
 }
 
 @media (max-width: 1161px) {

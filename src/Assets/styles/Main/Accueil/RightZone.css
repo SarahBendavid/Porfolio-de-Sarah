@@ -36,14 +36,6 @@
   }
 }
 
-@media (max-width: 523px) {
-
-  .accueil-page h1 {
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-  }
-}
-
 @media (max-width: 490px) {
 
   .description {

@@ -1,6 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { Link } from "react-router-dom";
+import { Download } from "lucide-react";
+
 
 import "../../Assets/styles/Main/Accueil/AccueilMain.css";
 import "../../Assets/styles/Main/Accueil/RightZone.css";
@@ -10,7 +12,7 @@ import animation from "../../Assets/images/animation.mp4";
 
 export default function Presentation() {
   const { t, i18n } = useTranslation();
-  const lang = i18n.language;
+  
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -128,12 +130,19 @@ export default function Presentation() {
         </div>
 
         <div className="buttons">
-          <Link to="/CV" className="btn">
-          {t("buttons.cv")}
-          </Link>
-          <Link to="/Projets" className="btn">
+
+          <a
+           href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
+           download
+           className="btn cv-btn">
+          <Download size={18} className="download-icon" />
+           {t("buttons.cv")}
+          </a>
+
+          <Link to="/Projets" className="btn pj-btn">
           {t("buttons.projects")}
           </Link>
+
         </div> 
       </section>
     </main>

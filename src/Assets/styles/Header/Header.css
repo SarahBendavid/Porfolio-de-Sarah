@@ -10,7 +10,7 @@
 .accueil-page h1,
 .projet-page h1 {
   font-size: 3rem;
-  font-family: "Brush Script MT", cursive;
+  font-family: "Brush Script MT", "cursive";
   color: rgb(243, 162, 124);
 }
 
@@ -89,7 +89,7 @@
   }
   .accueil-page header .titre3,
   .projet-page header .titre3 {
-  font-size: 0.8rem;
- }
+    font-size: 0.8rem;
+  }
 }
 

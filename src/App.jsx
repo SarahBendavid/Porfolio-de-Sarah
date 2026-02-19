@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import "flag-icons/css/flag-icons.min.css";
 
 import Accueil from "./Pages/Accueil.jsx";
-import CV from "./Pages/CV.jsx";
 import Projets from "./Pages/Projets.jsx";
 
 
@@ -21,7 +21,6 @@ function App() {
       <Routes>
     
       <Route path="/" element={<Accueil />} />
-      <Route path="/cv" element={<CV />} />
       <Route path="/projets" element={<Projets />} />
 
 

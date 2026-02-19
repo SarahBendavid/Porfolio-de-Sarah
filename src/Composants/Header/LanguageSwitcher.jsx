@@ -22,12 +22,12 @@ export default function LanguageSwitcher() {
       <ul className="dropdown-menu">
         <li>
           <button className="dropdown-item" onClick={() => changeLanguage("fr")}>
-            🇫🇷 Français
+            <span className="fi fi-fr"></span> Français
           </button>
         </li>
         <li>
           <button className="dropdown-item" onClick={() => changeLanguage("en")}>
-            🇬🇧 English
+            <span className="fi fi-gb"></span> English
           </button>
         </li>
       </ul>
