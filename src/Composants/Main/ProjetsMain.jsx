@@ -75,7 +75,7 @@ export default function ProjetsMain() {
           <div className="overlay">
             <h3>{t("projets.item.9.title")}</h3>
             <p className="date">{t("projets.item.9.date")}</p>
-            <p className="desc">{t("projets.item.9.desc")}</p>
+            <p className="desc, desc9">{t("projets.item.9.desc")}</p>
           </div>
           <a href="https://sarahbendavid.github.io/coeur-des-mamans/index.html " target="_blank" rel="noreferrer">
             <img src={Projet9} alt={t("projects.items.9.title")} />

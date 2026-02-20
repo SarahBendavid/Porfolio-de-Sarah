@@ -56,13 +56,13 @@ const resources = {
           8: {
             title: "Quizz",
             date: "Créé en 2021",
-            desc: "Quizz dérisoire (js). ",
+            desc: "Quizz dérisoire (js)",
           },
 
           9: {
             title: "Coeur des mamans",
             date: "Créé en 2021",
-            desc: "Premier projet : Site d'une association.",
+            desc: "Premier projet :\nSite vitrine.",
           },
         },
       },
@@ -118,19 +118,19 @@ const resources = {
           7: {
             title: "TotalTip",
             date: "In March 2022",
-            desc: "Quick calculation of tips to pay.",
+            desc: "Quick calculation of tips.",
           },
 
           8: {
             title: "Quizz",
             date: "Created in 2021",
-            desc: "A ridiculous quiz. Designed with Js. ",
+            desc: "A ridiculous quiz (Js). ",
           },
 
           9: {
             title: "Hearts of mothers",
             date: "Created in 2021",
-            desc: "First project : Showcase website.",
+            desc: "First project : \nShowcase website.",
           },
         },
       },
