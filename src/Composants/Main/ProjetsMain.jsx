@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 
 import "../../Assets/styles/Main/Projets/ProjetMain.css";
 
-import Projet4 from "../../Assets/images/projet4.png";
 import Projet5 from "../../Assets/images/projet5.png";
 import Projet6 from "../../Assets/images/projet6.png";
 import Projet7 from "../../Assets/images/projet7.png";
@@ -19,45 +18,12 @@ export default function ProjetsMain() {
        
         <div className="cell">
           <div className="overlay">
-            <h3>{t("projets.item.1.title")}</h3>
-            <p className="date">{t("projets.item.1.date")}</p>
-            <p className="desc">{t("projets.item.1.desc")}</p>
-          </div>
-          <a href="https://example.com/projet1" target="_blank" rel="noreferrer">
-            <img src="https://picsum.photos/800/800?random=1" alt={t("projects.items.1.title")} />
-          </a>
-        </div>
-
-        <div className="cell">
-          <div className="overlay">
-            <h3>{t("projets.item.2.title")}</h3>
-            <p className="date">{t("projets.item.2.date")}</p>
-            <p className="desc">{t("projets.item.2.desc")}</p>
-          </div>
-          <a href="https://example.com/projet2" target="_blank" rel="noreferrer">
-            <img src="https://picsum.photos/800/800?random=1" alt={t("projects.items.2.title")} />
-          </a>
-        </div>
-
-        <div className="cell">
-          <div className="overlay">
-            <h3>{t("projets.item.3.title")}</h3>
-            <p className="date">{t("projets.item.3.date")}</p>
-            <p className="desc">{t("projets.item.3.desc")}</p>
-          </div>
-          <a href="https://example.com/projet3" target="_blank" rel="noreferrer">
-            <img src="https://picsum.photos/800/800?random=1" alt={t("projects.items.3.title")} />
-          </a>
-        </div>
-
-        <div className="cell">
-          <div className="overlay">
             <h3>{t("projets.item.4.title")}</h3>
             <p className="date">{t("projets.item.4.date")}</p>
             <p className="desc">{t("projets.item.4.desc")}</p>
           </div>
-          <a href="https://SarahBendavid.github.io/Mon-portfolio/ " target="_blank" rel="noreferrer">
-            <img src={Projet4} alt={t("projects.items.4.title")} />
+          <a href="https://example.com/projet4" target="_blank" rel="noreferrer">
+            <img src="https://picsum.photos/800/800?random=1" alt={t("projects.items.4.title")} />
           </a>
         </div>
 

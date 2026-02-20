@@ -29,28 +29,10 @@ const resources = {
 
       projets: {
         item: {
-          1: {
-            title: "Jeu d'aventure",
-            date: "A venir",
-            desc: "description",
-          },
-
-          2: {
-            title: "Platforme Streaming",
-            date: "A venir",
-            desc: "description",
-          },
-
-          3: {
-            title: "E-commerce",
-            date: "A venir",
-            desc: "description",
-          },
-
           4: {
-            title: "Portfolio de Catherine",
-            date: "Janvier 2023",
-            desc: "Site Style annees 90.",
+            title: "E-commerce",
+            date: "En cours",
+            desc: "",
           },
 
           5: {
@@ -115,28 +97,10 @@ const resources = {
           "Here you will find a timeline of all the projects I have completed, from the most recent to my very first steps during my training..",
 
         item: {
-          1: {
-            title: "mon titre",
-            date: "Créé en 2024",
-            desc: "description",
-          },
-
-          2: {
-            title: "mon titre",
-            date: "Septembre 2023",
-            desc: "description",
-          },
-
-          3: {
-            title: "E-commerce",
-            date: "Créé en Mai 2023",
-            desc: "description",
-          },
-
           4: {
-            title: "Catherine's Portfolio",
-            date: "In January 2023",
-            desc: "1990s Style website",
+            title: "E-commerce",
+            date: "In progress",
+            desc: "",
           },
 
           5: {
@@ -160,7 +124,7 @@ const resources = {
           8: {
             title: "Quizz",
             date: "Created in 2021",
-            desc: "A ridiculous quiz. Designed in my early days using JavaScript.. ",
+            desc: "A ridiculous quiz. Designed with Js. ",
           },
 
           9: {
