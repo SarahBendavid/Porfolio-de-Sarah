@@ -59,8 +59,7 @@ p{
 
 .overlay h3,
 .overlay .date,
-.overlay .desc,
-.overlay .desc9 {
+.overlay .desc {
   margin: 0;                 
   padding: 0;
   line-height: 1.3;
@@ -76,14 +75,9 @@ p{
   font-size: 0.95rem;
 }
 
-.overlay .desc,
-.overlay .desc9 {
+.overlay .desc {
   font-size: 15px;
 }
-
-.desc9 {
-    text-align: left !important;
-  }
 
 /* Image invisible au départ */
 .cell img {
@@ -109,6 +103,11 @@ p{
   opacity: 1;
 }
 
+.imgSSclik {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* Responsive */
 
 @media (max-width: 756px) {
@@ -125,8 +124,7 @@ p{
 }
 
 @media (max-width: 680px) {
-  .overlay .desc, 
-  .overlay .desc9 {
+  .overlay .desc {
     font-size: 14px;
   }
   .overlay .date {
@@ -135,8 +133,7 @@ p{
 }
 
 @media (max-width: 645px) {
-  .overlay .desc, 
-  .overlay .desc9 {
+  .overlay .desc {
     font-size: 12px;
   }
 }
@@ -145,8 +142,7 @@ p{
   .overlay h3 {
     font-size: 15px;
   }
-  .overlay .desc, 
-  .overlay .desc9 {
+  .overlay .desc {
     font-size: 11px;
   }
 }
@@ -172,8 +168,7 @@ p{
 }
 
 @media (max-width: 440px) {
-  .overlay .desc,
-  .overlay .desc9 {
+  .overlay .desc {
     font-size: 10px;
   }
 }
