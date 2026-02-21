@@ -72,7 +72,7 @@ export default function ProjetsMain() {
         </div>
 
         <div className="cell">
-          <div className="overlay">
+          <div className="overlay, overlay9">
             <h3>{t("projets.item.9.title")}</h3>
             <p className="date">{t("projets.item.9.date")}</p>
             <p className="desc, desc9">{t("projets.item.9.desc")}</p>
