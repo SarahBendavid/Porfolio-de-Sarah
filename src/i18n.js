@@ -111,25 +111,25 @@ const resources = {
 
           6: {
             title: "AzerType",
-            date: "Created in May 2022",
+            date: "May 2022",
             desc: "Practice typing faster on the keyboard!",
           },
 
           7: {
             title: "TotalTip",
-            date: "In March 2022",
+            date: "March 2022",
             desc: "Quick calculation of tips.",
           },
 
           8: {
             title: "Quizz",
-            date: "Created in 2021",
+            date: "In 2021",
             desc: "A ridiculous quiz (Js). ",
           },
 
           9: {
             title: "Hearts of mothers",
-            date: "Created in 2021",
+            date: "In 2021",
             desc: "First project : \nShowcase website.",
           },
         },
