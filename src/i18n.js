@@ -105,7 +105,7 @@ const resources = {
 
           5: {
             title: "Tic-Tac-Toe",
-            date: "In October 2022",
+            date: "October 2022",
             desc: "Designed with React",
           },
 
