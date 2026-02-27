@@ -188,17 +188,30 @@ p{
   .overlay9 .date {
     font-size: 10px;
   }
+
+  .overlay .desc,
+  .overlay9 .desc9 {
+    font-size: 9.5px;
+  }
 }
 
 @media (max-width: 440px) {
 
+  .overlay {
+    gap: 0.7rem;
+  }
+  .overlay9 {
+    gap: 0.4rem;
+  }
+
   .overlay h3,
   .overlay9 h3 {
     font-size: 12px;
+    margin-bottom: 0;
   }
   .overlay .desc,
   .overlay9 .desc9 {
-    font-size: 8px;
+    font-size: 7px;
   }
   .overlay .date,
   .overlay9 .date {
@@ -214,10 +227,12 @@ p{
 }
 
 @media (max-width: 420px) {
+
   .overlay,
   .overlay9 {
     padding-inline: 13px;
   }
+
   .overlay h3,
   .overlay9 h3 {
     font-size: 11px;
@@ -226,9 +241,8 @@ p{
 
 
 @media (max-width: 390px) {
-  .overlay,
+  .overlay 
   .overlay9 {
-    gap: 0.1rem;
     padding-inline: 12px;
   }
 }
