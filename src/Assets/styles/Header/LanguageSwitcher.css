@@ -6,17 +6,18 @@
 
 .accueil-page .language-switcher .btn,
 .projet-page .language-switcher .btn {
-  background-color: #f3a27c;
+  background-color: rgb(169, 85, 180);
   color: black;
   border: none;
   font-size: 16px;
+  font-weight: bold;
   padding: 6px 10px;
 }
 
 .accueil-page .language-switcher .dropdown-menu,
 .projet-page .language-switcher .dropdown-menu
  {
-  background:rgb(243, 162, 124);
+  background-color: rgb(169, 85, 180);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -33,9 +34,14 @@
   padding: 5px 10px;
   width: 100%;
   text-align: left;
+  font-weight: bold;
 }
 
 .language-switcher .fi {
+  margin-right: 6px;
+}
+
+.language-switcher .btn .fa-earth-americas {
   margin-right: 6px;
 }
 
@@ -49,7 +55,7 @@
   .accueil-page .language-switcher,
   .projet-page .language-switcher {
     position: absolute;
-    bottom: 12rem;
+    bottom: 10rem;
     right: 2rem;
   }
   .accueil-page .language-switcher .dropdown-menu,
@@ -74,12 +80,11 @@
   } 
 }
 
-@media (max-width: 452px) {
+@media (max-width: 560px) {
   
   .accueil-page .language-switcher,
   .projet-page .language-switcher {
-    top: 15px;
-    right: 16px;
+    bottom: 12rem;
   }
 }
 

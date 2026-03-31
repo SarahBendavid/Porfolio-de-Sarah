@@ -8,9 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './i18n.js'  
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
-  </StrictMode>
 )

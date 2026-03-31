@@ -4,19 +4,27 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 1rem 2rem;
+  padding-inline: 2rem;
+}
+
+h1, h2, h3, p {
+  text-shadow: 
+    0 0 15px rgba(5, 3, 14, 0.9),
+    0 0 30px rgba(5, 3, 14, 0.7),
+    0 0 50px rgba(5, 3, 14, 0.5);
 }
 
 .accueil-page h1,
 .projet-page h1 {
   font-size: 3rem;
   font-family: "Brush Script MT", "cursive";
-  color: rgb(243, 162, 124);
+  color :rgb(243, 162, 124);
 }
 
 .accueil-page header h2,
 .projet-page header h2 {
   font-size: 1.5rem;
+  color: rgb(243, 162, 124);
 }
 
 .accueil-page header .titre3,

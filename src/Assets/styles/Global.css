@@ -11,11 +11,11 @@ html, body, #root {
 
 .accueil-page,
 .projet-page {
-  background-color: black;
   color: rgb(243, 162, 124);
   position: relative; 
   overflow-x: hidden;
 }
+
 
 
 

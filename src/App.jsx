@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import "flag-icons/css/flag-icons.min.css";
 
+import BackgroundBody from "./Composants/BackgroundBody";
 import Accueil from "./Pages/Accueil.jsx";
 import Projets from "./Pages/Projets.jsx";
-
 
 import MentionsLegales from "./Pages/Mentions-legales.jsx";
 import Confidentialite from "./Pages/Confidentialite.jsx";
@@ -17,6 +17,9 @@ function NotFound() {
 function App() {
 
   return (
+    <>
+
+    <BackgroundBody />
 
       <Routes>
     
@@ -33,6 +36,7 @@ function App() {
       {/* Page 404 */}
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </>
   );
 }
 
