@@ -4,7 +4,7 @@
   align-self: start;
   margin-left: 12%;
   flex: 2;
-  aspect-ratio: 560 / 680;
+  aspect-ratio: 450 / 700;
   margin-top: 75px;
 }
 
@@ -32,24 +32,25 @@
 }
 
 .texte h3 {
-  margin-top: 0;
-  margin-bottom: clamp(0.3rem, 2vw, 40px);
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw, 4vw);
   color: black;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 5px;
+  margin-bottom: clamp(0.3rem, 2vw, 40px);
 }
 
 .accueil-page p {
-  font-family: "calibri";
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
   color: rgb(243, 162, 124);
   text-align: justify;
   padding-inline: 2%;
   margin-top: clamp(0.3rem, 1.8vw, 2rem);
   font-size: clamp(0.6rem, 1.2vw, 1rem);
-}
-
-.accueil-page h3 {
-  font-size: clamp(1rem, 3vw, 4vw);
-  font-family: "Brush Script MT", cursive;
-  text-align: center;
 }
 
 .description {
@@ -208,6 +209,13 @@
   }
 }
 
+@media (max-width: 600px) {
+
+  .texte {
+    margin-top: -9vw;
+  }
+}
+
 @media (max-width: 570px) {
 
   .cadre-svg {
@@ -221,7 +229,7 @@
     font-size: 13px;
   }
   .texte {
-    margin-top: -6.6vw;
+    margin-top: -4vw;
   }
   .buttons {
     padding-bottom: 7px;

@@ -13,15 +13,15 @@ export default function BackgroundBody() {
 
     const TAGS = ["</>", "<body>", "</body>", "<head>", "</head>", "<html>", "<main>", "</main>", "</html>", "<footer>", "function()", "const()"];
     const TAG_COLORS = [
-      [80,  20, 180], [100, 10, 200], [130,  0, 210],
-      [200, 30, 180], [220, 40, 140], [240, 60, 160],
-      [255, 90, 180], [255, 120, 200],
+      [169,  85, 180], [169,  85, 180], [169,  85, 180],
+      [200,  30, 180], [220,  40, 140], [240,  60, 160],
+      [255,  90, 180], [255, 120, 200],
     ];
 
     const DEPTH_RANGE = 3000;
     const FOCAL       = 500;
-    const NUM         = 105;
-    const NUM_SIDE    = 16;
+    const NUM         = 68;
+    const NUM_SIDE    = 10;
     const SPEED       = 4.0;
     const SPREAD_X    = 2800;
     const SPREAD_Y    = 1100;
@@ -30,7 +30,7 @@ export default function BackgroundBody() {
     let tags = [], sideTags = [], cameraZ = 0, time = 0;
 
     // Grille pour dispersion homogène (stratified sampling)
-    const COLS = 11, ROWS = 10; // 110 cellules pour ~105 tags
+    const COLS = 11, ROWS = 10; // 110 cellules pour ~68 tags
     const positions = [];
     for (let c = 0; c < COLS; c++)
       for (let r = 0; r < ROWS; r++)
@@ -54,8 +54,8 @@ export default function BackgroundBody() {
 
     function getMarginRatio() {
       const w = window.innerWidth;
-      if (w >= 1024) return 0.50; // desktop  : 50% gauche libre
-      if (w >= 768)  return 0.70; // tablette : 70% gauche libre
+      if (w >= 1024) return 0.62; // desktop  : 62% gauche libre
+      if (w >= 768)  return 0.75; // tablette : 75% gauche libre
       return 1.0;                  // mobile   : tout le haut libre
     }
 
@@ -101,27 +101,36 @@ export default function BackgroundBody() {
       const W = canvas.width, H = canvas.height;
       const t = time * 0.0012;
 
-      ctx.fillStyle = "#05030e";
+      ctx.fillStyle = "#060208";
       ctx.fillRect(0, 0, W, H);
 
       const g1 = ctx.createRadialGradient(W*0.05, H*0.1, 0, W*0.05, H*0.1, H*0.8);
-      g1.addColorStop(0,   "rgba(55,15,150,0.6)");
-      g1.addColorStop(0.5, "rgba(25,8,90,0.25)");
+      g1.addColorStop(0,   "rgba(60,10,80,0.45)");
+      g1.addColorStop(0.5, "rgba(30,5,50,0.20)");
       g1.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g1; ctx.fillRect(0, 0, W, H);
 
       const ox = Math.sin(t)*W*0.03, oy = Math.cos(t*0.7)*H*0.03;
-      const g2 = ctx.createRadialGradient(W*0.9+ox, H*0.85+oy, 0, W*0.9+ox, H*0.85+oy, H*0.65);
-      g2.addColorStop(0,   "rgba(210,40,140,0.55)");
-      g2.addColorStop(0.4, "rgba(150,15,100,0.22)");
+      const g2 = ctx.createRadialGradient(W*0.9-ox, H*0.1+oy, 0, W*0.9-ox, H*0.1+oy, H*0.60);
+      g2.addColorStop(0,   "rgba(170,10,200,0.72)");
+      g2.addColorStop(0.3, "rgba(110,8,155,0.42)");
+      g2.addColorStop(0.6, "rgba(60,4,90,0.18)");
       g2.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
 
       const gd = ctx.createLinearGradient(0, 0, W, H);
-      gd.addColorStop(0,   "rgba(35,8,110,0.3)");
-      gd.addColorStop(0.5, "rgba(5,0,20,0)");
-      gd.addColorStop(1,   "rgba(170,15,90,0.28)");
+      gd.addColorStop(0,   "rgba(100,8,130,0.20)");
+      gd.addColorStop(0.5, "rgba(5,0,10,0)");
+      gd.addColorStop(1,   "rgba(50,5,80,0.18)");
       ctx.fillStyle = gd; ctx.fillRect(0, 0, W, H);
+
+      const ox2 = Math.sin(t*0.8+1)*W*0.02, oy2 = Math.cos(t*0.5+2)*H*0.02;
+      const g3 = ctx.createRadialGradient(W*0.85+ox2, H*0.95+oy2, 0, W*0.85+ox2, H*0.95+oy2, H*0.32);
+      g3.addColorStop(0,   "rgba(180,90,255,0.65)");
+      g3.addColorStop(0.3, "rgba(140,60,230,0.35)");
+      g3.addColorStop(0.6, "rgba(100,30,180,0.15)");
+      g3.addColorStop(1,   "rgba(0,0,0,0)");
+      ctx.fillStyle = g3; ctx.fillRect(0, 0, W, H);
 
       // Étoiles zone basse
       for (let i = 0; i < 220; i++) {
@@ -174,7 +183,7 @@ export default function BackgroundBody() {
         for (let i = 0; i < arr.length; i++) {
           const t    = arr[i];
           const relZ = t.z3 - cameraZ;
-          if (relZ < 10) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
+          if (relZ < 600) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
           if (relZ >= DEPTH_RANGE) continue;
 
           const scale = FOCAL / relZ;
@@ -184,6 +193,9 @@ export default function BackgroundBody() {
 
           const inTopZone = sy < H * TOP_MARGIN;
           if (inTopZone && (margin >= 1.0 || sx < W * margin)) continue;
+
+          const inButtonZone = sy < H * 0.26 && sx > W * 0.72;
+          if (inButtonZone) continue;
 
           const prog     = 1 - relZ / DEPTH_RANGE;
           const fontSize = Math.max(11, prog * 22);

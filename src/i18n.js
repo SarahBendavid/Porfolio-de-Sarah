@@ -7,7 +7,7 @@ const resources = {
   fr: {
     translation: {
       header: {
-        subtitle: "Développeuse front-end / Full-stack en devenir",
+        subtitle: "Développeuse front-end",
         tagline: "UI, Motion & Création visuelle assistée par IA",
         language: "Langue",
       },
@@ -20,8 +20,9 @@ const resources = {
       description: {
         title: "Qui suis-je ?",
         textWithBr:
-          "Initialement titulaire d'une licence en psychologie, j'ai toujours été intrigué, au cours de ma formation, par l'analogie entre le cerveau humain, et le fonctionnement d'un ordinateur. Par ailleurs,  étant perfectionniste, et à la recherche d'exactitude, je me suis detournée de l'etude de l'humain, pour me tourner vers une science plus exacte. <br /><br /> Pourquoi la programmation ? <br /><br /> Pour commencer, c’est un domaine vaste et en évolution constante, ce qui s'adapte parfaitement à ma soif de connaissance, et d'apprentissage. En programmation, il y a toujours un nouveau langage à apprendre, un nouveau problème à résoudre... De plus, je suis quelqu'un de très logique et dotée de la fibre artistique. La création de projets me permet donc de m'épanouir sous tous les angles : le front-end stimule ma créativité, et le back-end stimule ma logique. Ajoutons à cela, les qualités acquises en sciences humaines, qui me procurent une meilleure compréhension des besoins-utilisateurs, cela fait de moi, une développeuse complète, qui saura vous satisfaire. Si vous en doutez encore, je vous invite à découvrir mon CV et mes projets.",
+          "Développeuse certifiée et passionnée, je me suis interessée a la programmation car c'est un domaine vaste et en évolution constante, ce qui s'adapte parfaitement à ma soif de connaissance, et d'apprentissage. En effet, il y a toujours un nouveau langage à apprendre, un nouveau problème à résoudre...  De plus, etant très logique et dotée de la fibre artistique, la création de projets me permet donc de m'épanouir sous tous les angles : le front-end stimule ma créativité, et le back-end stimule ma logique. J'ai donc d'abord appris le codage en autodidacte, avant de me lancer dans une reconversion professionnelle complète.  <br /><br /> Polyvalente, je maîtrise les différentes étapes techniques de la création d'un site. Ajoutons à cela, les qualités acquises lors de ma formation initial en sciences humaines,  qui me procurent une meilleure compréhension des besoins-utilisateurs. Cela fait de moi, une développeuse complète, qui saura vous satisfaire. Si vous en doutez encore, je vous invite à découvrir mon CV et mes projets.",
       },
+
       buttons: {
         cv: "CV",
         projects: "Mes projets",
@@ -72,7 +73,7 @@ const resources = {
   en: {
     translation: {
       header: {
-        subtitle: "Front-end Developer / Aspiring Full-stack",
+        subtitle: "Front-end Developer",
         tagline: "UI, Motion & Visual creation (IA assisted)",
         language: "Language",
       },

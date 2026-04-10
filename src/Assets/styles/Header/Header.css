@@ -17,22 +17,35 @@ h1, h2, h3, p {
 .accueil-page h1,
 .projet-page h1 {
   font-size: 3rem;
-  font-family: "Brush Script MT", "cursive";
-  color :rgb(243, 162, 124);
+  font-weight: 400;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgb(245 51 183);
 }
 
 .accueil-page header h2,
 .projet-page header h2 {
-  font-size: 1.5rem;
-  color: rgb(243, 162, 124);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #c084fc;
+  text-shadow:
+    0 0 10px #a855f7,
+    0 0 30px #7c3aed,
+    0 0 60px #6d28d960;
 }
 
 .accueil-page header .titre3,
 .projet-page header .titre3 {
-  font-family: "Calibri";
-  font-size: 1.2rem;
+  font-family: 'Calibri', sans-serif;
+  font-size: 1.6rem;
   font-style: italic ;
   text-align: start;
+  color: #803cc5;
 }
 
 .headerLeft {
