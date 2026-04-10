@@ -61,53 +61,61 @@ h1, h2, h3, p {
 }
 
 @media (max-width: 900px) {
+
+  .accueil-page h1,
+  .projet-page h1 {
+    font-size: 2rem;
+}
   .accueil-page header h2,
   .projet-page header h2 {
     font-size: 1.3rem;
   }
+
+  .accueil-page header .titre3,
+  .projet-page header .titre3 {
+    font-size: 1.3rem;
+  }
 }
 
-@media (max-width: 562px) {
+@media (max-width: 650px) {
 
-  .accueil-page .header,
-  .projet-page .header {
-    padding: 1rem 1rem;
-  }
-  .headerLeft {
-    padding-left: 30px;
-  }
-  .accueil-page header h2, 
+  .accueil-page h1,
+  .projet-page h1 {
+    font-size: 1.5rem;
+}
+  .accueil-page header h2,
   .projet-page header h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .accueil-page header .titre3,
+  .projet-page header .titre3 {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 490px) {
-
-.headerLeft {
-  padding-left: 30px;
- }
-.accueil-page header h2, 
-.projet-page header h2 {
-  font-size: 1rem;
- }
-.accueil-page header .titre3,
-.projet-page header .titre3 {
-  font-size: 1rem;
- }
+@media (max-width: 540px) {
+  .headerLeft {
+    padding-left: 0;
+    margin-inline: auto;
+  }
 }
 
-@media (max-width: 450px) {
-  .headerLeft {
-     padding-left: 10px;
+@media (max-width: 460px) {
+
+  .accueil-page h1,
+  .projet-page h1 {
+    font-size: 1.3rem;
+}
+
+  .accueil-page header h2,
+  .projet-page header h2 {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 389px) {
-  .accueil-page header h2, 
-  .projet-page header h2 {
-    font-size: 0.8rem;
-  }
+
   .accueil-page header .titre3,
   .projet-page header .titre3 {
     font-size: 0.8rem;

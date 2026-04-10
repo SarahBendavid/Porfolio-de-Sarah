@@ -125,7 +125,7 @@ export default function BackgroundBody() {
       ctx.fillStyle = gd; ctx.fillRect(0, 0, W, H);
 
       const ox2 = Math.sin(t*0.8+1)*W*0.02, oy2 = Math.cos(t*0.5+2)*H*0.02;
-      const g3 = ctx.createRadialGradient(W*0.85+ox2, H*0.95+oy2, 0, W*0.85+ox2, H*0.95+oy2, H*0.32);
+      const g3 = ctx.createRadialGradient(W*0.98+ox2, H*1.02+oy2, 0, W*0.98+ox2, H*1.02+oy2, H*0.32);
       g3.addColorStop(0,   "rgba(180,90,255,0.65)");
       g3.addColorStop(0.3, "rgba(140,60,230,0.35)");
       g3.addColorStop(0.6, "rgba(100,30,180,0.15)");
