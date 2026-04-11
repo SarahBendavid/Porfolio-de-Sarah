@@ -20,7 +20,7 @@
 
 .texte {
   position: absolute;
-  top: 2%;
+  top: 8%;
   left: 6%;
   right: 6%;
   z-index: 2;
@@ -35,7 +35,7 @@
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 3vw, 4vw);
-  color: black;
+  color: white;
   text-align: center;
   letter-spacing: 5px;
   margin-top: 5px;
@@ -46,7 +46,7 @@
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
-  color: rgb(243, 162, 124);
+  color: white;
   text-align: justify;
   padding-inline: 2%;
   margin-top: clamp(0.3rem, 1.8vw, 2rem);
@@ -61,7 +61,7 @@
 
 .buttons {
   position: absolute;
-  bottom: clamp(0.5rem, 6vw, 6%);
+  bottom: clamp(0.5rem, 6vw, 11%);
   left: 0;
   right: 0;
   z-index: 2;
@@ -101,13 +101,6 @@
 
 .photo-mobile {
   display: none;
-}
-
-@media (max-width: 1300px) {
-  
-  .buttons {
-    bottom: clamp(0.5rem, 6vw, 5%);
-  }
 }
 
 @media (max-width: 1161px) {
@@ -162,7 +155,6 @@
 
   .texte h3 {
     margin-top: 0;
-    color: rgb(243, 162, 124);
   }
 
   .buttons {

@@ -114,11 +114,16 @@ h1, h2, h3, p {
   }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 390px) {
+
+  .accueil-page header h2,
+  .projet-page header h2 {
+    font-size: 0.7rem;
+  }
 
   .accueil-page header .titre3,
   .projet-page header .titre3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 

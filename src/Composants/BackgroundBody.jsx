@@ -183,7 +183,7 @@ export default function BackgroundBody() {
         for (let i = 0; i < arr.length; i++) {
           const t    = arr[i];
           const relZ = t.z3 - cameraZ;
-          if (relZ < 600) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
+          if (relZ < 1200) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
           if (relZ >= DEPTH_RANGE) continue;
 
           const scale = FOCAL / relZ;
@@ -198,12 +198,11 @@ export default function BackgroundBody() {
           if (inButtonZone) continue;
 
           const prog     = 1 - relZ / DEPTH_RANGE;
-          const fontSize = Math.max(11, prog * 22);
           const [r, g, b] = t.col;
           const bright   = 0.65 + prog * 0.35;
 
-          ctx.font        = `${Math.round(fontSize)}px 'Consolas', 'Fira Code', monospace`;
-          ctx.globalAlpha = 0.55 + prog * 0.45;
+          ctx.font        = `12px 'Consolas', 'Fira Code', monospace`;
+          ctx.globalAlpha = 0.3 + prog * 0.55;
           ctx.fillStyle   = `rgb(${Math.round(r*bright)},${Math.round(g*bright)},${Math.round(b*bright)})`;
           const tw = ctx.measureText(t.text).width;
           ctx.fillText(t.text, sx - tw/2, sy);
