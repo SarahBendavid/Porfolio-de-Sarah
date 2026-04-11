@@ -127,3 +127,12 @@ h1, h2, h3, p {
   }
 }
 
+@media (max-width: 363px) {
+
+  .accueil-page header h2,
+  .projet-page header h2 {
+    font-size: 0.6rem;
+  }
+}
+
+

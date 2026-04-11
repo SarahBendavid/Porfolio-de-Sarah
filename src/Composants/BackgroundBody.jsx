@@ -13,9 +13,9 @@ export default function BackgroundBody() {
 
     const TAGS = ["</>", "<body>", "</body>", "<head>", "</head>", "<html>", "<main>", "</main>", "</html>", "<footer>", "function()", "const()"];
     const TAG_COLORS = [
-      [169,  85, 180], [169,  85, 180], [169,  85, 180],
-      [200,  30, 180], [220,  40, 140], [240,  60, 160],
-      [255,  90, 180], [255, 120, 200],
+      [210, 100, 220], [210, 100, 220], [210, 100, 220],
+      [255,  40, 200], [240,  60, 160], [255,  80, 180],
+      [255, 130, 210], [220,  50, 170],
     ];
 
     const DEPTH_RANGE = 3000;
@@ -56,7 +56,11 @@ export default function BackgroundBody() {
       const w = window.innerWidth;
       if (w >= 1024) return 0.62; // desktop  : 62% gauche libre
       if (w >= 768)  return 0.75; // tablette : 75% gauche libre
-      return 1.0;                  // mobile   : tout le haut libre
+      return 0;                    // mobile   : balises partout horizontalement
+    }
+
+    function getTopMargin() {
+      return window.innerWidth < 768 ? 0.38 : TOP_MARGIN; // mobile : protège header + titres
     }
 
     function resize() {
@@ -155,6 +159,23 @@ export default function BackgroundBody() {
       ctx.fillStyle = gMask;
       ctx.fillRect(0, 0, W, H * 0.80);
 
+      // Halos mobile — après le masque, visibles sur fond sombre
+      if (canvas.width < 768) {
+        const ox3 = Math.sin(t*0.9)*W*0.03, oy3 = Math.cos(t*0.6)*H*0.02;
+        const gm1 = ctx.createRadialGradient(W*0.92+ox3, H*0.05+oy3, 0, W*0.92+ox3, H*0.05+oy3, W*0.30);
+        gm1.addColorStop(0,   "rgba(170,10,200,0.65)");
+        gm1.addColorStop(0.4, "rgba(100,8,150,0.28)");
+        gm1.addColorStop(1,   "rgba(0,0,0,0)");
+        ctx.fillStyle = gm1; ctx.fillRect(0, 0, W, H);
+
+        const ox4 = Math.sin(t*0.7+2)*W*0.02, oy4 = Math.cos(t*0.5+1)*H*0.02;
+        const gm2 = ctx.createRadialGradient(W*0.08+ox4, H*0.55+oy4, 0, W*0.08+ox4, H*0.55+oy4, W*0.28);
+        gm2.addColorStop(0,   "rgba(140,60,220,0.50)");
+        gm2.addColorStop(0.4, "rgba(80,20,160,0.22)");
+        gm2.addColorStop(1,   "rgba(0,0,0,0)");
+        ctx.fillStyle = gm2; ctx.fillRect(0, 0, W, H);
+      }
+
       // Étoiles zone titre — après le masque
       for (let i = 0; i < 220; i++) {
         const sx = (Math.sin(i*61.3+3.5)*0.5+0.5)*W;
@@ -191,8 +212,9 @@ export default function BackgroundBody() {
           const sy    = cy + t.y3 * scale;
           if (sx < -200 || sx > W+200 || sy < -200 || sy > H+200) continue;
 
-          const inTopZone = sy < H * TOP_MARGIN;
-          if (inTopZone && (margin >= 1.0 || sx < W * margin)) continue;
+              const topMargin = getTopMargin();
+          const inTopZone = sy < H * topMargin;
+          if (inTopZone && (margin <= 0 || sx < W * margin)) continue;
 
           const inButtonZone = sy < H * 0.26 && sx > W * 0.72;
           if (inButtonZone) continue;
