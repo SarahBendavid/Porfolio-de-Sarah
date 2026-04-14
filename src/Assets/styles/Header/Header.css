@@ -2,8 +2,15 @@
 .projet-page .header {
   position: relative;
   display: flex;
-  justify-content: space-between; 
+  flex-direction: column;
+  padding-inline: 0;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-inline: 2rem;
 }
 

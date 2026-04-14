@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import ReseauxSociaux from "./ReseauxSociaux";
+import SkillsBar from "./SkillsBar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import "../../Assets/styles/Header/Header.css";
 
@@ -13,15 +13,17 @@ export default function Header() {
   return (
 
     <header className="header">
-      <div className="headerLeft">
-        <h1>Sarah Bendavid</h1>
-        <h2>{t("header.subtitle")}</h2>
-        <h3 className="titre3">{t("header.tagline")}</h3>
-        <ReseauxSociaux/>
+      <div className="headerTop">
+        <div className="headerLeft">
+          <h1>Sarah Bendavid</h1>
+          <h2>{t("header.subtitle")}</h2>
+          <h3 className="titre3">{t("header.tagline")}</h3>
+        </div>
+        <div className="headerRight">
+          <LanguageSwitcher/>
+        </div>
       </div>
-      <div className="headerRight">
-        <LanguageSwitcher/>
-      </div>
+      <SkillsBar/>
     </header>
   );
 }

@@ -1,5 +1,5 @@
-import Header from "../Composants/Header/Header.jsx";
-import Presentation from "../Composants/Main/AccueilMain.jsx";
+import Header from "../Composants/Accueil/Header.jsx";
+import Presentation from "../Composants/Accueil/Presentation.jsx";
 
   export default function Accueil() {
   return (

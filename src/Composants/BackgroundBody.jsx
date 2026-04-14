@@ -13,18 +13,18 @@ export default function BackgroundBody() {
 
     const TAGS = ["</>", "<body>", "</body>", "<head>", "</head>", "<html>", "<main>", "</main>", "</html>", "<footer>", "function()", "const()"];
     const TAG_COLORS = [
-      [210, 100, 220], [210, 100, 220], [210, 100, 220],
-      [255,  40, 200], [240,  60, 160], [255,  80, 180],
-      [255, 130, 210], [220,  50, 170],
+      [255,   0, 220], [255,   0, 220], [255,   0, 220],
+      [220,   0, 255], [180,   0, 255], [255,  50, 255],
+      [255,   0, 180], [200,   0, 240],
     ];
 
     const DEPTH_RANGE = 3000;
     const FOCAL       = 500;
-    const NUM         = 68;
-    const NUM_SIDE    = 10;
+    const NUM         = window.innerWidth < 768 ? 90 : 68;
+    const NUM_SIDE    = window.innerWidth < 768 ? 18 : 10;
     const SPEED       = 4.0;
-    const SPREAD_X    = 2800;
-    const SPREAD_Y    = 1100;
+    const SPREAD_X    = window.innerWidth < 768 ? 1200 : 2800;
+    const SPREAD_Y    = window.innerWidth < 768 ? 1800 : 1100;
     const TOP_MARGIN  = 0.42;
 
     let tags = [], sideTags = [], cameraZ = 0, time = 0;
@@ -54,13 +54,21 @@ export default function BackgroundBody() {
 
     function getMarginRatio() {
       const w = window.innerWidth;
-      if (w >= 1024) return 0.62; // desktop  : 62% gauche libre
-      if (w >= 768)  return 0.75; // tablette : 75% gauche libre
-      return 0;                    // mobile   : balises partout horizontalement
+      if (w >= 1024) return 0.62;
+      if (w >= 768)  return 0.75;
+      return 0;
     }
 
     function getTopMargin() {
-      return window.innerWidth < 768 ? 0.38 : TOP_MARGIN; // mobile : protège header + titres
+      return window.innerWidth < 768 ? 0.38 : TOP_MARGIN;
+    }
+
+    function getNavbarZone() {
+      // Navbar SkillsBar : zone horizontale ~42%-50% de la hauteur écran en desktop
+      // En mobile elle est dans le header, déjà protégé par getTopMargin
+      const w = window.innerWidth;
+      if (w < 768) return null;
+      return { yMin: 0.41, yMax: 0.50 }; // bande à exclure
     }
 
     function resize() {
@@ -168,12 +176,6 @@ export default function BackgroundBody() {
         gm1.addColorStop(1,   "rgba(0,0,0,0)");
         ctx.fillStyle = gm1; ctx.fillRect(0, 0, W, H);
 
-        const ox4 = Math.sin(t*0.7+2)*W*0.02, oy4 = Math.cos(t*0.5+1)*H*0.02;
-        const gm2 = ctx.createRadialGradient(W*0.08+ox4, H*0.55+oy4, 0, W*0.08+ox4, H*0.55+oy4, W*0.28);
-        gm2.addColorStop(0,   "rgba(140,60,220,0.50)");
-        gm2.addColorStop(0.4, "rgba(80,20,160,0.22)");
-        gm2.addColorStop(1,   "rgba(0,0,0,0)");
-        ctx.fillStyle = gm2; ctx.fillRect(0, 0, W, H);
       }
 
       // Étoiles zone titre — après le masque
@@ -219,12 +221,16 @@ export default function BackgroundBody() {
           const inButtonZone = sy < H * 0.26 && sx > W * 0.72;
           if (inButtonZone) continue;
 
+          // Zone navbar SkillsBar
+          const navZone = getNavbarZone();
+          if (navZone && sy > H * navZone.yMin && sy < H * navZone.yMax) continue;
+
           const prog     = 1 - relZ / DEPTH_RANGE;
           const [r, g, b] = t.col;
           const bright   = 0.65 + prog * 0.35;
 
           ctx.font        = `12px 'Consolas', 'Fira Code', monospace`;
-          ctx.globalAlpha = 0.3 + prog * 0.55;
+          ctx.globalAlpha = 0.55 + prog * 0.45;
           ctx.fillStyle   = `rgb(${Math.round(r*bright)},${Math.round(g*bright)},${Math.round(b*bright)})`;
           const tw = ctx.measureText(t.text).width;
           ctx.fillText(t.text, sx - tw/2, sy);

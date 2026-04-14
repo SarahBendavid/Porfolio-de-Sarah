@@ -1,4 +1,4 @@
-
+import Header from "../Composants/Accueil/Header.jsx";
 
 export default function Projets() {
   return (

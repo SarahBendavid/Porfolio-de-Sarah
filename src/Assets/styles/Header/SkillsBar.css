@@ -1,0 +1,77 @@
+.skills-bar {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  padding: 6px 0;
+  background-color: #04020a;
+  border-top: 1px solid rgba(192, 132, 252, 0.35);
+  border-bottom: 1px solid rgba(192, 132, 252, 0.35);
+  box-shadow:
+    0 -1px 8px rgba(168, 85, 247, 0.25),
+    0  1px 8px rgba(168, 85, 247, 0.25);
+}
+
+/* Fondu sur les bords gauche/droit */
+.skills-bar::before,
+.skills-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.skills-bar::before {
+  left: 0;
+  background: linear-gradient(to right, #04020a, transparent);
+}
+.skills-bar::after {
+  right: 0;
+  background: linear-gradient(to left, #04020a, transparent);
+}
+
+.skills-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: scrollSkills 30s linear infinite;
+}
+
+@keyframes scrollSkills {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.skill-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.9rem;
+  border-radius: 9px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: rgb(169, 85, 180);
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
+  cursor: default;
+}
+
+@media (max-width: 950px) {
+  .skills-bar {
+    margin-top: 1rem;
+  }
+  .skill-btn {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.7rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .skill-btn {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.6rem;
+  }
+}
