@@ -2,7 +2,7 @@
   grid-area: left;
   position: relative;
   align-self: start;
-  margin-left: 12%;
+  margin-left: 10%;
   flex: 2;
   aspect-ratio: 450 / 700;
   margin-top: 75px;
@@ -61,7 +61,7 @@
 
 .buttons {
   position: absolute;
-  bottom: clamp(0.5rem, 6vw, 11%);
+  bottom: clamp(29.5rem, 6vw, 11%);
   left: 0;
   right: 0;
   z-index: 2;
@@ -103,6 +103,11 @@
   display: none;
 }
 
+.cadre-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 @media (max-width: 1161px) {
   
   .description {
@@ -132,6 +137,11 @@
     flex-direction: column;
     align-items: center;
     margin-top: 45px;
+  }
+
+  .cadre-wrapper {
+    margin-top: -13.5%;
+    width: 75%;
   }
 
   .cadre-svg {
@@ -166,13 +176,14 @@
     justify-content: center;
     gap: 2rem;
     padding-bottom: 0;
-  }
+    margin-top: 5%;
+    }
 
   .photo-mobile {
     display: block;
     position: relative;
     z-index: 3;
-    width: 60%;
+    width: 40%;
     align-self: center;
     margin-bottom: -8.5vw;
   }
@@ -209,6 +220,11 @@
 }
 
 @media (max-width: 570px) {
+
+  .cadre-wrapper {
+    margin-top: -13.5%;
+    width: 100%;
+  }
 
   .cadre-svg {
     top: 41.9vw;

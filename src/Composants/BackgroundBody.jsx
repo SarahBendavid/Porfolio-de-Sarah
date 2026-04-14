@@ -105,34 +105,34 @@ export default function BackgroundBody() {
       const W = canvas.width, H = canvas.height;
       const t = time * 0.0012;
 
-      ctx.fillStyle = "#060208";
+      ctx.fillStyle = "#04020a";
       ctx.fillRect(0, 0, W, H);
 
       const g1 = ctx.createRadialGradient(W*0.05, H*0.1, 0, W*0.05, H*0.1, H*0.8);
-      g1.addColorStop(0,   "rgba(60,10,80,0.45)");
-      g1.addColorStop(0.5, "rgba(30,5,50,0.20)");
+      g1.addColorStop(0,   "rgba(40,5,60,0.40)");
+      g1.addColorStop(0.5, "rgba(20,3,35,0.18)");
       g1.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g1; ctx.fillRect(0, 0, W, H);
 
       const ox = Math.sin(t)*W*0.03, oy = Math.cos(t*0.7)*H*0.03;
       const g2 = ctx.createRadialGradient(W*0.9-ox, H*0.1+oy, 0, W*0.9-ox, H*0.1+oy, H*0.60);
-      g2.addColorStop(0,   "rgba(170,10,200,0.72)");
-      g2.addColorStop(0.3, "rgba(110,8,155,0.42)");
-      g2.addColorStop(0.6, "rgba(60,4,90,0.18)");
+      g2.addColorStop(0,   "rgba(90,5,130,0.60)");
+      g2.addColorStop(0.3, "rgba(55,3,85,0.32)");
+      g2.addColorStop(0.6, "rgba(25,2,45,0.12)");
       g2.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
 
       const gd = ctx.createLinearGradient(0, 0, W, H);
-      gd.addColorStop(0,   "rgba(100,8,130,0.20)");
+      gd.addColorStop(0,   "rgba(60,5,90,0.15)");
       gd.addColorStop(0.5, "rgba(5,0,10,0)");
-      gd.addColorStop(1,   "rgba(50,5,80,0.18)");
+      gd.addColorStop(1,   "rgba(30,3,55,0.12)");
       ctx.fillStyle = gd; ctx.fillRect(0, 0, W, H);
 
       const ox2 = Math.sin(t*0.8+1)*W*0.02, oy2 = Math.cos(t*0.5+2)*H*0.02;
       const g3 = ctx.createRadialGradient(W*0.98+ox2, H*1.02+oy2, 0, W*0.98+ox2, H*1.02+oy2, H*0.32);
-      g3.addColorStop(0,   "rgba(180,90,255,0.65)");
-      g3.addColorStop(0.3, "rgba(140,60,230,0.35)");
-      g3.addColorStop(0.6, "rgba(100,30,180,0.15)");
+      g3.addColorStop(0,   "rgba(110,40,180,0.50)");
+      g3.addColorStop(0.3, "rgba(70,20,130,0.25)");
+      g3.addColorStop(0.6, "rgba(35,8,80,0.10)");
       g3.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g3; ctx.fillRect(0, 0, W, H);
 
