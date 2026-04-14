@@ -62,13 +62,13 @@ export default function HologramPortrait() {
             <stop offset="50%"  stopColor="#2d0050" stopOpacity="0.95"/>
             <stop offset="100%" stopColor="#1a0030" stopOpacity="0.95"/>
           </linearGradient>
-          <filter id="glowFilter" x="-10%" y="-10%" width="120%" height="120%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
-            <feFlood floodColor="#a855f7" floodOpacity="0.9" result="color"/>
+          <filter id="glowFilter" x="-15%" y="-15%" width="130%" height="130%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+            <feFlood floodColor="#a855f7" floodOpacity="0.55" result="color"/>
             <feComposite in="color" in2="blur" operator="in" result="glow"/>
+            <feComposite in="glow" in2="SourceGraphic" operator="out" result="outerGlow"/>
             <feMerge>
-              <feMergeNode in="glow"/>
-              <feMergeNode in="glow"/>
+              <feMergeNode in="outerGlow"/>
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
           </filter>

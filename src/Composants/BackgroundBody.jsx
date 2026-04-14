@@ -20,11 +20,13 @@ export default function BackgroundBody() {
 
     const DEPTH_RANGE = 3000;
     const FOCAL       = 500;
-    const NUM         = window.innerWidth < 768 ? 90 : 68;
-    const NUM_SIDE    = window.innerWidth < 768 ? 18 : 10;
+    const MOBILE      = window.innerWidth < 768;
+    const NUM         = MOBILE ? 45 : 68;
+    const NUM_SIDE    = MOBILE ? 8  : 10;
     const SPEED       = 4.0;
-    const SPREAD_X    = window.innerWidth < 768 ? 1200 : 2800;
-    const SPREAD_Y    = window.innerWidth < 768 ? 1800 : 1100;
+    const SPREAD_X    = MOBILE ? 800  : 2800;
+    const SPREAD_Y    = MOBILE ? 1400 : 1100;
+    const RECYCLE_Z   = MOBILE ? 150 : 1200;
     const TOP_MARGIN  = 0.42;
 
     let tags = [], sideTags = [], cameraZ = 0, time = 0;
@@ -60,7 +62,7 @@ export default function BackgroundBody() {
     }
 
     function getTopMargin() {
-      return window.innerWidth < 768 ? 0.38 : TOP_MARGIN;
+      return window.innerWidth < 768 ? 0.28 : TOP_MARGIN;
     }
 
     function getNavbarZone() {
@@ -206,7 +208,7 @@ export default function BackgroundBody() {
         for (let i = 0; i < arr.length; i++) {
           const t    = arr[i];
           const relZ = t.z3 - cameraZ;
-          if (relZ < 1200) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
+          if (relZ < RECYCLE_Z) { arr[i] = createFn(cameraZ + DEPTH_RANGE); continue; }
           if (relZ >= DEPTH_RANGE) continue;
 
           const scale = FOCAL / relZ;
