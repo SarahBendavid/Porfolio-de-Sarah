@@ -55,7 +55,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   white-space: nowrap;
-  background-color: rgb(190 119 199);
+  background-color: #c084fc;
   color: black;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
@@ -69,6 +69,13 @@
   .skill-btn {
     font-size: 0.75rem;
     padding: 0.2rem 0.7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .skills-bar {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
   }
 }
 
