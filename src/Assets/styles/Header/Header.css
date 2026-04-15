@@ -29,7 +29,11 @@ h1, h2, h3, p {
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: rgb(243 106 199);
+  color: #803cc5;
+  text-shadow:
+    0 0 18px #a855f7,
+    0 0 40px #7c3aed,
+    0 0 70px #6d28d960;
 }
 
 .accueil-page header h2,
@@ -52,7 +56,7 @@ h1, h2, h3, p {
   font-size: 1.6rem;
   font-style: italic ;
   text-align: start;
-  color: #803cc5;
+  color: rgb(243 106 199);
 }
 
 .headerLeft {
@@ -137,7 +141,29 @@ h1, h2, h3, p {
 @media (max-width: 480px) {
   .accueil-page h1 {
     font-size: 0.9rem;
+  }
 }
+
+@media (max-width: 440px) {
+  .accueil-page header h2 {
+    font-size: 0.6rem;
+  }
+  .accueil-page header .titre3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .accueil-page h1 {
+    font-size: 0.8rem;
+  }
+  .accueil-page header h2 {
+    font-size: 0.5rem;
+  }
+  .accueil-page header .titre3 {
+    font-size: 0.7rem;
+  }
 }
 
 
