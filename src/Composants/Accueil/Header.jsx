@@ -4,11 +4,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import "../../Assets/styles/Header/Header.css";
 
 export default function Header() {
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
 

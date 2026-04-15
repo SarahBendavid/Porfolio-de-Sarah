@@ -62,7 +62,9 @@ export default function BackgroundBody() {
     }
 
     function getTopMargin() {
-      return window.innerWidth < 768 ? 0.28 : TOP_MARGIN;
+      const w = window.innerWidth;
+      if (w >= 768) return TOP_MARGIN;
+      return 0.40;
     }
 
     function getNavbarZone() {
@@ -124,13 +126,6 @@ export default function BackgroundBody() {
       g1.addColorStop(1,   "rgba(0,0,0,0)");
       ctx.fillStyle = g1; ctx.fillRect(0, 0, W, H);
 
-      const ox = Math.sin(t)*W*0.03, oy = Math.cos(t*0.7)*H*0.03;
-      const g2 = ctx.createRadialGradient(W*0.9-ox, H*0.1+oy, 0, W*0.9-ox, H*0.1+oy, H*0.60);
-      g2.addColorStop(0,   "rgba(90,5,130,0.60)");
-      g2.addColorStop(0.3, "rgba(55,3,85,0.32)");
-      g2.addColorStop(0.6, "rgba(25,2,45,0.12)");
-      g2.addColorStop(1,   "rgba(0,0,0,0)");
-      ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
 
       const gd = ctx.createLinearGradient(0, 0, W, H);
       gd.addColorStop(0,   "rgba(60,5,90,0.15)");
@@ -169,16 +164,6 @@ export default function BackgroundBody() {
       ctx.fillStyle = gMask;
       ctx.fillRect(0, 0, W, H * 0.80);
 
-      // Halos mobile — après le masque, visibles sur fond sombre
-      if (canvas.width < 768) {
-        const ox3 = Math.sin(t*0.9)*W*0.03, oy3 = Math.cos(t*0.6)*H*0.02;
-        const gm1 = ctx.createRadialGradient(W*0.92+ox3, H*0.05+oy3, 0, W*0.92+ox3, H*0.05+oy3, W*0.30);
-        gm1.addColorStop(0,   "rgba(170,10,200,0.65)");
-        gm1.addColorStop(0.4, "rgba(100,8,150,0.28)");
-        gm1.addColorStop(1,   "rgba(0,0,0,0)");
-        ctx.fillStyle = gm1; ctx.fillRect(0, 0, W, H);
-
-      }
 
       // Étoiles zone titre — après le masque
       for (let i = 0; i < 220; i++) {

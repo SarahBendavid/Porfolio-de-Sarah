@@ -84,62 +84,61 @@ h1, h2, h3, p {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 
+  .headerLeft {
+    padding-top: 35px;
+    padding-left: 10px;
+}
   .accueil-page h1,
   .projet-page h1 {
     font-size: 1.5rem;
 }
-  .accueil-page header h2,
-  .projet-page header h2 {
+  .accueil-page header h2 {
     font-size: 1rem;
   }
 
-  .accueil-page header .titre3,
-  .projet-page header .titre3 {
-    font-size: 1rem;
+  .accueil-page header .titre3 {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 540px) {
-  .headerLeft {
-    padding-left: 0;
-    margin-inline: auto;
-  }
-}
-
-@media (max-width: 460px) {
+@media (max-width: 650px) {
 
   .accueil-page h1,
   .projet-page h1 {
     font-size: 1.3rem;
 }
-
-  .accueil-page header h2,
-  .projet-page header h2 {
+  .accueil-page header h2 {
     font-size: 0.8rem;
   }
+  .accueil-page header .titre3 {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 550px) {
 
-  .accueil-page header h2,
-  .projet-page header h2 {
+  .headerLeft {
+    padding-top: 30px;
+    padding-left: 0;
+}
+  .accueil-page h1 {
+    font-size: 1rem;
+}
+  .accueil-page header h2 {
     font-size: 0.7rem;
   }
-
-  .accueil-page header .titre3,
-  .projet-page header .titre3 {
-    font-size: 0.7rem;
+  .accueil-page header .titre3 {
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 363px) {
-
-  .accueil-page header h2,
-  .projet-page header h2 {
-    font-size: 0.6rem;
-  }
+@media (max-width: 480px) {
+  .accueil-page h1 {
+    font-size: 0.9rem;
 }
+}
+
 
 

@@ -222,12 +222,16 @@
 @media (max-width: 570px) {
 
   .cadre-wrapper {
-    margin-top: -13.5%;
+    margin-top: -19.5%;
     width: 100%;
   }
 
   .cadre-svg {
     top: 41.9vw;
+  }
+
+  .photo-mobile {
+    width: 50%;
   }
 }
 

@@ -1,11 +1,9 @@
-.accueil-page .language-switcher,
-.projet-page .language-switcher {
+.accueil-page .language-switcher {
   bottom: 3rem;
   right: 2rem;
 }
 
-.accueil-page .language-switcher .btn,
-.projet-page .language-switcher .btn {
+.accueil-page .language-switcher .btn {
   background-color: transparent;
   color: rgb(179 74 146);
   text-shadow:
@@ -18,9 +16,7 @@
   padding: 6px 10px;
 }
 
-.accueil-page .language-switcher .dropdown-menu,
-.projet-page .language-switcher .dropdown-menu
- {
+.accueil-page .language-switcher .dropdown-menu {
   background-color:  rgb(3 2 10);
   color: rgb(179 74 146);
   text-shadow:
@@ -61,44 +57,46 @@
 
 @media (max-width: 950px) {
 
-  .accueil-page .language-switcher .btn,
-  .projet-page .language-switcher .btn {
+  .accueil-page .language-switcher .btn {
     font-size: 14px;
     padding: 4px 8px;
   }
-  .accueil-page .language-switcher,
-  .projet-page .language-switcher {
+  .accueil-page .language-switcher {
     position: absolute;
     bottom: 10rem;
     right: 2rem;
   }
-  .accueil-page .language-switcher .dropdown-menu,
-  .projet-page .language-switcher .dropdown-menu {
+  .accueil-page .language-switcher .dropdown-menu {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .accueil-page .language-switcher {
+    bottom: 8rem;
   }
 }
 
 @media (max-width: 635px) {
 
-  .accueil-page .language-switcher .btn,
-  .projet-page .language-switcher .btn {
+  .accueil-page .language-switcher .btn {
     font-size: 12px;
     padding: 3px 7px;
   }
   .dropdown-menu {
     font-size: 11px;
   }
-  .accueil-page .language-switcher .dropdown-menu,
-  .projet-page .language-switcher .dropdown-menu {
+  .accueil-page .language-switcher .dropdown-menu {
     font-size: 12px;
   } 
 }
 
-@media (max-width: 560px) {
-  
-  .accueil-page .language-switcher,
-  .projet-page .language-switcher {
-    bottom: 12rem;
+@media (max-width: 550px) {
+  .accueil-page .language-switcher {
+    right: 1rem;
+    bottom: 7.2rem;
   }
 }
+
 
