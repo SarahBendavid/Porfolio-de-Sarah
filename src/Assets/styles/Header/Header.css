@@ -6,6 +6,7 @@
   padding-inline: 0;
 }
 
+
 .headerTop {
   display: flex;
   justify-content: space-between;
@@ -21,30 +22,31 @@ h1, h2, h3, p {
     0 0 50px rgba(5, 3, 14, 0.5);
 }
 
-.accueil-page h1,
-.projet-page h1 {
+.accueil-page h1 {
   font-size: 3rem;
   font-weight: 400;
   font-family: 'Orbitron', sans-serif;
   font-weight: 400;
   letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #803cc5;
+  color: rgb(243 106 199);
   text-shadow:
-    0 0 18px #a855f7,
-    0 0 40px #7c3aed,
-    0 0 70px #6d28d960;
+    0 0 15px #e0845a,
+    0 0 35px #fd81d4,
+    0 0 65px #e95b4860;
 }
 
 .accueil-page header h2,
 .projet-page header h2 {
   font-family: 'Orbitron', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: rgb(243 106 199);
-  text-shadow: none;
+  color: #c084fc;
+  text-shadow:
+    0 0 18px #a855f7,
+    0 0 40px #7c3aed,
+    0 0 70px #6d28d960;
 }
 
 .accueil-page header .titre3,
@@ -128,40 +130,50 @@ h1, h2, h3, p {
     font-size: 1rem;
 }
   .accueil-page header h2 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .accueil-page header .titre3 {
     font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .accueil-page h1 {
     font-size: 0.9rem;
   }
+  .accueil-page header h2 {
+    text-transform: none;
+    font-size: 0.9rem;
+  }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 455px) {
   .accueil-page header h2 {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   .accueil-page header .titre3 {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .accueil-page h1 {
     font-size: 0.8rem;
+  }
+  .accueil-page header h2 {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 400px) {
-
-  .accueil-page h1 {
-    font-size: 0.8rem;
-  }
   .accueil-page header h2 {
-    font-size: 0.5rem;
-  }
-  .accueil-page header .titre3 {
-    font-size: 0.7rem;
+    font-size: 2.8vw;
+    white-space: nowrap;
   }
 }
+
+
 
 
 
