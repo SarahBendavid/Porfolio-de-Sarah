@@ -25,13 +25,13 @@ export default function NavMenu() {
   return (
     <>
       <nav className="nav-menu">
-        <NavLink to="/" end className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+        <NavLink to="/" end className={({ isActive }) => isActive ? "navmenu-link active" : "navmenu-link"}>
           {t("nav.home")}
         </NavLink>
-        <NavLink to="/projets" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+        <NavLink to="/projets" className={({ isActive }) => isActive ? "navmenu-link active" : "navmenu-link"}>
           {t("nav.projects")}
         </NavLink>
-        <a href="#contact" className="nav-link">{t("nav.contact")}</a>
+        <a href="#contact" className="navmenu-link">{t("nav.contact")}</a>
       </nav>
 
       <button

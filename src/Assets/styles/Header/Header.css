@@ -59,11 +59,10 @@ h1, h2, h3, p {
   font-weight: 400;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 5px;
-  color: rgb(243 106 199);
+  color: #f7a8e0;
   text-shadow:
-    0 0 15px #e0845a,
-    0 0 35px #fd81d4,
-    0 0 65px #e95b4860;
+    0 0 12px rgba(247, 168, 224, 0.7),
+    0 0 30px rgba(247, 168, 224, 0.4);
   position: relative;
   top: -10px;
 }
