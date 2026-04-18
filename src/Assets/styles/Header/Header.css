@@ -6,17 +6,49 @@
   padding-inline: 0;
 }
 
-
-.headerTop {
+/* ── Bande fine en haut ── */
+.headerBand {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-inline: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(4, 2, 10, 0.88);
+  box-sizing: border-box;
+}
+
+/* ── Ligne lumineuse entre h1 et h2 ── */
+.header-glow-line {
+  width: 75%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(253, 129, 212, 0.5) 15%,
+    rgba(240, 100, 220, 0.9) 40%,
+    rgba(192, 80, 255, 0.8) 65%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 6px rgba(253, 129, 212, 0.8),
+    0 0 16px rgba(200, 80, 240, 0.5),
+    0 0 30px rgba(160, 50, 220, 0.3);
+  margin-top: -0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Titres centrés en dessous ── */
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+  gap: 0.4rem;
 }
 
 h1, h2, h3, p {
-  text-shadow: 
+  text-shadow:
     0 0 15px rgba(5, 3, 14, 0.9),
     0 0 30px rgba(5, 3, 14, 0.7),
     0 0 50px rgba(5, 3, 14, 0.5);
@@ -26,13 +58,14 @@ h1, h2, h3, p {
   font-size: 3rem;
   font-weight: 400;
   font-family: 'Orbitron', sans-serif;
-  font-weight: 400;
   letter-spacing: 5px;
   color: rgb(243 106 199);
   text-shadow:
     0 0 15px #e0845a,
     0 0 35px #fd81d4,
     0 0 65px #e95b4860;
+  position: relative;
+  top: -10px;
 }
 
 .accueil-page header h2,
@@ -53,87 +86,40 @@ h1, h2, h3, p {
 .projet-page header .titre3 {
   font-family: 'Calibri', sans-serif;
   font-size: 1.6rem;
-  font-style: italic ;
-  text-align: start;
+  font-style: italic;
+  text-align: center;
   color: #c084fc;
 }
 
-.headerLeft {
-  padding-top: 40px;
-  padding-left: 40px;
-}
-
-.headerRight {
-  position: static;
-  display: flex;
-  align-items: flex-end; 
-  gap: 0.5rem;
-}
-
 @media (max-width: 900px) {
-
   .accueil-page h1,
   .projet-page h1 {
     font-size: 2rem;
-}
+  }
   .accueil-page header h2,
   .projet-page header h2 {
     font-size: 1.3rem;
   }
-
   .accueil-page header .titre3,
   .projet-page header .titre3 {
     font-size: 1.3rem;
   }
 }
 
-@media (max-width: 750px) {
-
-  .headerLeft {
-    padding-top: 35px;
-    padding-left: 10px;
-}
-  .accueil-page h1,
-  .projet-page h1 {
-    font-size: 1.5rem;
-}
-  .accueil-page header h2 {
-    font-size: 1rem;
-  }
-
-  .accueil-page header .titre3 {
-    font-size: 1.2rem;
-  }
-}
-
 @media (max-width: 650px) {
 
+  .headerTitles {
+    padding: 3.5rem 1rem 1.5rem;
+  }
   .accueil-page h1,
   .projet-page h1 {
     font-size: 1.3rem;
-}
+  }
   .accueil-page header h2 {
     font-size: 0.8rem;
   }
   .accueil-page header .titre3 {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 550px) {
-
-  .headerLeft {
-    padding-top: 30px;
-    padding-left: 0;
-}
-  .accueil-page h1 {
-    font-size: 1rem;
-}
-  .accueil-page header h2 {
-    font-size: 0.8rem;
-  }
-  .accueil-page header .titre3 {
-    font-size: 0.9rem;
   }
 }
 
@@ -157,7 +143,6 @@ h1, h2, h3, p {
 }
 
 @media (max-width: 420px) {
-
   .accueil-page h1 {
     font-size: 0.8rem;
   }
@@ -172,8 +157,3 @@ h1, h2, h3, p {
     white-space: nowrap;
   }
 }
-
-
-
-
-

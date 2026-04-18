@@ -1,11 +1,6 @@
-.accueil-page .language-switcher {
-  bottom: 3rem;
-  right: 2rem;
-}
-
-.accueil-page .language-switcher .btn {
+.language-switcher .btn {
   background-color: transparent;
-  color: rgb(179 74 146);
+  color: rgb(179, 74, 146);
   text-shadow:
     0 0 10px #e0845a,
     0 0 30px #fd81d4,
@@ -16,9 +11,9 @@
   padding: 6px 10px;
 }
 
-.accueil-page .language-switcher .dropdown-menu {
-  background-color:  rgb(3 2 10);
-  color: rgb(179 74 146);
+.language-switcher .dropdown-menu {
+  background-color: rgb(3, 2, 10);
+  color: rgb(179, 74, 146);
   text-shadow:
     0 0 10px #e0845a,
     0 0 30px #fd81d4,
@@ -29,8 +24,8 @@
   top: 100%;
   bottom: auto;
   transform: none;
-  min-width: 0 !important;       
-  width: auto !important; 
+  min-width: 0 !important;
+  width: auto !important;
 }
 
 .language-switcher .dropdown-item {
@@ -40,7 +35,7 @@
   width: 100%;
   text-align: left;
   font-weight: bold;
-  color: rgb(179 74 146);
+  color: rgb(179, 74, 146);
   text-shadow:
     0 0 10px #e0845a,
     0 0 30px #fd81d4,
@@ -55,55 +50,19 @@
   margin-right: 6px;
 }
 
-@media (max-width: 950px) {
-
-  .accueil-page .language-switcher .btn {
+@media (max-width: 768px) {
+  .language-switcher .btn {
     font-size: 14px;
     padding: 4px 8px;
-  }
-  .accueil-page .language-switcher {
-    right: 0;
-  }
-  .accueil-page .language-switcher .dropdown-menu {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 750px) {
-
-  .accueil-page .language-switcher {
-    bottom: 2rem;
   }
 }
 
 @media (max-width: 635px) {
-
-  .accueil-page .language-switcher .btn {
+  .language-switcher .btn {
     font-size: 12px;
     padding: 3px 7px;
   }
-  .dropdown-menu {
-    font-size: 11px;
-  }
-  .accueil-page .language-switcher .dropdown-menu {
+  .language-switcher .dropdown-menu {
     font-size: 12px;
-  } 
-}
-
-@media (max-width: 550px) {
-  .accueil-page .language-switcher {
-    bottom: 1.5rem;
-    right: -15px;
-  }
-  .accueil-page .language-switcher .btn {
-    font-size: 10px;
   }
 }
-
-@media (max-width: 380px) {
-  .accueil-page .language-switcher {
-    right: 0.5rem;
-  }
-}
-
-

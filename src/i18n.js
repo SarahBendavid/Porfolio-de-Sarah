@@ -11,6 +11,11 @@ const resources = {
         tagline: "UI, Motion & Création visuelle assistée par IA",
         language: "Langue",
       },
+      nav: {
+        home: "Accueil",
+        projects: "Projets",
+        contact: "Contact",
+      },
       footer: {
         contact: "Contact :",
         legal: "Mentions légales",
@@ -90,6 +95,11 @@ const resources = {
         subtitle: "Front-end Developer",
         tagline: "UI, Motion & Visual creation (IA assisted)",
         language: "Language",
+      },
+      nav: {
+        home: "Home",
+        projects: "Projects",
+        contact: "Contact",
       },
       footer: {
         contact: "Contact:",
