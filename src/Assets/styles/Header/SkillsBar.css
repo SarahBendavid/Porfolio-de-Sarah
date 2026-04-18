@@ -7,12 +7,12 @@
   transform: translateY(1rem);
   background-color: #04020a;
   border-top: 3px solid rgba(192, 132, 252, 0.5);
-  border-bottom: 3px solid rgba(192, 132, 252, 0.5);
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
   box-shadow:
     0 -1px 8px rgba(147, 51, 234, 0.7),
     0 -1px 20px rgba(109, 40, 217, 0.5),
-    0  1px 8px rgba(147, 51, 234, 0.7),
-    0  1px 20px rgba(109, 40, 217, 0.5);
+    0 6px 20px rgba(147, 51, 234, 0.4),
+    0 6px 40px rgba(109, 40, 217, 0.25);
 }
 
 /* Fondu sur les bords gauche/droit */
@@ -75,7 +75,6 @@
 @media (max-width: 650px) {
   .skills-bar {
     border-top-width: 1px;
-    border-bottom-width: 1px;
   }
 }
 

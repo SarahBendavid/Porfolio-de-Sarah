@@ -5,7 +5,10 @@ import "../../Assets/styles/Main/Accueil/AccueilMain.css";
 import "../../Assets/styles/Main/Accueil/RightZone.css";
 import "../../Assets/styles/Main/Accueil/LeftZone.css";
 
-import Cadre from "../../Assets/images/Cadre.jpg";
+import CadreTop from "../../Assets/images/CadreTop.jpg";
+import CadreMidDesktop from "../../Assets/images/CadreMidDesktop.png";
+import CadreMidMobile from "../../Assets/images/CadreMidMobile.png";
+import CadreBot from "../../Assets/images/CadreBot.jpg";
 import HologramPortrait from "./CadrePortrait";
 import PhotoPC from "../../Assets/images/PhotoPC.png";
 import PhotoMobile from "../../Assets/images/PhotoMobile.png";
@@ -23,8 +26,35 @@ export default function Presentation() {
           <img src={PhotoMobile} className="photo-mobile" alt="" aria-hidden="true" />
 
           <div className="cadre-wrapper">
-            <div style={{paddingTop:"6.1%"}}></div>
-            <img src={Cadre} style={{width:"100%", height:"auto", display:"block"}} alt="" aria-hidden="true"/>
+            <div style={{paddingTop:"9.2%"}}></div>
+            <img src={CadreTop} className="cadre-img-top" alt="" aria-hidden="true" />
+            <div className="cadre-mid-wrapper">
+              <picture>
+                <source media="(max-width: 670px)" srcSet={CadreMidMobile} />
+                <img src={CadreMidDesktop} style={{width:"100%", height:"auto", display:"block"}} alt="" aria-hidden="true" />
+              </picture>
+              <div className="cadre-skills-section">
+                <div className="skill-row">
+                  <div className="skill-text">
+                    <span className="skill-title">{t("skills.dev.title")}</span>
+                    <span className="skill-subtitle">{t("skills.dev.subtitle")}</span>
+                  </div>
+                </div>
+                <div className="skill-row">
+                  <div className="skill-text">
+                    <span className="skill-title">{t("skills.writer.title")}</span>
+                    <span className="skill-subtitle">{t("skills.writer.subtitle")}</span>
+                  </div>
+                </div>
+                <div className="skill-row">
+                  <div className="skill-text">
+                    <span className="skill-title">{t("skills.psycho.title")}</span>
+                    <span className="skill-subtitle">{t("skills.psycho.subtitle")}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src={CadreBot} className="cadre-img-bot" alt="" aria-hidden="true" />
             <HologramPortrait />
           </div>
           <div className="buttons">

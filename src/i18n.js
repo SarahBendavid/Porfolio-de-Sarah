@@ -17,6 +17,20 @@ const resources = {
         privacy: "Politique de confidentialité",
         rights: "Tous droits réservés",
       },
+      skills: {
+        dev: {
+          title: "Dev Front-End | UI Designer",
+          subtitle: "Fibre artistique et souci du détail"
+        },
+        writer: {
+          title: "Rédactrice web",
+          subtitle: "La qualité du contenu réside dans le choix des mots"
+        },
+        psycho: {
+          title: "Psychologue",
+          subtitle: "La compréhension humaine au cœur du code"
+        }
+      },
       description: {
         title: "Qui suis-je ?",
         textWithBr:
@@ -82,6 +96,20 @@ const resources = {
         legal: "Legal notice",
         privacy: "Privacy Policy",
         rights: "All rights reserved",
+      },
+      skills: {
+        dev: {
+          title: "Front-End Dev | UI Designer",
+          subtitle: "Artistic flair and eye for detail"
+        },
+        writer: {
+          title: "Web Writer",
+          subtitle: "Quality content lies in the choice of words"
+        },
+        psycho: {
+          title: "Psychologist",
+          subtitle: "Human understanding at the heart of code"
+        }
       },
       description: {
         title: "Who am I?",

@@ -10,8 +10,27 @@
   transform: translateX(-16%) translateY(4%);
 }
 
+.photo-mobile {
+  display: none;
+}
+
 @media (max-width: 950px) {
+  
   .rightZone {
     display: none;
+  }
+  .photo-mobile {
+    display: block;
+    position: relative;
+    z-index: 12;
+    width: 40%;
+    align-self: center;
+    margin-bottom: -8.5vw;
+  }
+}
+
+@media (max-width: 590px) {
+.photo-mobile {
+    width: 50%;
   }
 }
