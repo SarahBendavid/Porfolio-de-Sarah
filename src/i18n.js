@@ -8,7 +8,7 @@ const resources = {
     translation: {
       header: {
         subtitle: "Développeuse front-end",
-        tagline: "UI, Motion & Création visuelle assistée par IA",
+        tagline: "UI, Motion & Création visuelle",
         language: "Langue",
       },
       nav: {
@@ -93,7 +93,7 @@ const resources = {
     translation: {
       header: {
         subtitle: "Front-end Developer",
-        tagline: "UI, Motion & Visual creation (IA assisted)",
+        tagline: "UI, Motion & Visual creation",
         language: "Language",
       },
       nav: {

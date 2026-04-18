@@ -1,34 +1,19 @@
-import { useEffect, useRef } from "react";
+import bgImage from "../Assets/images/Background.png";
 
 export default function BackgroundBody() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-
-    function resize() {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-      ctx.fillStyle = "#04020a";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
-
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
-  }, []);
-
   return (
-    <canvas
-      ref={canvasRef}
+    <img
+      src={bgImage}
+      aria-hidden="true"
+      alt=""
       style={{
-        position:      "fixed",
-        top:           0,
-        left:          0,
-        width:         "100%",
-        height:        "100%",
-        zIndex:        0,
+        position:   "fixed",
+        top:        0,
+        left:       0,
+        width:      "100%",
+        height:     "100%",
+        objectFit:  "cover",
+        zIndex:     0,
         pointerEvents: "none",
       }}
     />
