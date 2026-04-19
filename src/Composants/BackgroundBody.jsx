@@ -1,4 +1,4 @@
-import bgImage from "../Assets/images/Background.png";
+import bgImage from "../Assets/images/Background.webp";
 
 export default function BackgroundBody() {
   return (
