@@ -5,6 +5,24 @@
   font-size: 16px;
   font-weight: bold;
   padding: 6px 10px;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+
+.language-switcher .btn:hover {
+  color: #c084fc !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.language-switcher .btn:focus,
+.language-switcher .btn:active,
+.language-switcher .btn:focus-visible,
+.language-switcher .btn:focus:active {
+  color: #f7a8e0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .language-switcher .dropdown-menu {
@@ -27,6 +45,20 @@
   text-align: left;
   font-weight: bold;
   color: #f7a8e0;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+
+.language-switcher .dropdown-item:hover {
+  color: #c084fc !important;
+  background: none !important;
+}
+
+.language-switcher .dropdown-item:focus,
+.language-switcher .dropdown-item:active {
+  color: #f7a8e0 !important;
+  background: none !important;
+  outline: none !important;
 }
 
 .language-switcher .fi {

@@ -12,11 +12,16 @@
   font-weight: bold;
   letter-spacing: 1.5px;
   color: #f7a8e0;
-  transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.15s, opacity 0.2s;
 }
 
 .navmenu-link:hover {
   opacity: 0.65;
+}
+
+.navmenu-link:active {
+  color: #c084fc;
 }
 
 .navmenu-link.active {
@@ -83,12 +88,17 @@
   font-weight: bold;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 4px;
-  color: #5b21b6;
-  transition: opacity 0.2s;
+  color: #9b5de5;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.15s, opacity 0.2s;
 }
 
 .mobile-link:hover {
   opacity: 0.65;
+}
+
+.mobile-link:active {
+  color: #c084fc;
 }
 
 @media (max-width: 450px) {

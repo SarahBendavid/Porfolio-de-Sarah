@@ -61,8 +61,6 @@ h1, h2, h3, p {
 }
 
 .accueil-page h1 {
-  font-size: 3rem;
-  font-weight: 400;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 5px;
   color: #c084fc;
@@ -147,10 +145,16 @@ h1, h2, h3, p {
   }
 }
 
+@media (max-width: 450px) {
+ .headerTitles {
+    padding: 2.7rem 1rem 1.5rem;
+  }
+}
+
 @media (max-width: 400px) {
 
   .accueil-page h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .accueil-page header h2 {
     font-size: 3.2vw;

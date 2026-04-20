@@ -10,9 +10,9 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .bg-image {
     background-image: url("/src/Assets/images/BackgroundMobile.webp");
-    background-position: center;
+    background-position: top center;
   }
 }
