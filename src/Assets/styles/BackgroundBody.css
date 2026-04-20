@@ -1,0 +1,18 @@
+.bg-image {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/src/Assets/images/Background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+
+@media (max-width: 500px) {
+  .bg-image {
+    background-image: url("/src/Assets/images/BackgroundMobile.webp");
+    background-position: center;
+  }
+}
