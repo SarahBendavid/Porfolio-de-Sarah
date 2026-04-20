@@ -92,7 +92,7 @@ h1, h2, h3, p {
   font-size: 1.6rem;
   font-style: italic;
   text-align: center;
-  color: #c084fc;
+  color: white;
 }
 
 @media (max-width: 950px) {
