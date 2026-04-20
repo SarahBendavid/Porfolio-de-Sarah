@@ -272,6 +272,10 @@
   .cadre-svg {
     top: 42.1vw;
   }
+
+  .cadre-img-bot {
+    margin-top: -3%;
+  }
 }
 
 @media (max-width: 630px) {
@@ -294,6 +298,10 @@
 
   .cadre-svg {
     top: 41.9vw;
+  }
+
+  .cadre-img-bot {
+    margin-top: -5%;
   }
 }
 
@@ -320,8 +328,10 @@
 }
 
 @media (max-width: 480px) {
-
   
+.cadre-skills-section {
+    gap: 15%;
+  }
 }
 
 @media (max-width: 450px) {
