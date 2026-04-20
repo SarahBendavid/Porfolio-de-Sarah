@@ -1,0 +1,120 @@
+.contact-preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2rem 1rem 1rem;
+}
+
+.contact-preview-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #f7a8e0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(247, 168, 224, 0.5),
+    0 0 25px rgba(247, 168, 224, 0.3);
+}
+
+.contact-info-blocks {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+@keyframes blockGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 4px rgba(192, 132, 252, 0.4),
+      0 0 10px rgba(192, 132, 252, 0.2),
+      inset 0 0 6px rgba(192, 132, 252, 0.04);
+  }
+  50% {
+    box-shadow:
+      0 0 8px rgba(192, 132, 252, 0.65),
+      0 0 18px rgba(168, 85, 247, 0.3),
+      inset 0 0 10px rgba(192, 132, 252, 0.08);
+  }
+}
+
+.contact-info-block {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(192, 132, 252, 0.5);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  width: 175px;
+  backdrop-filter: blur(4px);
+  animation: blockGlow 3s ease-in-out infinite;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.contact-info-block:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.contact-info-block:hover {
+  background: rgba(192, 132, 252, 0.07);
+  border-color: rgba(247, 168, 224, 0.6);
+}
+
+.block-icon {
+  font-size: 1.5rem;
+  color: #f7a8e0;
+  filter: drop-shadow(0 0 6px rgba(247, 168, 224, 0.5));
+}
+
+.block-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f7a8e0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.block-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.contact-me-btn {
+  background: none;
+  border: 1px solid #c084fc;
+  color: #c084fc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.55rem 1.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.contact-me-btn:hover {
+  background: rgba(192, 132, 252, 0.12);
+  color: #f7a8e0;
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+}
+
+@media (max-width: 400px) {
+  .contact-info-block {
+    width: 155px;
+    padding: 1.1rem 0.8rem;
+  }
+
+  .block-subtitle {
+    font-size: 0.65rem;
+  }
+}

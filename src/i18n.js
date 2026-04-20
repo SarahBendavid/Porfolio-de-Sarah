@@ -48,6 +48,19 @@ const resources = {
         projects: "Mes projets",
       },
 
+      contactPreview: {
+        title: "Titre",
+        block1: {
+          title: "Réponse rapide",
+          subtitle: "Délais de 48h",
+        },
+        block2: {
+          title: "Devis gratuit",
+          subtitle: "Sans aucun engagement",
+        },
+        btn: "Contactez moi",
+      },
+
       projets: {
         item: {
           4: {
@@ -131,6 +144,19 @@ const resources = {
       buttons: {
         cv: "Resume",
         projects: "My projects",
+      },
+
+      contactPreview: {
+        title: "Title",
+        block1: {
+          title: "Quick response",
+          subtitle: "Within 48 hours maximum",
+        },
+        block2: {
+          title: "Free quote",
+          subtitle: "No commitment required",
+        },
+        btn: "Contact me",
       },
 
       projets: {

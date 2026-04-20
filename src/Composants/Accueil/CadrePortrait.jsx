@@ -72,12 +72,15 @@ export default function HologramPortrait() {
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
           </filter>
+          <clipPath id="headerClip">
+            <rect x="0" y="0" width={VB_W} height={H_HEADER} />
+          </clipPath>
         </defs>
 
         {/* ── EN-TÊTE ── */}
-        {/* Fond de la barre */}
-        <rect x="1" y="1" width={VB_W - 2} height={H_HEADER - 2}
-              fill="url(#pGHeader)" rx="2"/>
+        {/* Fond de la barre — clipPath coupe le fond exactement à H_HEADER */}
+        <rect x="1" y="1" width={VB_W - 2} height={H_HEADER + 6}
+              fill="url(#pGHeader)" rx="7" clipPath="url(#headerClip)"/>
         {/* Ligne de séparation basse de l'en-tête */}
         <line x1="1" y1={H_HEADER} x2={VB_W - 1} y2={H_HEADER}
               stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.4" className="header-glow"/>
@@ -88,19 +91,19 @@ export default function HologramPortrait() {
 
         {/* ── CADRE PRINCIPAL (décalé de H_HEADER) ── */}
 
-        {/* Bordures latérales du header */}
-        <line x1="1"       y1="1" x2="1"       y2={H_HEADER + 1} stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.5"/>
-        <line x1={VB_W-1}  y1="1" x2={VB_W-1}  y2={H_HEADER + 1} stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.5"/>
+        {/* Bordures latérales du header (démarrent après l'arc rx=7) */}
+        <line x1="1"       y1="8" x2="1"       y2={H_HEADER + 1} stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.5"/>
+        <line x1={VB_W-1}  y1="8" x2={VB_W-1}  y2={H_HEADER + 1} stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.5"/>
 
         {/* Contour uniforme — rect unique */}
         {/* Halo glow derrière le contour */}
         <rect x="1" y="1" width={VB_W - 2} height={totalH - 2}
               fill="none" stroke="#c084fc" strokeWidth="4" strokeOpacity="0.6"
-              vectorEffect="non-scaling-stroke" filter="url(#glowFilter)"/>
+              rx="7" vectorEffect="non-scaling-stroke" filter="url(#glowFilter)"/>
         {/* Contour net par-dessus */}
         <rect x="1" y="1" width={VB_W - 2} height={totalH - 2}
               fill="none" stroke="#c084fc" strokeWidth="2" strokeOpacity="0.5"
-              vectorEffect="non-scaling-stroke"/>
+              rx="7" vectorEffect="non-scaling-stroke"/>
 
         {/* Bordure haute du cadre (entre en-tête et image) */}
         <line x1="1" y1={H_HEADER + 1} x2={VB_W - 1} y2={H_HEADER + 1}

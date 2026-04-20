@@ -4,6 +4,7 @@ import "flag-icons/css/flag-icons.min.css";
 import BackgroundBody from "./Composants/BackgroundBody";
 import Accueil from "./Pages/Accueil.jsx";
 import Projets from "./Pages/Projets.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 import MentionsLegales from "./Pages/Mentions-legales.jsx";
 import Confidentialite from "./Pages/Confidentialite.jsx";
@@ -25,6 +26,7 @@ function App() {
     
       <Route path="/" element={<Accueil />} />
       <Route path="/projets" element={<Projets />} />
+      <Route path="/contact" element={<Contact />} />
 
 
       {/* Pages légales */}

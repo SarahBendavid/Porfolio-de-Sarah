@@ -1,5 +1,6 @@
 .accueil-page .header,
-.projet-page .header {
+.projet-page .header,
+.contact-page .header {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -91,7 +92,7 @@ h1, h2, h3, p {
   font-size: 1.6rem;
   font-style: italic;
   text-align: center;
-  color: #f7a8e0;
+  color: #c084fc;
 }
 
 @media (max-width: 950px) {

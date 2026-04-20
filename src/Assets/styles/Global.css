@@ -11,9 +11,10 @@ html, body, #root {
 }
 
 .accueil-page,
-.projet-page {
+.projet-page,
+.contact-page {
   color: rgb(243, 162, 124);
-  position: relative; 
+  position: relative;
   overflow-x: hidden;
 }
 

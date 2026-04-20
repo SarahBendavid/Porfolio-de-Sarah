@@ -323,6 +323,10 @@
 
 @media (max-width: 500px) {
 
+  .cadre-img-bot {
+    margin-top: calc(-19vw + 81px);
+  }
+
   .cadre-skills-section {
     gap: 16%;
   }

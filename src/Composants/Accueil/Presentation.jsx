@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, Zap, FileText } from "lucide-react";
 
 import "../../Assets/styles/Main/Accueil/AccueilMain.css";
 import "../../Assets/styles/Main/Accueil/RightZone.css";
 import "../../Assets/styles/Main/Accueil/LeftZone.css";
+import "../../Assets/styles/Main/Accueil/ContactPreview.css";
 
 import CadreTop from "../../Assets/images/CadreTop.jpg";
 import CadreMidDesktop from "../../Assets/images/CadreMidDesktop.png";
@@ -61,6 +63,23 @@ export default function Presentation() {
             <img src={CadreBot} className="cadre-img-bot" alt="" aria-hidden="true" />
             <HologramPortrait />
           </div>
+          <div className="contact-preview">
+            <h3 className="contact-preview-title">{t("contactPreview.title")}</h3>
+            <div className="contact-info-blocks">
+              <div className="contact-info-block">
+                <Zap className="block-icon" />
+                <span className="block-title">{t("contactPreview.block1.title")}</span>
+                <span className="block-subtitle">{t("contactPreview.block1.subtitle")}</span>
+              </div>
+              <div className="contact-info-block">
+                <FileText className="block-icon" />
+                <span className="block-title">{t("contactPreview.block2.title")}</span>
+                <span className="block-subtitle">{t("contactPreview.block2.subtitle")}</span>
+              </div>
+            </div>
+            <Link to="/contact" className="contact-me-btn">{t("contactPreview.btn")}</Link>
+          </div>
+
           <div className="buttons">
             <a 
               href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
