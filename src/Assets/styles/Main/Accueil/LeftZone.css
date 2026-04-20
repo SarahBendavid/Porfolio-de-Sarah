@@ -309,6 +309,10 @@
   .cadre-skills-section {
      gap: 17%;
   }
+
+  .cadre-img-bot {
+    margin-top: calc(-19vw + 86px);
+  }
 }
 
 @media (max-width: 520px) {
@@ -334,9 +338,65 @@
   }
 }
 
-@media (max-width: 450px) {
+.writer-break {
+  display: none;
+}
+
+@media (max-width: 460px) {
+  .skill-row:nth-child(2) .skill-text {
+    display: block;
+  }
+
+  .skill-row:nth-child(2) .skill-title::after {
+    content: " \2014  ";
+  }
+
+  .skill-row:nth-child(2) .skill-subtitle {
+    display: inline;
+    white-space: normal;
+  }
+
+  .writer-break {
+    display: inline;
+  }
+}
+
+@media (max-width: 455px) {
   .cadre-skills-section {
-    gap: 15%;
+    gap: 14%;
+  }
+}
+
+@media (max-width: 440px) {
+  .cadre-skills-section {
+     gap: 13%;
+  }
+}
+
+@media (max-width: 425px) {
+  .cadre-skills-section {
+     gap: 12%;
+  }
+}
+
+@media (max-width: 405px) {
+
+  .cadre-skills-section {
+    gap: 11%;
+  }
+  .skill-subtitle {
+    font-size:clamp(12px, calc(8px + 0.5vw), 14px); 
+  }
+}
+
+@media (max-width: 390px) {
+
+  .cadre-skills-section {
+    gap: 12%;
+  }
+  
+  .skill-title {
+    font-size: clamp(0.8rem, 2.5vw, 2rem);
   }
 }
 

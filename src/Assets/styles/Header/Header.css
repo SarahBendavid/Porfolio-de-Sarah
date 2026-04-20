@@ -91,7 +91,7 @@ h1, h2, h3, p {
   font-size: 1.6rem;
   font-style: italic;
   text-align: center;
-  color: #c084fc;
+  color: #f7a8e0;
 }
 
 @media (max-width: 950px) {
@@ -142,6 +142,7 @@ h1, h2, h3, p {
   }
   .accueil-page header .titre3 {
     font-size: 1.1rem;
+    font-weight: 300;
   }
 }
 
@@ -154,7 +155,7 @@ h1, h2, h3, p {
 @media (max-width: 400px) {
 
   .accueil-page h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .accueil-page header h2 {
     font-size: 3.2vw;

@@ -43,7 +43,11 @@ export default function Presentation() {
                 <div className="skill-row">
                   <div className="skill-text">
                     <span className="skill-title">{t("skills.writer.title")}</span>
-                    <span className="skill-subtitle">{t("skills.writer.subtitle")}</span>
+                    <span className="skill-subtitle">
+                      {t("skills.writer.subtitlePart1")}
+                      <br className="writer-break" />
+                      {t("skills.writer.subtitlePart2")}
+                    </span>
                   </div>
                 </div>
                 <div className="skill-row">

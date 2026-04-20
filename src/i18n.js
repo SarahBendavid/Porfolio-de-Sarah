@@ -29,7 +29,8 @@ const resources = {
         },
         writer: {
           title: "Rédactrice web",
-          subtitle: "La qualité du contenu réside dans le choix des mots"
+          subtitlePart1: "La qualité du contenu",
+          subtitlePart2: "réside dans le choix des mots."
         },
         psycho: {
           title: "Psychologue",
@@ -114,7 +115,8 @@ const resources = {
         },
         writer: {
           title: "Web Writer",
-          subtitle: "Quality content lies in the choice of words"
+          subtitlePart1: "Quality content",
+          subtitlePart2: "lies in the choice of words."
         },
         psycho: {
           title: "Psychologist",
