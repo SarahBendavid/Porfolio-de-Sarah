@@ -135,14 +135,14 @@ h1, h2, h3, p {
 
 @media (max-width: 550px) {
   .accueil-page h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .accueil-page header h2 {
     font-size: 0.9rem;
     font-weight: bold;
   }
   .accueil-page header .titre3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
   }
 }

@@ -1,3 +1,46 @@
+.work-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.8rem 1rem 0.5rem;
+}
+
+.work-section-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-btn {
+  background: #f7a8e0;
+  border: 1px solid #f7a8e0;
+  color: black;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.55rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 110px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.action-btn:hover {
+  background: #c084fc;
+  border-color: #c084fc;
+  color: black;
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.35);
+}
+
 .contact-preview {
   width: 100%;
   display: flex;
@@ -6,6 +49,7 @@
   gap: 1.4rem;
   padding: 2rem 1rem 1rem;
 }
+
 
 .contact-preview-title {
   font-family: 'Orbitron', sans-serif;
@@ -51,7 +95,7 @@
   gap: 0.5rem;
   text-align: center;
   width: 175px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(12px);
   animation: blockGlow 3s ease-in-out infinite;
   transition: border-color 0.2s, background 0.2s;
 }
@@ -75,7 +119,7 @@
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
-  color: #f7a8e0;
+  color: white;
   letter-spacing: 1px;
   white-space: nowrap;
 }
@@ -88,24 +132,48 @@
 }
 
 .contact-me-btn {
-  background: none;
-  border: 1px solid #c084fc;
-  color: #c084fc;
+  background: #f7a8e0;
+  border: 1px solid #f7a8e0;
+  color: black;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 0.55rem 1.8rem;
+  padding: 0.55rem calc(1.8rem - 2px) 0.55rem 1.8rem;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact-me-btn:hover {
-  background: rgba(192, 132, 252, 0.12);
-  color: #f7a8e0;
-  box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+  background: #c084fc;
+  border-color: #c084fc;
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.35);
+}
+
+@media (max-width: 630px) {
+  .action-btn {
+    width: 90px;
+    padding: 0.4rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .contact-preview-title {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .contact-me-btn {
+    padding: 0.45rem calc(1rem - 2px) 0.45rem 1rem;
+    font-size: 0.7rem;
+    width: 160px;
+  }
 }
 
 @media (max-width: 400px) {

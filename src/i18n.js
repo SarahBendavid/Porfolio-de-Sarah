@@ -45,11 +45,15 @@ const resources = {
 
       buttons: {
         cv: "CV",
-        projects: "Mes projets",
+        projects: "Projets",
+      },
+
+      workSection: {
+        title: "Découvrez mon parcours...",
       },
 
       contactPreview: {
-        title: "Titre",
+        title: "Travaillons ensemble !",
         block1: {
           title: "Réponse rapide",
           subtitle: "Délais de 48h",
@@ -143,11 +147,15 @@ const resources = {
       },
       buttons: {
         cv: "Resume",
-        projects: "My projects",
+        projects: "Projects",
+      },
+
+      workSection: {
+        title: "Discover my journey...",
       },
 
       contactPreview: {
-        title: "Title",
+        title: "Let's work together!",
         block1: {
           title: "Quick response",
           subtitle: "Within 48 hours maximum",

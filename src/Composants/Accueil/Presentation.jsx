@@ -63,6 +63,22 @@ export default function Presentation() {
             <img src={CadreBot} className="cadre-img-bot" alt="" aria-hidden="true" />
             <HologramPortrait />
           </div>
+          <div className="work-section">
+            <h3 className="contact-preview-title">{t("workSection.title")}</h3>
+            <div className="work-section-buttons">
+              <a
+                href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
+                download
+                className="action-btn">
+                <Download size={14} />
+                {t("buttons.cv")}
+              </a>
+              <Link to="/projets" className="action-btn">
+                {t("buttons.projects")}
+              </Link>
+            </div>
+          </div>
+
           <div className="contact-preview">
             <h3 className="contact-preview-title">{t("contactPreview.title")}</h3>
             <div className="contact-info-blocks">
@@ -80,15 +96,6 @@ export default function Presentation() {
             <Link to="/contact" className="contact-me-btn">{t("contactPreview.btn")}</Link>
           </div>
 
-          <div className="buttons">
-            <a 
-              href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
-              download
-              className="btn cv-btn">
-              <Download className="download-icon" />
-              {t("buttons.cv")}
-            </a>
-          </div>
         </div>  
 
         <div className="rightZone">
