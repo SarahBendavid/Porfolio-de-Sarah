@@ -2,7 +2,7 @@
   background: none;
   color: #f7a8e0;
   border: none;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 6px 10px;
   -webkit-tap-highlight-color: transparent;
@@ -71,12 +71,11 @@
 
 @media (max-width: 768px) {
   .language-switcher .btn {
-    font-size: 14px;
     padding: 4px 8px;
   }
 }
 
-@media (max-width: 635px) {
+@media (max-width: 450px) {
   .language-switcher .btn {
     font-size: 12px;
     padding: 3px 7px;

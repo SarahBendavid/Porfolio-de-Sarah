@@ -64,10 +64,10 @@ h1, h2, h3, p {
 .accueil-page h1 {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 5px;
-  color: #c084fc;
+  color: white;
   text-shadow:
-    0 0 12px rgba(192, 132, 252, 0.5),
-    0 0 30px rgba(168, 85, 247, 0.3);
+    0 0 12px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.2);
   position: relative;
   top: -10px;
 }
