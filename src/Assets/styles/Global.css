@@ -4,6 +4,7 @@ html, body, #root {
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: black;
 }
 
 *, *::before, *::after {

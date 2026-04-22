@@ -79,13 +79,13 @@ h1, h2, h3, p {
   font-size: 1.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #f7a8e0;
+  color: #c084fc;
   text-shadow:
-    0 0 6px rgba(247, 168, 224, 1),
-    0 0 15px rgba(247, 168, 224, 0.95),
-    0 0 35px rgba(247, 168, 224, 0.75),
-    0 0 70px rgba(247, 168, 224, 0.45),
-    0 0 120px rgba(220, 130, 200, 0.25);
+    0 0 6px rgba(192, 132, 252, 1),
+    0 0 15px rgba(192, 132, 252, 0.95),
+    0 0 35px rgba(192, 132, 252, 0.75),
+    0 0 70px rgba(168, 85, 247, 0.55),
+    0 0 120px rgba(124, 58, 237, 0.35);
 }
 
 .accueil-page header .titre3,
@@ -95,6 +95,7 @@ h1, h2, h3, p {
   font-style: italic;
   text-align: center;
   color: white;
+  font-weight: 200;
 }
 
 .accueil-page header .titre3 .ampersand,
@@ -150,8 +151,6 @@ h1, h2, h3, p {
   }
   .accueil-page header .titre3 {
     font-size: 0.8rem;
-    
-    font-weight: 200;
   }
 }
 
@@ -171,6 +170,6 @@ h1, h2, h3, p {
     white-space: nowrap;
   }
   .accueil-page header .titre3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

@@ -15,8 +15,8 @@
 }
 
 .action-btn {
-  background: #f7a8e0;
-  border: 1px solid #f7a8e0;
+  background: #c084fc;
+  border: 1px solid #c084fc;
   color: black;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -98,7 +98,7 @@
 }
 
 .contact-info-block {
-  background: linear-gradient(135deg, rgba(8, 3, 20, 0.96) 0%, rgba(28, 6, 52, 0.96) 100%);
+  background: linear-gradient(135deg, rgba(12, 5, 28, 0.97) 0%, rgba(35, 10, 62, 0.97) 100%);
   border: 1.5px solid rgba(192, 132, 252, 0.5);
   border-radius: 12px;
   padding: 1.4rem 1.2rem;
@@ -108,10 +108,9 @@
   gap: 0.5rem;
   text-align: center;
   width: 175px;
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   animation: blockGlow 3s ease-in-out infinite;
-  will-change: transform;
   transition: border-color 0.2s, background 0.2s;
 }
 
@@ -119,10 +118,6 @@
   animation-delay: 1.5s;
 }
 
-.contact-info-block:hover {
-  background: rgba(192, 132, 252, 0.07);
-  border-color: rgba(192, 132, 252, 0.8);
-}
 
 .block-icon {
   font-size: 1.5rem;
@@ -147,8 +142,8 @@
 }
 
 .contact-me-btn {
-  background: #f7a8e0;
-  border: 1px solid #f7a8e0;
+  background: #c084fc;
+  border: 1px solid #c084fc;
   color: black;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -193,6 +188,7 @@
 
 @media (max-width: 768px) {
   .contact-info-block {
+    background: linear-gradient(135deg, rgba(18, 7, 42, 0.98) 0%, rgba(45, 13, 78, 0.98) 100%);
     animation: blockGlowMobile 3s ease-in-out infinite;
     box-shadow:
       0 0 6px rgba(192, 132, 252, 0.35),
