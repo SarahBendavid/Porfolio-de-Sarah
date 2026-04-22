@@ -5,6 +5,10 @@ const styles = `
     0%, 100% { filter: drop-shadow(0 0 3px #a855f7) drop-shadow(0 0 7px #7c3aed); }
     50%       { filter: drop-shadow(0 0 6px #c084fc) drop-shadow(0 0 14px #a855f7); }
   }
+  @keyframes pulseOpacity {
+    0%, 100% { opacity: 0.75; }
+    50%       { opacity: 1; }
+  }
   @keyframes blinkDotP {
     0%, 49%, 100% { opacity: 1; }
     50%, 99%       { opacity: 0; }
@@ -22,6 +26,14 @@ const styles = `
   .dot-p2         { animation: blinkDotP 1.5s infinite 0.5s; }
   .dot-p3         { animation: blinkDotP 1.5s infinite 1s; }
   .header-glow    { animation: headerGlow 3s ease-in-out infinite; }
+
+  @media (max-width: 768px) {
+    .frame-portrait { filter: drop-shadow(0 0 6px #9333ea); }
+    .corner-p1      { animation: pulseOpacity 2s ease-in-out infinite; filter: drop-shadow(0 0 3px #a855f7); }
+    .corner-p2      { animation: pulseOpacity 2s ease-in-out infinite 0.5s; filter: drop-shadow(0 0 3px #a855f7); }
+    .corner-p3      { animation: pulseOpacity 2s ease-in-out infinite 1s; filter: drop-shadow(0 0 3px #a855f7); }
+    .corner-p4      { animation: pulseOpacity 2s ease-in-out infinite 1.5s; filter: drop-shadow(0 0 3px #a855f7); }
+  }
 
   .frame-svg-overlay {
     position: absolute;

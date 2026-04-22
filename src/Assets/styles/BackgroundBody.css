@@ -1,18 +1,12 @@
-.bg-image {
+.bg-video {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
   pointer-events: none;
-  background-image: url("/src/Assets/images/Background.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center right;
-}
-
-
-@media (max-width: 650px) {
-  .bg-image {
-    background-image: url("/src/Assets/images/BackgroundMobile.webp");
-    background-position: top center;
-  }
+  will-change: transform;
+  transform: translateZ(0);
 }

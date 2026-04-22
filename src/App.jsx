@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "flag-icons/css/flag-icons.min.css";
 
-import BackgroundBody from "./Composants/BackgroundBody";
+import BackgroundAnim from "./Composants/BackgroundAnim";
 import Accueil from "./Pages/Accueil.jsx";
 import Projets from "./Pages/Projets.jsx";
 import Contact from "./Pages/Contact.jsx";
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
 
-    <BackgroundBody />
+    <BackgroundAnim />
 
       <Routes>
     

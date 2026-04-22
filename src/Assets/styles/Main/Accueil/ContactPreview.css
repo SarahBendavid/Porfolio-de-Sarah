@@ -84,6 +84,11 @@
   }
 }
 
+@keyframes blockGlowMobile {
+  0%, 100% { opacity: 0.85; }
+  50%       { opacity: 1; }
+}
+
 .contact-info-block {
   background: rgba(255, 255, 255, 0.04);
   border: 1.5px solid rgba(192, 132, 252, 0.5);
@@ -97,6 +102,7 @@
   width: 175px;
   backdrop-filter: blur(12px);
   animation: blockGlow 3s ease-in-out infinite;
+  will-change: transform;
   transition: border-color 0.2s, background 0.2s;
 }
 
@@ -173,6 +179,16 @@
     padding: 0.45rem calc(1rem - 2px) 0.45rem 1rem;
     font-size: 0.7rem;
     width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-block {
+    backdrop-filter: none;
+    animation: blockGlowMobile 3s ease-in-out infinite;
+    box-shadow:
+      0 0 6px rgba(192, 132, 252, 0.35),
+      0 0 14px rgba(192, 132, 252, 0.15);
   }
 }
 
