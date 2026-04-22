@@ -64,11 +64,10 @@ h1, h2, h3, p {
 .accueil-page h1 {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 5px;
-  color: #c084fc;
+  color: white;
   text-shadow:
-    0 0 10px rgba(192, 132, 252, 0.7),
-    0 0 25px rgba(168, 85, 247, 0.5),
-    0 0 50px rgba(124, 58, 237, 0.3);
+    0 0 12px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.2);
   position: relative;
   top: -10px;
 }
@@ -80,20 +79,27 @@ h1, h2, h3, p {
   font-size: 1.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #f7a8e0;
   text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.95),
-    0 0 20px rgba(255, 255, 255, 0.7),
-    0 0 45px rgba(255, 255, 255, 0.4);
+    0 0 6px rgba(247, 168, 224, 1),
+    0 0 15px rgba(247, 168, 224, 0.95),
+    0 0 35px rgba(247, 168, 224, 0.75),
+    0 0 70px rgba(247, 168, 224, 0.45),
+    0 0 120px rgba(220, 130, 200, 0.25);
 }
 
 .accueil-page header .titre3,
 .projet-page header .titre3 {
-  font-family: 'Calibri', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.6rem;
   font-style: italic;
   text-align: center;
   color: white;
+}
+
+.accueil-page header .titre3 .ampersand,
+.projet-page header .titre3 .ampersand {
+  font-family: 'Calibri', sans-serif;
 }
 
 @media (max-width: 950px) {
@@ -143,8 +149,9 @@ h1, h2, h3, p {
     font-weight: bold;
   }
   .accueil-page header .titre3 {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 0.8rem;
+    
+    font-weight: 200;
   }
 }
 

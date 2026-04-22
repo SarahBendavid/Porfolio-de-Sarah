@@ -110,16 +110,16 @@ export default function HologramPortrait() {
         {/* Contour uniforme — rect unique */}
         {/* Halo glow derrière le contour */}
         <rect x="1" y="1" width={VB_W - 2} height={totalH - 2}
-              fill="none" stroke="#c084fc" strokeWidth="4" strokeOpacity="0.6"
+              fill="none" stroke="#c084fc" strokeWidth="2" strokeOpacity="0.5"
               rx="7" vectorEffect="non-scaling-stroke" filter="url(#glowFilter)"/>
         {/* Contour net par-dessus */}
         <rect x="1" y="1" width={VB_W - 2} height={totalH - 2}
-              fill="none" stroke="#c084fc" strokeWidth="2" strokeOpacity="0.5"
+              fill="none" stroke="#c084fc" strokeWidth="1.2" strokeOpacity="0.5"
               rx="7" vectorEffect="non-scaling-stroke"/>
 
         {/* Bordure haute du cadre (entre en-tête et image) */}
         <line x1="1" y1={H_HEADER + 1} x2={VB_W - 1} y2={H_HEADER + 1}
-              stroke="#c084fc" strokeWidth="2" strokeOpacity="0.5"/>
+              stroke="#c084fc" strokeWidth="1.2" strokeOpacity="0.5"/>
 
       </svg>
     </>

@@ -28,12 +28,12 @@
   filter: none;
   mix-blend-mode: screen;
   will-change: transform;
-  animation: rotateNebula 120s linear 0s infinite normal none running;
+  animation: rotateNebula 15s linear 0s infinite alternate none running;
 }
 
 @keyframes rotateNebula {
   from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
+  to   { transform: translate(-50%, -50%) rotate(-45deg); }
 }
 
 .bg-corners {
@@ -45,5 +45,5 @@
   left: 50%;
   pointer-events: none;
   will-change: transform;
-  animation: rotateNebula 120s linear 0s infinite normal none running;
+  animation: rotateNebula 15s linear 0s infinite alternate none running;
 }
