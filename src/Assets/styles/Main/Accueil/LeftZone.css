@@ -105,45 +105,6 @@
   font-style: italic;
 }
 
-.buttons {
-  position: absolute;
-  bottom: 37%;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  gap: clamp(0.5rem, 2vw, 2rem);
-}
-
-.buttons .btn {
-  padding: clamp(0.15rem, 0.4vw, 0.3rem) clamp(0.3rem, 0.8vw, 0.7rem);
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: clamp(0.5rem, 0.85vw, 0.85rem);
-  font-weight: bold;
-  background-color: rgb(169, 85, 180);
-  color: black;
-  border: none;
-  display: flex;
-  gap: clamp(3px, 0.5vw, 8px);
-  cursor: pointer;
-}
-
-.buttons .cv-btn {
-  padding: clamp(0.25rem, 0.55vw, 0.45rem) clamp(0.8rem, 1.5vw, 1.5rem);
-  border-radius: 5px;
-  background-color: #c084fc;
-  align-items: center;
-  gap: clamp(5px, 0.6vw, 10px);
-  box-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
-}
-
-.buttons .cv-btn:hover {
-  transform: translateY(3px) scale(0.98);
-  color: black;
-}
-
 .buttons .download-icon {
   width: clamp(10px, 1vw, 18px);
   height: clamp(10px, 1vw, 18px);
