@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "bootstrap": "^5.3.8",
     "flag-icons": "^7.5.0",
     "i18next": "^25.8.5",
