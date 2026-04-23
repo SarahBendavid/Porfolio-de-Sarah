@@ -23,7 +23,7 @@
   top: 50%;
   left: 50%;
   z-index: 3;
-  background: url("/src/Assets/images/nebula.jpg") center/cover no-repeat;
+  background: url("/src/Assets/images/nebula.png") center/cover no-repeat;
   opacity: 1;
   filter: none;
   mix-blend-mode: screen;
