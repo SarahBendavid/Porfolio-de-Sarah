@@ -15,7 +15,8 @@
 }
 
 .action-btn {
-  background: #9d40d5;
+  background: linear-gradient(135deg, #5a28b8 0%, #7e3dd6 100%);
+  border: 1px solid rgba(180, 110, 255, 0.5);
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -30,7 +31,7 @@
   justify-content: center;
   gap: 6px;
   width: 110px;
-  transition: background 0.2s, 
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .action-btn:hover {
@@ -195,6 +196,12 @@
     padding: 0.45rem calc(1rem - 2px) 0.45rem 1rem;
     font-size: 0.7rem;
     width: 160px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contact-me-btn {
+    margin-top: 0.3rem;
   }
 }
 
