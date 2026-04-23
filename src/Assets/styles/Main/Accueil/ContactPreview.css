@@ -40,6 +40,12 @@
   box-shadow: 0 0 10px rgba(192, 132, 252, 0.35);
 }
 
+.action-btn:active {
+  transform: translateY(2px) scale(0.96);
+  box-shadow: 0 0 4px rgba(192, 132, 252, 0.2);
+  filter: brightness(0.85);
+}
+
 .contact-preview {
   width: 100%;
   display: flex;
@@ -141,7 +147,7 @@
 }
 
 .contact-me-btn {
-  background: #ab3f7a;
+  background: #bf4a8a;
   border: 1px solid white;
   color: white;
   font-family: 'Orbitron', sans-serif;
@@ -155,12 +161,19 @@
   display: inline-block;
   text-align: center;
   transition: background 0.2s;
+  margin-top: 4%;
 }
 
 .contact-me-btn:hover {
   background: #c084fc;
   border-color: #c084fc;
   box-shadow: 0 0 10px rgba(192, 132, 252, 0.35);
+}
+
+.contact-me-btn:active {
+  transform: translateY(2px) scale(0.96);
+  box-shadow: 0 0 4px rgba(192, 132, 252, 0.2);
+  filter: brightness(0.85);
 }
 
 @media (max-width: 630px) {
