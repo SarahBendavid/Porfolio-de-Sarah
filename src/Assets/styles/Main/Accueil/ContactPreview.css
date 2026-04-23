@@ -16,6 +16,7 @@
 
 .action-btn {
   background: #57008b;
+  border: 1px solid white;
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -148,6 +149,7 @@
 
 .contact-me-btn {
   background: #bf4a8a;
+  border: 1px solid white;
   color: black;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
