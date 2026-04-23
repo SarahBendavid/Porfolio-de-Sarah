@@ -15,8 +15,7 @@
 }
 
 .action-btn {
-  background: #4d2279;
-  border: 1px solid #4d2279;;
+  background: #884fc3;
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -31,7 +30,7 @@
   justify-content: center;
   gap: 6px;
   width: 110px;
-  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, 
 }
 
 .action-btn:hover {
@@ -142,8 +141,8 @@
 }
 
 .contact-me-btn {
-  background: #d17eba;
-  border: 1px solid #f7a8e0;
+  background: #e15ebd;
+  border: 1px solid white;
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
@@ -155,7 +154,7 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
-  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s;
 }
 
 .contact-me-btn:hover {
