@@ -11,7 +11,7 @@
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-  color: #bd4a8a;
+  color: #f7a8e0;
   -webkit-tap-highlight-color: transparent;
   transition: color 0.15s, opacity 0.2s;
 }
@@ -45,7 +45,7 @@
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #ab3f7a;
+  background-color: #f7a8e0;
   border-radius: 1px;
   transition: transform 0.25s, opacity 0.25s;
 }
@@ -88,7 +88,7 @@
   font-weight: bold;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 4px;
-  color: #9b5de5;
+  color: #f7a8e0;
   -webkit-tap-highlight-color: transparent;
   transition: color 0.15s, opacity 0.2s;
 }
