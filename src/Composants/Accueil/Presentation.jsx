@@ -63,6 +63,13 @@ export default function Presentation() {
             <img src={CadreBot} className="cadre-img-bot" alt="" aria-hidden="true" />
             <HologramPortrait />
           </div>
+        </div>
+
+        <div className="rightZone">
+          <img src={PhotoPC} className="photoPC" alt="" aria-hidden="true" />
+        </div>
+
+        <div className="bottom-section">
           <div className="work-section">
             <h3 className="contact-preview-title">{t("workSection.title")}</h3>
             <div className="work-section-buttons">
@@ -95,11 +102,6 @@ export default function Presentation() {
             </div>
             <Link to="/contact" className="contact-me-btn">{t("contactPreview.btn")}</Link>
           </div>
-
-        </div>  
-
-        <div className="rightZone">
-          <img src={PhotoPC} className="photoPC" alt="" aria-hidden="true" />
         </div>
 
       </section>
