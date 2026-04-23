@@ -30,7 +30,8 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  width: 110px;
+  min-width: 110px;
+  white-space: nowrap;
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -148,7 +149,7 @@
 }
 
 .contact-me-btn {
-  background: #e775b3;
+  background: #b1437f;
   border: 1px solid white;
   color: white;
   font-family: 'Orbitron', sans-serif;
