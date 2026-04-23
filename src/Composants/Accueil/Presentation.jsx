@@ -69,42 +69,43 @@ export default function Presentation() {
           <img src={PhotoPC} className="photoPC" alt="" aria-hidden="true" />
         </div>
 
-        <div className="bottom-section">
-          <div className="work-section">
-            <h3 className="contact-preview-title">{t("workSection.title")}</h3>
-            <div className="work-section-buttons">
-              <a
-                href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
-                download
-                className="action-btn">
-                <Download size={14} />
-                {t("buttons.cv")}
-              </a>
-              <Link to="/projets" className="action-btn">
-                {t("buttons.projects")}
-              </Link>
-            </div>
-          </div>
+      </section>
 
-          <div className="contact-preview">
-            <h3 className="contact-preview-title">{t("contactPreview.title")}</h3>
-            <div className="contact-info-blocks">
-              <div className="contact-info-block">
-                <Zap className="block-icon" />
-                <span className="block-title">{t("contactPreview.block1.title")}</span>
-                <span className="block-subtitle">{t("contactPreview.block1.subtitle")}</span>
-              </div>
-              <div className="contact-info-block">
-                <FileText className="block-icon" />
-                <span className="block-title">{t("contactPreview.block2.title")}</span>
-                <span className="block-subtitle">{t("contactPreview.block2.subtitle")}</span>
-              </div>
-            </div>
-            <Link to="/contact" className="contact-me-btn">{t("contactPreview.btn")}</Link>
+      <div className="bottom-section">
+        <div className="work-section">
+          <h3 className="contact-preview-title">{t("workSection.title")}</h3>
+          <div className="work-section-buttons">
+            <a
+              href={`${import.meta.env.BASE_URL}${i18n.language === "fr" ? "CVFR.pdf" : "CVEN.pdf"}`}
+              download
+              className="action-btn">
+              <Download size={14} />
+              {t("buttons.cv")}
+            </a>
+            <Link to="/projets" className="action-btn">
+              {t("buttons.projects")}
+            </Link>
           </div>
         </div>
 
-      </section>
+        <div className="contact-preview">
+          <h3 className="contact-preview-title">{t("contactPreview.title")}</h3>
+          <div className="contact-info-blocks">
+            <div className="contact-info-block">
+              <Zap className="block-icon" />
+              <span className="block-title">{t("contactPreview.block1.title")}</span>
+              <span className="block-subtitle">{t("contactPreview.block1.subtitle")}</span>
+            </div>
+            <div className="contact-info-block">
+              <FileText className="block-icon" />
+              <span className="block-title">{t("contactPreview.block2.title")}</span>
+              <span className="block-subtitle">{t("contactPreview.block2.subtitle")}</span>
+            </div>
+          </div>
+          <Link to="/contact" className="contact-me-btn">{t("contactPreview.btn")}</Link>
+        </div>
+      </div>
+
     </main>
   );
 }
