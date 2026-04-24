@@ -8,6 +8,8 @@ const SERVICE_ID  = "service_95trf8k";
 const TEMPLATE_ID = "template_ptlcmgr";
 const PUBLIC_KEY  = "lEMLCWBEuwStDRbO5";
 
+emailjs.init({ publicKey: PUBLIC_KEY });
+
 export default function Contact() {
   const { t } = useTranslation();
   const formRef = useRef(null);
@@ -23,7 +25,7 @@ export default function Contact() {
         username: data.get("username"),
         email:    data.get("email"),
         message:  data.get("message"),
-      }, PUBLIC_KEY)
+      })
       .then(() => {
         setStatus("success");
         formRef.current.reset();
