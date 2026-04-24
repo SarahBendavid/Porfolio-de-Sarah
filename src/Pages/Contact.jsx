@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import { Mail, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import Header from "../Composants/Accueil/Header.jsx";
 import "../Assets/styles/Main/Contact/ContactMain.css";
 
@@ -30,10 +32,7 @@ export default function Contact() {
         setStatus("success");
         formRef.current.reset();
       })
-      .catch((error) => {
-        console.error("❌ EmailJS error:", error);
-        setStatus("error");
-      });
+      .catch(() => setStatus("error"));
   };
 
   return (
@@ -97,6 +96,39 @@ export default function Contact() {
             )}
           </form>
         </div>
+
+        <div className="contact-card contact-info-card">
+          <div className="contact-info-row">
+            <Mail className="contact-info-icon" size={18} />
+            <span className="contact-info-text">sarah.laura.bendavid@gmail.com</span>
+          </div>
+          <div className="contact-info-row">
+            <Phone className="contact-info-icon" size={18} />
+            <span className="contact-info-text">{t("contact.phone")}</span>
+          </div>
+        </div>
+
+        <a
+          href={`https://wa.me/${t("contact.whatsappNumber")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+          aria-label="WhatsApp"
+        >
+          <svg className="whatsapp-ring-svg" viewBox="0 0 160 160" aria-hidden="true">
+            <defs>
+              <path id="wa-circle" d="M 80,80 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" />
+            </defs>
+            <circle cx="80" cy="80" r="58" fill="none" stroke="rgba(247,168,224,0.2)" strokeWidth="1" />
+            <text className="whatsapp-ring-text">
+              <textPath href="#wa-circle">WHATSAPP • WHATSAPP • WHATSAPP • </textPath>
+            </text>
+          </svg>
+          <div className="whatsapp-icon-center">
+            <FaWhatsapp className="whatsapp-icon" />
+          </div>
+        </a>
+
       </main>
     </div>
   );

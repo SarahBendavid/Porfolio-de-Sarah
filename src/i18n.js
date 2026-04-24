@@ -39,6 +39,8 @@ const resources = {
       },
       description: {
         title: "Qui suis-je ?",
+        tagline1: "Je conçois des interfaces à votre image —",
+        tagline2: "car j'ai d'abord appris à vous comprendre...",
         textWithBr:
           "Développeuse certifiée et passionnée, je me suis interessée a la programmation car c'est un domaine vaste et en évolution constante, ce qui s'adapte parfaitement à ma soif de connaissance, et d'apprentissage. En effet, il y a toujours un nouveau langage à apprendre, un nouveau problème à résoudre...  De plus, etant très logique et dotée de la fibre artistique, la création de projets me permet donc de m'épanouir sous tous les angles : le front-end stimule ma créativité, et le back-end stimule ma logique. J'ai donc d'abord appris le codage en autodidacte, avant de me lancer dans une reconversion professionnelle complète.  <br /><br /> Polyvalente, je maîtrise les différentes étapes techniques de la création d'un site. Ajoutons à cela, les qualités acquises lors de ma formation initial en sciences humaines,  qui me procurent une meilleure compréhension des besoins-utilisateurs. Cela fait de moi, une développeuse complète, qui saura vous satisfaire. Si vous en doutez encore, je vous invite à découvrir mon CV et mes projets.",
       },
@@ -107,16 +109,18 @@ const resources = {
 
       contact: {
         pageTitle: "Contactez-moi",
-        name: "Votre nom",
+        name: "Nom",
         placeholderName: "Prénom Nom",
-        email: "Votre email",
-        message: "Votre message",
+        email: "Email",
+        message: "Message",
         placeholderEmail: "exemple@email.com",
         placeholderMessage: "Votre message...",
         send: "Envoyer",
         sending: "Envoi en cours...",
         success: "Message envoyé ! Je vous répondrai dans les plus brefs délais.",
         error: "Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.",
+        phone: "0033 7 65 14 92 65",
+        whatsappNumber: "33765149265",
       },
     },
   },
@@ -155,7 +159,9 @@ const resources = {
         }
       },
       description: {
-        title: "Who am I?",
+        title: "Who am I ?",
+        tagline1: "I design interfaces tailored to you —",
+        tagline2: "because I first learned to understand you...",
         textWithBr:
           "Originally trained with a degree in psychology, I was always intrigued throughout my studies by the analogy between the human brain and the workings of a computer. However, being a perfectionist and striving for accuracy, I turned away from the study of human behavior to pursue a more precise science. <br /><br /> Why programming ? <br /><br /> To begin with, it's a vast and constantly evolving field, which perfectly suits my thirst for knowledge and learning. In programming, there's always a new language to learn, a new problem to solve... Furthermore, I'm a very logical person with an artistic flair. Creating projects allows me to flourish in every way: the front-end stimulates my creativity, and the back-end stimulates my logic. Add to that the skills I acquired in the humanities, which give me a better understanding of user needs, and you have a well-rounded developer who will be able to meet your expectations. If you still have any doubts, I invite you to take a look at my CV and my projects.",
       },
@@ -226,16 +232,18 @@ const resources = {
 
       contact: {
         pageTitle: "Contact me",
-        name: "Your name",
+        name: "Name",
         placeholderName: "First Last",
-        email: "Your email",
-        message: "Your message",
+        email: "Email",
+        message: "Message",
         placeholderEmail: "example@email.com",
         placeholderMessage: "Your message...",
         send: "Send",
         sending: "Sending...",
         success: "Message sent! I'll get back to you as soon as possible.",
         error: "Something went wrong. Please try again or contact me directly by email.",
+        phone: "00972 537 889 212",
+        whatsappNumber: "972537889212",
       },
     },
   },

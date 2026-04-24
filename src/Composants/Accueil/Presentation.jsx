@@ -1,18 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Download, Zap, FileText } from "lucide-react";
+import { Download, Zap, FileText, SquareCode, PenTool, Brain } from "lucide-react";
 
 import "../../Assets/styles/Main/Accueil/AccueilMain.css";
 import "../../Assets/styles/Main/Accueil/RightZone.css";
 import "../../Assets/styles/Main/Accueil/LeftZone.css";
 import "../../Assets/styles/Main/Accueil/ContactPreview.css";
 
-import CadreTop from "../../Assets/images/CadreTop.jpg";
-import CadreMidDesktop from "../../Assets/images/CadreMidDesktop.png";
-import CadreMidMobile from "../../Assets/images/CadreMidMobile.png";
-import CadreBot from "../../Assets/images/CadreBot.jpg";
 import HologramPortrait from "./CadrePortrait";
-import PhotoPC from "../../Assets/images/PhotoPC.png";
+import PhotoPC     from "../../Assets/images/PhotoPC.png";
 import PhotoMobile from "../../Assets/images/PhotoMobile.png";
 
 export default function Presentation() {
@@ -28,39 +24,52 @@ export default function Presentation() {
           <img src={PhotoMobile} className="photo-mobile" alt="" aria-hidden="true" />
 
           <div className="cadre-wrapper">
-            <div style={{paddingTop:"9.2%"}}></div>
-            <img src={CadreTop} className="cadre-img-top" alt="" aria-hidden="true" />
-            <div className="cadre-mid-wrapper">
-              <picture>
-                <source media="(max-width: 670px)" srcSet={CadreMidMobile} />
-                <img src={CadreMidDesktop} style={{width:"100%", height:"auto", display:"block"}} alt="" aria-hidden="true" />
-              </picture>
-              <div className="cadre-skills-section">
-                <div className="skill-row">
-                  <div className="skill-text">
-                    <span className="skill-title">{t("skills.dev.title")}</span>
-                    <span className="skill-subtitle">{t("skills.dev.subtitle")}</span>
-                  </div>
+
+            <div className="cadre-top-section">
+              <h3 className="cadre-title">{t("description.title")}</h3>
+              <div className="cadre-title-line" aria-hidden="true" />
+            </div>
+
+            <div className={`cadre-skills-section${i18n.language === "en" ? " cadre-skills-en" : ""}`}>
+              <div className="skill-row">
+                <SquareCode className="skill-icon" aria-hidden="true" />
+                <div className="skill-text">
+                  <span className="skill-title">{t("skills.dev.title")}</span>
+                  <span className="skill-subtitle">{t("skills.dev.subtitle")}</span>
                 </div>
-                <div className="skill-row">
-                  <div className="skill-text">
-                    <span className="skill-title">{t("skills.writer.title")}</span>
-                    <span className="skill-subtitle">
-                      {t("skills.writer.subtitlePart1")}
-                      <br className="writer-break" />
-                      {t("skills.writer.subtitlePart2")}
-                    </span>
-                  </div>
+              </div>
+              <div className="skill-row">
+                <PenTool className="skill-icon" aria-hidden="true" />
+                <div className="skill-text">
+                  <span className="skill-title">{t("skills.writer.title")}</span>
+                  <span className="skill-subtitle">
+                    {t("skills.writer.subtitlePart1")}
+                    <br className="writer-break" />
+                    {t("skills.writer.subtitlePart2")}
+                  </span>
                 </div>
-                <div className="skill-row">
-                  <div className="skill-text">
-                    <span className="skill-title">{t("skills.psycho.title")}</span>
-                    <span className="skill-subtitle">{t("skills.psycho.subtitle")}</span>
-                  </div>
+              </div>
+              <div className="skill-row">
+                <Brain className="skill-icon" aria-hidden="true" />
+                <div className="skill-text">
+                  <span className="skill-title">{t("skills.psycho.title")}</span>
+                  <span className="skill-subtitle">{t("skills.psycho.subtitle")}</span>
                 </div>
               </div>
             </div>
-            <img src={CadreBot} className="cadre-img-bot" alt="" aria-hidden="true" />
+
+            <div className="cadre-bot-section">
+              <div className="cadre-bot-divider" aria-hidden="true" />
+              <div className="cadre-bot-line">
+                <span className="cadre-bot-dash" aria-hidden="true" />
+                <span className="cadre-bot-text">{t("description.tagline1")}</span>
+              </div>
+              <div className="cadre-bot-line cadre-bot-line--indent">
+                <span className="cadre-bot-dash" aria-hidden="true" />
+                <span className="cadre-bot-text">{t("description.tagline2")}</span>
+              </div>
+            </div>
+
             <HologramPortrait />
           </div>
         </div>

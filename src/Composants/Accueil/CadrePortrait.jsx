@@ -18,21 +18,21 @@ const styles = `
     50%       { opacity: 0.9; }
   }
   .frame-portrait { filter: drop-shadow(0 0 8px #9333ea) drop-shadow(0 0 20px #6d28d9); }
-  .corner-p1      { animation: pulseGlowP 2s ease-in-out infinite; }
-  .corner-p2      { animation: pulseGlowP 2s ease-in-out infinite 0.5s; }
-  .corner-p3      { animation: pulseGlowP 2s ease-in-out infinite 1s; }
-  .corner-p4      { animation: pulseGlowP 2s ease-in-out infinite 1.5s; }
-  .dot-p1         { animation: blinkDotP 1.5s infinite; }
-  .dot-p2         { animation: blinkDotP 1.5s infinite 0.5s; }
-  .dot-p3         { animation: blinkDotP 1.5s infinite 1s; }
-  .header-glow    { animation: headerGlow 3s ease-in-out infinite; }
+  .corner-p1      { animation: pulseGlowP 2s ease-in-out infinite; will-change: filter; }
+  .corner-p2      { animation: pulseGlowP 2s ease-in-out infinite 0.5s; will-change: filter; }
+  .corner-p3      { animation: pulseGlowP 2s ease-in-out infinite 1s; will-change: filter; }
+  .corner-p4      { animation: pulseGlowP 2s ease-in-out infinite 1.5s; will-change: filter; }
+  .dot-p1         { animation: blinkDotP 1.5s infinite; will-change: opacity; }
+  .dot-p2         { animation: blinkDotP 1.5s infinite 0.5s; will-change: opacity; }
+  .dot-p3         { animation: blinkDotP 1.5s infinite 1s; will-change: opacity; }
+  .header-glow    { animation: headerGlow 3s ease-in-out infinite; will-change: opacity; }
 
   @media (max-width: 768px) {
     .frame-portrait { filter: drop-shadow(0 0 6px #9333ea); }
-    .corner-p1      { animation: pulseOpacity 2s ease-in-out infinite; filter: drop-shadow(0 0 3px #a855f7); }
-    .corner-p2      { animation: pulseOpacity 2s ease-in-out infinite 0.5s; filter: drop-shadow(0 0 3px #a855f7); }
-    .corner-p3      { animation: pulseOpacity 2s ease-in-out infinite 1s; filter: drop-shadow(0 0 3px #a855f7); }
-    .corner-p4      { animation: pulseOpacity 2s ease-in-out infinite 1.5s; filter: drop-shadow(0 0 3px #a855f7); }
+    .corner-p1      { animation: pulseOpacity 2s ease-in-out infinite; filter: drop-shadow(0 0 3px #a855f7); will-change: opacity; }
+    .corner-p2      { animation: pulseOpacity 2s ease-in-out infinite 0.5s; filter: drop-shadow(0 0 3px #a855f7); will-change: opacity; }
+    .corner-p3      { animation: pulseOpacity 2s ease-in-out infinite 1s; filter: drop-shadow(0 0 3px #a855f7); will-change: opacity; }
+    .corner-p4      { animation: pulseOpacity 2s ease-in-out infinite 1.5s; filter: drop-shadow(0 0 3px #a855f7); will-change: opacity; }
   }
 
   .frame-svg-overlay {
@@ -97,9 +97,9 @@ export default function HologramPortrait() {
         <line x1="1" y1={H_HEADER} x2={VB_W - 1} y2={H_HEADER}
               stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.4" className="header-glow"/>
         {/* 3 Dots dans l'en-tête */}
-        <circle cx="14" cy={H_HEADER / 2} r="3" fill="#c084fc" className="dot-p1"/>
-        <circle cx="24" cy={H_HEADER / 2} r="3" fill="#7c3aed" className="dot-p2"/>
-        <circle cx="34" cy={H_HEADER / 2} r="3" fill="#4c1d95" className="dot-p3"/>
+        <circle cx="14" cy={H_HEADER / 2} r="3" fill="#7c3aed" className="dot-p1"/>
+        <circle cx="24" cy={H_HEADER / 2} r="3" fill="#c084fc" className="dot-p2"/>
+        <circle cx="34" cy={H_HEADER / 2} r="3" fill="#f7a8e0" className="dot-p3"/>
 
         {/* ── CADRE PRINCIPAL (décalé de H_HEADER) ── */}
 

@@ -5,6 +5,7 @@ export default function BackgroundAnim() {
   const starsRef   = useRef(null);
   const cornersRef = useRef(null);
   const animRef    = useRef(null);
+  const resizeRef  = useRef(null);
 
   // ── Corners canvas (static, drawn once) ──
   useEffect(() => {
@@ -55,6 +56,22 @@ export default function BackgroundAnim() {
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // Pre-render glow sprite once — évite createRadialGradient à chaque frame
+    const SPRITE_SIZE = 64;
+    const sprite = document.createElement("canvas");
+    sprite.width  = SPRITE_SIZE;
+    sprite.height = SPRITE_SIZE;
+    const sCtx = sprite.getContext("2d");
+    const g = sCtx.createRadialGradient(
+      SPRITE_SIZE / 2, SPRITE_SIZE / 2, 0,
+      SPRITE_SIZE / 2, SPRITE_SIZE / 2, SPRITE_SIZE / 2
+    );
+    g.addColorStop(0,   "rgba(255,180,230,0.6)");
+    g.addColorStop(0.5, "rgba(200,80,180,0.15)");
+    g.addColorStop(1,   "rgba(0,0,0,0)");
+    sCtx.fillStyle = g;
+    sCtx.fillRect(0, 0, SPRITE_SIZE, SPRITE_SIZE);
+
     const stars = [];
 
     for (let i = 0; i < 700; i++) {
@@ -93,12 +110,8 @@ export default function BackgroundAnim() {
           const size = Math.max((1 - star.z / canvas.width) * 2, 0.01);
 
           if (star.big) {
-            const glow = ctx.createRadialGradient(x, y, 0, x, y, size * 8);
-            glow.addColorStop(0,   "rgba(255,180,230,0.6)");
-            glow.addColorStop(0.5, "rgba(200,80,180,0.15)");
-            glow.addColorStop(1,   "rgba(0,0,0,0)");
-            ctx.fillStyle = glow;
-            ctx.beginPath(); ctx.arc(x, y, size * 8, 0, Math.PI * 2); ctx.fill();
+            const glowR = size * 8;
+            ctx.drawImage(sprite, x - glowR, y - glowR, glowR * 2, glowR * 2);
             ctx.fillStyle = "rgba(255,255,255,0.95)";
             ctx.beginPath(); ctx.arc(x, y, size * 1.8, 0, Math.PI * 2); ctx.fill();
           } else {
@@ -114,13 +127,17 @@ export default function BackgroundAnim() {
     draw();
 
     function handleResize() {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
+      clearTimeout(resizeRef.current);
+      resizeRef.current = setTimeout(() => {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }, 150);
     }
     window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animRef.current);
+      clearTimeout(resizeRef.current);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
