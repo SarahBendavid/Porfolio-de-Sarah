@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FaWhatsapp } from "react-icons/fa";
+import WhatsAppIcon from "../WhatsAppIcon";
 import { Mail } from "lucide-react";
 
 
@@ -20,7 +20,7 @@ export default function BlocGauche () {
         <div className="coordonees">
 
           <div className="contactItem">
-            <FaWhatsapp size={20} />
+            <WhatsAppIcon size={20} />
             <a
               href="https://wa.me/33765149265"
               target="_blank"

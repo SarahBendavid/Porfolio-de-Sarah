@@ -1,5 +1,7 @@
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import "../../Assets/styles/Header/ReseauxSociaux.css";
+import logoGithub   from "../../Assets/images/logo-github.png";
+import logoLinkedin from "../../Assets/images/logo-linkedin.png";
+import logoDiscord  from "../../Assets/images/logo-discord.jpg";
 
 export default function ReseauxSociaux () {
     return (
@@ -10,7 +12,7 @@ export default function ReseauxSociaux () {
         rel="noopener noreferrer"
         className="social-btn github"
       >
-        <FaGithub className="social-icon" />
+        <img src={logoGithub} className="social-icon" alt="" aria-hidden="true" />
         <span>GitHub</span>
       </a>
 
@@ -20,7 +22,7 @@ export default function ReseauxSociaux () {
         rel="noopener noreferrer"
         className="social-btn linkedin"
       >
-        <FaLinkedin className="social-icon" />
+        <img src={logoLinkedin} className="social-icon" alt="" aria-hidden="true" />
         <span>LinkedIn</span>
       </a>
 
@@ -30,7 +32,7 @@ export default function ReseauxSociaux () {
         rel="noopener noreferrer"
         className="social-btn discord"
       >
-        <FaDiscord className="social-icon" />
+        <img src={logoDiscord} className="social-icon" alt="" aria-hidden="true" />
         <span>Discord</span>
       </a>
     </div>

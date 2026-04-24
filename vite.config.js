@@ -4,4 +4,18 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/Porfolio-de-Sarah/",
+  build: {
+    sourcemap: false,
+    minify: "esbuild",
+    target: "es2017",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom"],
+          "router": ["react-router-dom"],
+          "i18n": ["i18next", "react-i18next"],
+        },
+      },
+    },
+  },
 });

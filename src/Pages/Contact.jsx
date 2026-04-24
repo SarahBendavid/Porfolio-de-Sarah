@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import WhatsAppIcon from "../Composants/WhatsAppIcon";
 import Header from "../Composants/Accueil/Header.jsx";
 import "../Assets/styles/Main/Contact/ContactMain.css";
 
@@ -125,7 +125,7 @@ export default function Contact() {
             </text>
           </svg>
           <div className="whatsapp-icon-center">
-            <FaWhatsapp className="whatsapp-icon" />
+            <WhatsAppIcon className="whatsapp-icon" size="36px" />
           </div>
         </a>
 
