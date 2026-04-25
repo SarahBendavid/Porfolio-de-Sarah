@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import "../Assets/styles/BackgroundAnim.css";
+import "../Assets/styles/Global/BackgroundAnim.css";
 
 export default function BackgroundAnim() {
   const starsRef   = useRef(null);

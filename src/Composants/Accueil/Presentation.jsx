@@ -60,13 +60,15 @@ export default function Presentation() {
 
             <div className="cadre-bot-section">
               <div className="cadre-bot-divider" aria-hidden="true" />
-              <div className="cadre-bot-line">
-                <span className="cadre-bot-dash" aria-hidden="true" />
-                <span className="cadre-bot-text">{t("description.tagline1")}</span>
-              </div>
-              <div className="cadre-bot-line cadre-bot-line--indent">
-                <span className="cadre-bot-dash" aria-hidden="true" />
-                <span className="cadre-bot-text">{t("description.tagline2")}</span>
+              <div className="cadre-bot-lines">
+                <div className="cadre-bot-line">
+                  <span className="cadre-bot-dash" aria-hidden="true" />
+                  <span className="cadre-bot-text">{t("description.tagline1")}</span>
+                </div>
+                <div className="cadre-bot-line cadre-bot-line--indent">
+                  <span className="cadre-bot-dash" aria-hidden="true" />
+                  <span className="cadre-bot-text">{t("description.tagline2")}</span>
+                </div>
               </div>
             </div>
 

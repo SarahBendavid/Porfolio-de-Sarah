@@ -25,17 +25,17 @@ const resources = {
       skills: {
         dev: {
           title: "Dev Front-End | UI Designer",
-          subtitle: "Fibre artistique et souci du détail"
+          subtitle: "Fibre artistique et souci du détail",
         },
         writer: {
           title: "Rédactrice web",
-          subtitlePart1: "La qualité du contenu",
-          subtitlePart2: "réside dans le choix des mots."
+          subtitlePart1: "La qualité du contenu ",
+          subtitlePart2: "réside dans le choix des mots.",
         },
         psycho: {
           title: "Psychologue",
-          subtitle: "La compréhension humaine au cœur du code"
-        }
+          subtitle: "La compréhension humaine au cœur du code",
+        },
       },
       description: {
         title: "Qui suis-je ?",
@@ -117,8 +117,10 @@ const resources = {
         placeholderMessage: "Votre message...",
         send: "Envoyer",
         sending: "Envoi en cours...",
-        success: "Message envoyé ! Je vous répondrai dans les plus brefs délais.",
-        error: "Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.",
+        success:
+          "Message envoyé ! Je vous répondrai dans les plus brefs délais.",
+        error:
+          "Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.",
         phone: "0033 7 65 14 92 65",
         whatsappNumber: "33765149265",
       },
@@ -146,17 +148,17 @@ const resources = {
       skills: {
         dev: {
           title: "Front-End Dev | UI Designer",
-          subtitle: "Artistic flair and eye for detail"
+          subtitle: "Artistic flair and eye for detail",
         },
         writer: {
           title: "Web Writer",
-          subtitlePart1: "Quality content",
-          subtitlePart2: "lies in the choice of words."
+          subtitlePart1: "Quality content lies ",
+          subtitlePart2: "in the choice of words.",
         },
         psycho: {
           title: "Psychologist",
-          subtitle: "Human understanding at the heart of code"
-        }
+          subtitle: "Human understanding at the heart of code",
+        },
       },
       description: {
         title: "Who am I ?",
@@ -241,7 +243,8 @@ const resources = {
         send: "Send",
         sending: "Sending...",
         success: "Message sent! I'll get back to you as soon as possible.",
-        error: "Something went wrong. Please try again or contact me directly by email.",
+        error:
+          "Something went wrong. Please try again or contact me directly by email.",
         phone: "00972 537 889 212",
         whatsappNumber: "972537889212",
       },

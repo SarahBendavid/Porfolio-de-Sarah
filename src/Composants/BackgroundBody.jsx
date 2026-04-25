@@ -1,5 +1,5 @@
 import animBg from "../Assets/images/AnimBackground.mp4";
-import "../Assets/styles/BackgroundBody.css";
+import "../Assets/styles/Global/BackgroundBody.css";
 
 export default function BackgroundBody() {
   return (
