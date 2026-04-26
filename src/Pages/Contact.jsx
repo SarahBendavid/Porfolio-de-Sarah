@@ -2,9 +2,9 @@ import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import { Mail } from "lucide-react";
-import WhatsAppIcon from "../Composants/WhatsAppIcon";
-import Header from "../Composants/Accueil/Header.jsx";
-import FooterBand from "../Composants/FooterBand.jsx";
+import WhatsAppIcon from "../Composants/Contact/WhatsAppIcon";
+import Header from "../Composants/Header/Header.jsx";
+import FooterBand from "../Composants/Global/FooterBand.jsx";
 import "../Assets/styles/Main/Contact/ContactMain.css";
 
 const SERVICE_ID  = "service_95trf8k";

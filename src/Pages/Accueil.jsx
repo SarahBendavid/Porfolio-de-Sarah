@@ -1,6 +1,6 @@
-import Header from "../Composants/Accueil/Header.jsx";
+import Header from "../Composants/Header/Header.jsx";
 import Presentation from "../Composants/Accueil/Presentation.jsx";
-import FooterBand from "../Composants/FooterBand.jsx";
+import FooterBand from "../Composants/Global/FooterBand.jsx";
 
   export default function Accueil() {
   return (

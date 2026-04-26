@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "flag-icons/css/flag-icons.min.css";
 
-import BackgroundAnim from "./Composants/BackgroundAnim";
+import BackgroundAnim from "./Composants/Global/BackgroundAnim";
 import Accueil from "./Pages/Accueil.jsx";
 import Projets from "./Pages/Projets.jsx";
 import Contact from "./Pages/Contact.jsx";

@@ -1,8 +1,8 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import Header from "../Composants/Accueil/Header.jsx";
-import FooterBand from "../Composants/FooterBand.jsx";
+import Header from "../Composants/Header/Header.jsx";
+import FooterBand from "../Composants/Global/FooterBand.jsx";
 import "../Assets/styles/Main/Projets/ProjetMain.css";
 
 import logoDigitalMarket from "../Assets/images/logo-digital market.png";
@@ -25,38 +25,72 @@ const CARD_VIDEOS = {
 };
 
 const CARD_COUNT = 5;
+const CHROMA_FPS  = 30;
+const CHROMA_INTERVAL = 1000 / CHROMA_FPS;
 
 function ChromaCanvas({ src, className }) {
-  const videoRef = useRef(null);
-  const canvasRef = useRef(null);
-  const rafRef = useRef(null);
+  const videoRef   = useRef(null);
+  const canvasRef  = useRef(null);
+  const rafRef     = useRef(null);
+  const lastTsRef  = useRef(0);
+  const visibleRef = useRef(true);
+  const offRef     = useRef(null); // offscreen canvas for half-res processing
 
   useEffect(() => {
-    const video = videoRef.current;
+    const video  = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
 
-    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    const ctx = canvas.getContext("2d");
+    offRef.current = document.createElement("canvas");
+    const offCtx = offRef.current.getContext("2d", { willReadFrequently: true });
 
-    const draw = () => {
-      if (video.readyState >= 2 && video.videoWidth > 0) {
-        if (canvas.width !== video.videoWidth)   canvas.width  = video.videoWidth;
-        if (canvas.height !== video.videoHeight) canvas.height = video.videoHeight;
-        ctx.drawImage(video, 0, 0);
-        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const d = frame.data;
-        for (let i = 0; i < d.length; i += 4) {
-          const r = d[i], g = d[i + 1], b = d[i + 2];
-          if (g > 80 && g > r * 1.4 && g > b * 1.4) d[i + 3] = 0;
-        }
-        ctx.putImageData(frame, 0, 0);
-        ctx.clearRect(0, 0, Math.round(canvas.width * 0.22), Math.round(canvas.height * 0.16));
-      }
+    const draw = (ts) => {
       rafRef.current = requestAnimationFrame(draw);
+
+      if (!visibleRef.current) return;
+      if (ts - lastTsRef.current < CHROMA_INTERVAL) return;
+      lastTsRef.current = ts;
+
+      if (video.readyState < 2 || video.videoWidth === 0) return;
+
+      // Traitement à demi-résolution (4× moins de pixels)
+      const hw = Math.floor(video.videoWidth  / 2);
+      const hh = Math.floor(video.videoHeight / 2);
+      const off = offRef.current;
+      if (off.width !== hw)  off.width  = hw;
+      if (off.height !== hh) off.height = hh;
+
+      offCtx.drawImage(video, 0, 0, hw, hh);
+      const frame = offCtx.getImageData(0, 0, hw, hh);
+      const d = frame.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const r = d[i], g = d[i + 1], b = d[i + 2];
+        if (g > 80 && g > r * 1.4 && g > b * 1.4) d[i + 3] = 0;
+      }
+      offCtx.putImageData(frame, 0, 0);
+      offCtx.clearRect(0, 0, Math.round(hw * 0.22), Math.round(hh * 0.16));
+
+      // Upscale vers le canvas d'affichage
+      if (canvas.width  !== video.videoWidth)  canvas.width  = video.videoWidth;
+      if (canvas.height !== video.videoHeight) canvas.height = video.videoHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(off, 0, 0, canvas.width, canvas.height);
     };
 
     rafRef.current = requestAnimationFrame(draw);
-    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+
+    // Pause quand la carte sort du viewport
+    const observer = new IntersectionObserver(
+      ([entry]) => { visibleRef.current = entry.isIntersecting; },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -101,24 +135,29 @@ function ChromaKeyVideo({ src, className }) {
 
 export default function Projets() {
   const { t } = useTranslation();
-  const carouselRefs = useRef({});
+  const carouselRefs  = useRef({});
+  const scrollRafRefs = useRef({});
   const [scrollPos, setScrollPos] = useState({});
 
   const isAtStart = (section) => scrollPos[section]?.atStart ?? true;
   const isAtEnd   = (section) => scrollPos[section]?.atEnd   ?? false;
 
-  const handleScroll = (section) => {
-    const el = carouselRefs.current[section];
-    if (!el) return;
-    const maxScroll = el.scrollWidth - el.clientWidth;
-    setScrollPos(prev => ({
-      ...prev,
-      [section]: {
-        atStart: el.scrollLeft <= 4,
-        atEnd:   el.scrollLeft >= maxScroll - 4,
-      },
-    }));
-  };
+  const handleScroll = useCallback((section) => {
+    if (scrollRafRefs.current[section]) return;
+    scrollRafRefs.current[section] = requestAnimationFrame(() => {
+      scrollRafRefs.current[section] = null;
+      const el = carouselRefs.current[section];
+      if (!el) return;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      setScrollPos(prev => ({
+        ...prev,
+        [section]: {
+          atStart: el.scrollLeft <= 4,
+          atEnd:   el.scrollLeft >= maxScroll - 4,
+        },
+      }));
+    });
+  }, []);
 
   const getStep = (section) => {
     const el = carouselRefs.current[section];

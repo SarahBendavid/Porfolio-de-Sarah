@@ -11,7 +11,7 @@ import "../../Assets/styles/Main/Accueil/RightZone.css";
 import "../../Assets/styles/Main/Accueil/LeftZone.css";
 import "../../Assets/styles/Main/Accueil/ContactPreview.css";
 
-import HologramPortrait from "./CadrePortrait";
+import HologramPortrait from "./CadreSvg";
 import PhotoPC     from "../../Assets/images/PhotoPC.png";
 import PhotoMobile from "../../Assets/images/PhotoMobile.png";
 

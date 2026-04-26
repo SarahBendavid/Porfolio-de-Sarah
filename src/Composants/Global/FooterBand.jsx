@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-import logoLinkedin from "../Assets/images/logo-linkedin.png";
-import logoGithub   from "../Assets/images/logo-github.png";
-import logoDiscord  from "../Assets/images/logo-discord.jpg";
+import logoLinkedin from "../../Assets/images/logo-linkedin.png";
+import logoGithub   from "../../Assets/images/logo-github.png";
+import logoDiscord  from "../../Assets/images/logo-discord.jpg";
 
-import "../Assets/styles/Footer/FooterBand.css";
+import "../../Assets/styles/Footer/FooterBand.css";
 
 export default function FooterBand() {
   const { t, i18n } = useTranslation();
