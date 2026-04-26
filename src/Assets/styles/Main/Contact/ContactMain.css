@@ -318,3 +318,10 @@
     letter-spacing: 1.5px;
   }
 }
+
+@media (max-width: 361px) {
+  .contact-tagline-question, 
+  .contact-tagline-cta {
+    font-size: 0.70rem;
+  }
+}
