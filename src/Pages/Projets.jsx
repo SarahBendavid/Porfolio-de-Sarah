@@ -1,10 +1,12 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../Composants/Accueil/Header.jsx";
 import FooterBand from "../Composants/FooterBand.jsx";
 import "../Assets/styles/Main/Projets/ProjetMain.css";
 
 import logoDigitalMarket from "../Assets/images/logo-digital market.png";
+import carteVisite from "../Assets/images/carte visite.jpg";
 import animationVideo from "../Assets/images/animation.mp4";
 
 const SECTIONS = ["web", "video"];
@@ -12,6 +14,7 @@ const SECTIONS = ["web", "video"];
 const CARD_IMAGES = {
   video: {
     0: logoDigitalMarket,
+    1: carteVisite,
   },
 };
 
@@ -20,7 +23,81 @@ const CARD_VIDEOS = {
     2: animationVideo,
   },
 };
+
 const CARD_COUNT = 5;
+
+function ChromaCanvas({ src, className }) {
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+    const draw = () => {
+      if (video.readyState >= 2 && video.videoWidth > 0) {
+        if (canvas.width !== video.videoWidth)   canvas.width  = video.videoWidth;
+        if (canvas.height !== video.videoHeight) canvas.height = video.videoHeight;
+        ctx.drawImage(video, 0, 0);
+        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const d = frame.data;
+        for (let i = 0; i < d.length; i += 4) {
+          const r = d[i], g = d[i + 1], b = d[i + 2];
+          if (g > 80 && g > r * 1.4 && g > b * 1.4) d[i + 3] = 0;
+        }
+        ctx.putImageData(frame, 0, 0);
+        ctx.clearRect(0, 0, Math.round(canvas.width * 0.22), Math.round(canvas.height * 0.16));
+      }
+      rafRef.current = requestAnimationFrame(draw);
+    };
+
+    rafRef.current = requestAnimationFrame(draw);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, []);
+
+  return (
+    <div className="chroma-wrapper" style={{ position: "relative" }}>
+      <video
+        ref={videoRef}
+        src={src}
+        autoPlay loop muted playsInline
+        style={{ position: "absolute", top: 0, left: 0, width: "100%", opacity: 0, pointerEvents: "none" }}
+      />
+      <canvas ref={canvasRef} className={className} />
+    </div>
+  );
+}
+
+function ChromaKeyVideo({ src, className }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => { if (e.key === "Escape") setIsOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen]);
+
+  return (
+    <>
+      <div className="chroma-outer" style={{ cursor: "zoom-in" }} onClick={() => setIsOpen(true)}>
+        <ChromaCanvas src={src} className={className} />
+      </div>
+
+      {isOpen && createPortal(
+        <div className="video-lightbox" onClick={() => setIsOpen(false)}>
+          <button className="video-lightbox-close" onClick={() => setIsOpen(false)} aria-label="Fermer">✕</button>
+          <ChromaCanvas src={src} className="video-lightbox-canvas" />
+        </div>,
+        document.body
+      )}
+    </>
+  );
+}
 
 export default function Projets() {
   const { t } = useTranslation();
@@ -103,13 +180,9 @@ export default function Projets() {
                     </h3>
                     <div className="projet-card-photo">
                       {CARD_VIDEOS[section]?.[i] ? (
-                        <video
+                        <ChromaKeyVideo
                           src={CARD_VIDEOS[section][i]}
                           className="projet-card-video"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
                         />
                       ) : CARD_IMAGES[section]?.[i] && (
                         <a

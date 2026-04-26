@@ -51,6 +51,9 @@
 }
 
 /* Croix quand ouvert */
+.burger-btn.open span {
+  background-color: #9b5de5;
+}
 .burger-btn.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }

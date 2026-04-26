@@ -84,8 +84,8 @@ const resources = {
             title: "Motion & Créations visuelles",
             cards: {
               0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Création du logo de l'entreprise." },
-              1: { title: "Carte de visite", subtitle: "Outils", desc: "Description du projet." },
-              2: { title: "Vidéo d'illustration", subtitle: "Outils", desc: "Description du projet." },
+              1: { title: "Carte de visite", subtitle: "WELLNESS THERAPY", desc: "Création de la carte de visite d'une masseuse indépendante." },
+              2: { title: "Vidéo d'illustration", subtitle: "DIGITAL MARKET", desc: "Création d'une vidéo afin d'illustrer du contenu dans le thème de la programmation." },
               3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
               4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
             },
@@ -241,8 +241,8 @@ const resources = {
             title: "Motion & Visual Creations",
             cards: {
               0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Company logo creation." },
-              1: { title: "Business Card", subtitle: "Tools", desc: "Project description." },
-              2: { title: "Illustration Video", subtitle: "Tools", desc: "Project description." },
+              1: { title: "Business Card", subtitle: "WELLNESS THERAPY", desc: "Business card creation for an independent massage therapist." },
+              2: { title: "Illustration Video", subtitle: "DIGITAL MARKET", desc: "Creation of a video to illustrate content on the theme of programming." },
               3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
               4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
             },
