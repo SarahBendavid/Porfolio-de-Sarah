@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Download, Zap, FileText, SquareCode, PenTool, Brain } from "lucide-react";
+import { Download, Zap, FileText } from "lucide-react";
+
+import IconeCode    from "../../Assets/images/Icone Code.svg";
+import IconeStylo   from "../../Assets/images/Icone stylo.svg";
+import IconeCerveau from "../../Assets/images/Icone Cerveau.svg";
 
 import "../../Assets/styles/Main/Accueil/AccueilMain.css";
 import "../../Assets/styles/Main/Accueil/RightZone.css";
@@ -32,14 +36,14 @@ export default function Presentation() {
 
             <div className={`cadre-skills-section${i18n.language === "en" ? " cadre-skills-en" : ""}`}>
               <div className="skill-row">
-                <SquareCode className="skill-icon" aria-hidden="true" />
+                <img src={IconeCode} className="skill-icon" alt="" aria-hidden="true" />
                 <div className="skill-text">
                   <span className="skill-title">{t("skills.dev.title")}</span>
                   <span className="skill-subtitle">{t("skills.dev.subtitle")}</span>
                 </div>
               </div>
               <div className="skill-row">
-                <PenTool className="skill-icon" aria-hidden="true" />
+                <img src={IconeStylo} className="skill-icon" alt="" aria-hidden="true" />
                 <div className="skill-text">
                   <span className="skill-title">{t("skills.writer.title")}</span>
                   <span className="skill-subtitle">
@@ -50,7 +54,7 @@ export default function Presentation() {
                 </div>
               </div>
               <div className="skill-row">
-                <Brain className="skill-icon" aria-hidden="true" />
+                <img src={IconeCerveau} className="skill-icon skill-icon-brain" alt="" aria-hidden="true" />
                 <div className="skill-text">
                   <span className="skill-title">{t("skills.psycho.title")}</span>
                   <span className="skill-subtitle">{t("skills.psycho.subtitle")}</span>

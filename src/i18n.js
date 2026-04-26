@@ -33,7 +33,7 @@ const resources = {
           subtitlePart2: "réside dans le choix des mots.",
         },
         psycho: {
-          title: "Psychologue",
+          title: "Licence en psychologie",
           subtitle: "La compréhension humaine au cœur du code",
         },
       },
@@ -68,6 +68,39 @@ const resources = {
       },
 
       projets: {
+        pageTitle: "Mes projets",
+        sections: {
+          web: {
+            title: "Développement Web / Mobile",
+            cards: {
+              0: { title: "Projet 1", subtitle: "Technologies", desc: "Description du projet." },
+              1: { title: "Projet 2", subtitle: "Technologies", desc: "Description du projet." },
+              2: { title: "Projet 3", subtitle: "Technologies", desc: "Description du projet." },
+              3: { title: "Projet 4", subtitle: "Technologies", desc: "Description du projet." },
+              4: { title: "Projet 5", subtitle: "Technologies", desc: "Description du projet." },
+            },
+          },
+          video: {
+            title: "Motion & Créations visuelles",
+            cards: {
+              0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Création du logo de l'entreprise." },
+              1: { title: "Carte de visite", subtitle: "Outils", desc: "Description du projet." },
+              2: { title: "Projet 3", subtitle: "Outils", desc: "Description du projet." },
+              3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
+              4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
+            },
+          },
+          visual: {
+            title: "Créations visuelles",
+            cards: {
+              0: { title: "Projet 1", subtitle: "Outils", desc: "Description du projet." },
+              1: { title: "Projet 2", subtitle: "Outils", desc: "Description du projet." },
+              2: { title: "Projet 3", subtitle: "Outils", desc: "Description du projet." },
+              3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
+              4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
+            },
+          },
+        },
         item: {
           4: {
             title: "E-commerce",
@@ -109,6 +142,8 @@ const resources = {
 
       contact: {
         pageTitle: "Contactez-moi",
+        taglineQuestion: "Une idée en tête ?",
+        taglineCta: "Discutons de votre projet !",
         name: "Nom",
         placeholderName: "Prénom Nom",
         email: "Email",
@@ -156,7 +191,7 @@ const resources = {
           subtitlePart2: "in the choice of words.",
         },
         psycho: {
-          title: "Psychologist",
+          title: "Bachelor's degree in psychology",
           subtitle: "Human understanding at the heart of code",
         },
       },
@@ -190,6 +225,39 @@ const resources = {
       },
 
       projets: {
+        pageTitle: "My Projects",
+        sections: {
+          web: {
+            title: "Web / Mobile Development",
+            cards: {
+              0: { title: "Project 1", subtitle: "Technologies", desc: "Project description." },
+              1: { title: "Project 2", subtitle: "Technologies", desc: "Project description." },
+              2: { title: "Project 3", subtitle: "Technologies", desc: "Project description." },
+              3: { title: "Project 4", subtitle: "Technologies", desc: "Project description." },
+              4: { title: "Project 5", subtitle: "Technologies", desc: "Project description." },
+            },
+          },
+          video: {
+            title: "Motion & Visual Creations",
+            cards: {
+              0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Company logo creation." },
+              1: { title: "Business Card", subtitle: "Tools", desc: "Project description." },
+              2: { title: "Project 3", subtitle: "Tools", desc: "Project description." },
+              3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
+              4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
+            },
+          },
+          visual: {
+            title: "Visual Creations",
+            cards: {
+              0: { title: "Project 1", subtitle: "Tools", desc: "Project description." },
+              1: { title: "Project 2", subtitle: "Tools", desc: "Project description." },
+              2: { title: "Project 3", subtitle: "Tools", desc: "Project description." },
+              3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
+              4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
+            },
+          },
+        },
         intro:
           "Here you will find a timeline of all the projects I have completed, from the most recent to my very first steps during my training..",
 
@@ -234,6 +302,8 @@ const resources = {
 
       contact: {
         pageTitle: "Contact me",
+        taglineQuestion: "Got an idea in mind ?",
+        taglineCta: "Let's talk about your project !",
         name: "Name",
         placeholderName: "First Last",
         email: "Email",

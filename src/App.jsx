@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "flag-icons/css/flag-icons.min.css";
 
 import BackgroundAnim from "./Composants/BackgroundAnim";
@@ -15,12 +16,19 @@ function NotFound() {
   return <h1>404 - Page non trouvée</h1>;
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 function App() {
 
   return (
     <>
 
     <BackgroundAnim />
+    <ScrollToTop />
 
       <Routes>
     

@@ -1,9 +1,8 @@
 export default function PrivacyPolicy() {
   return (
-    <>
-    <div style={{ padding: "20px" }}></div>
+  <div className="legal-page" style={{ position: "relative", zIndex: 1, background: "white", minHeight: "100vh", padding: "20px" }}>
   <h1 style={{ textAlign: "center", marginBottom: "20px", fontSize: "8vw" }}>Privacy Policy</h1>
-  <div style={{ padding: "20px" }}>
+  <div style={{ padding: "20px", textAlign: "justify" }}>
   <p>
     This website does not collect personal data beyond what you may voluntarily
     provide (for example, by contacting me via email).
@@ -20,10 +19,10 @@ export default function PrivacyPolicy() {
   <p>
     In accordance with applicable data protection laws (including the GDPR in
     the European Union), you have the right to access, correct, or delete your
-    personal data. To exercise these rights, please contact me at:
-    <strong>sarah.laura.bendavid@gmail.com</strong>
+    personal data. To exercise these rights, please contact me at :
+    <strong> sarah.laura.bendavid@gmail.com</strong>
   </p>
   </div>
-</>
+  </div>
   )
 }

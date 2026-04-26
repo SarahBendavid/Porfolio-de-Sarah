@@ -1,5 +1,6 @@
 .accueil-page .header,
 .projet-page .header,
+.projets-page .header,
 .contact-page .header {
   position: relative;
   display: flex;

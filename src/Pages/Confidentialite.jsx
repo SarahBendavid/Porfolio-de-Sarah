@@ -1,16 +1,20 @@
 export default function Confidentialite() {
   return (
-    <>
   <div
+      className="legal-page"
       style={{
+        position: "relative",
+        zIndex: 1,
+        background: "white",
+        minHeight: "100vh",
         padding: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", 
-        textAlign: "center",
+        alignItems: "center",
+        textAlign: "justify",
       }}
     >
-      <h1 style={{ marginBottom: "20px", fontSize: "8vw" }}>
+      <h1 style={{ fontSize: "6vw", marginBottom: "40px" }}>
         Politique de confidentialité</h1>
       <h2>Collecte des données</h2>
       <p>
@@ -40,9 +44,8 @@ export default function Confidentialite() {
     Conformément au Règlement Général sur la Protection des Données (RGPD), vous
     pouvez demander l’accès, la modification ou la suppression de vos données
     personnelles en écrivant à l’adresse suivante :
-    <strong>[Ton adresse email]</strong>.
+    <strong> sarah.laura.bendavid@gmail.com</strong>.
   </p>
   </div>
-</>
   )
 }

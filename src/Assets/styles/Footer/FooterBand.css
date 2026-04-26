@@ -1,0 +1,85 @@
+.footerBand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 1.8rem;
+  margin-top: 2rem;
+  background-color: rgba(4, 2, 10, 0.88);
+  box-sizing: border-box;
+}
+
+/* ── Réseaux sociaux (toujours à gauche) ── */
+.footerBand-social {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.footerBand-social a {
+  display: flex;
+  align-items: center;
+  opacity: 0.75;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.footerBand-social a:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+.footerBand-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* ── Texte légal (toujours à droite, 3 lignes) ── */
+.footerBand-legal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.footerBand-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.footerBand-link:hover {
+  color: #f7a8e0;
+}
+
+.footerBand-copyright {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .footerBand {
+    padding: 0.9rem 1rem;
+  }
+
+  .footerBand-social {
+    gap: 0.9rem;
+  }
+
+  .footerBand-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footerBand-link,
+  .footerBand-copyright {
+    font-size: 0.65rem;
+  }
+}

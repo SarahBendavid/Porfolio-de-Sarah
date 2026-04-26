@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Mail } from "lucide-react";
 import WhatsAppIcon from "../Composants/WhatsAppIcon";
 import Header from "../Composants/Accueil/Header.jsx";
+import FooterBand from "../Composants/FooterBand.jsx";
 import "../Assets/styles/Main/Contact/ContactMain.css";
 
 const SERVICE_ID  = "service_95trf8k";
@@ -43,6 +44,11 @@ export default function Contact() {
           <h2 className="contact-page-title">{t("contact.pageTitle")}</h2>
           <div className="contact-glow-line" aria-hidden="true" />
         </div>
+        <div className="contact-tagline-card">
+          <p className="contact-tagline-question">{t("contact.taglineQuestion")}</p>
+          <p className="contact-tagline-cta">{t("contact.taglineCta")}</p>
+        </div>
+
         <div className="contact-card">
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div className="contact-field-group">
@@ -119,6 +125,7 @@ export default function Contact() {
         </a>
 
       </main>
+      <FooterBand />
     </div>
   );
 }

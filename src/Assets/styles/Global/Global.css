@@ -11,8 +11,20 @@ html, body, #root {
   box-sizing: inherit;
 }
 
+.legal-page h1,
+.legal-page h2,
+.legal-page h3,
+.legal-page p {
+  text-shadow: none;
+}
+
+.legal-page h1 {
+  text-decoration: underline;
+}
+
 .accueil-page,
 .projet-page,
+.projets-page,
 .contact-page {
   color: rgb(243, 162, 124);
   position: relative;
