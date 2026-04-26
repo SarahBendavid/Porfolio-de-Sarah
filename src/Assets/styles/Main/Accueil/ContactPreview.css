@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
-  padding: 1.8rem 1rem 0.5rem;
+  padding: 3.5rem 1rem 0.5rem;
 }
 
 .work-section-buttons {
@@ -51,7 +51,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.4rem;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem 0;
 }
 
 
@@ -153,14 +153,15 @@
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 0.55rem calc(1.8rem - 2px) 0.55rem 1.8rem;
+  padding: 0.55rem 1.8rem;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   transition: background 0.2s;
-  margin-top: 4%;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .contact-me-btn:hover {
@@ -199,7 +200,7 @@
 
 @media (max-width: 950px) {
   .contact-me-btn {
-    margin-top: 0.3rem;
+    margin-top: 1.3rem;
   }
 }
 
