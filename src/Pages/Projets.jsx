@@ -5,12 +5,19 @@ import FooterBand from "../Composants/FooterBand.jsx";
 import "../Assets/styles/Main/Projets/ProjetMain.css";
 
 import logoDigitalMarket from "../Assets/images/logo-digital market.png";
+import animationVideo from "../Assets/images/animation.mp4";
 
 const SECTIONS = ["web", "video"];
 
 const CARD_IMAGES = {
   video: {
     0: logoDigitalMarket,
+  },
+};
+
+const CARD_VIDEOS = {
+  video: {
+    2: animationVideo,
   },
 };
 const CARD_COUNT = 5;
@@ -95,7 +102,16 @@ export default function Projets() {
                       {t(`projets.sections.${section}.cards.${i}.title`)}
                     </h3>
                     <div className="projet-card-photo">
-                      {CARD_IMAGES[section]?.[i] && (
+                      {CARD_VIDEOS[section]?.[i] ? (
+                        <video
+                          src={CARD_VIDEOS[section][i]}
+                          className="projet-card-video"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                        />
+                      ) : CARD_IMAGES[section]?.[i] && (
                         <a
                           href={CARD_IMAGES[section][i]}
                           target="_blank"

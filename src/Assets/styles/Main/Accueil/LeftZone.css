@@ -92,14 +92,17 @@
   height: clamp(26px, 3vw, 44px);
   flex-shrink: 0;
   filter:
-    drop-shadow(0 0 5px rgba(247, 168, 224, 0.75))
-    drop-shadow(0 0 14px rgba(247, 168, 224, 0.4));
+    drop-shadow(0 0 1px rgba(247, 168, 224, 1))
+    drop-shadow(0 0 1px rgba(247, 168, 224, 1))
+    drop-shadow(0 0 5px rgba(247, 168, 224, 0.7))
+    drop-shadow(0 0 10px rgba(247, 168, 224, 0.35));
 }
 
 .skill-icon-brain {
   filter:
     drop-shadow(0 0 1px rgba(247, 168, 224, 1))
-    drop-shadow(0 0 4px rgba(247, 168, 224, 0.25));
+    drop-shadow(0 0 1px rgba(247, 168, 224, 1))
+    drop-shadow(0 0 3px rgba(247, 168, 224, 0.7));
 }
 
 .cadre-wrapper .frame-svg-overlay {

@@ -147,8 +147,8 @@
 }
 
 @keyframes arrowPulse {
-  0%, 100% { opacity: 0.55; transform: translateX(0); }
-  50%       { opacity: 1;    transform: translateX(3px); }
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(3px); }
 }
 
 /* ── Project card ── */
@@ -206,6 +206,13 @@
 
 .projet-card-photo img:hover {
   transform: scale(1.04);
+}
+
+.projet-card-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
 }
 
 .projet-card-desc {

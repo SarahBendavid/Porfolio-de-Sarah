@@ -85,7 +85,7 @@ const resources = {
             cards: {
               0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Création du logo de l'entreprise." },
               1: { title: "Carte de visite", subtitle: "Outils", desc: "Description du projet." },
-              2: { title: "Projet 3", subtitle: "Outils", desc: "Description du projet." },
+              2: { title: "Vidéo d'illustration", subtitle: "Outils", desc: "Description du projet." },
               3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
               4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
             },
@@ -242,7 +242,7 @@ const resources = {
             cards: {
               0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Company logo creation." },
               1: { title: "Business Card", subtitle: "Tools", desc: "Project description." },
-              2: { title: "Project 3", subtitle: "Tools", desc: "Project description." },
+              2: { title: "Illustration Video", subtitle: "Tools", desc: "Project description." },
               3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
               4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
             },
