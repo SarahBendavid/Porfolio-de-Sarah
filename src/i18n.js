@@ -64,7 +64,7 @@ const resources = {
           title: "Devis gratuit",
           subtitle: "Sans aucun engagement",
         },
-        btn: "Contactez moi",
+        btn: "Contactez-moi",
       },
 
       projets: {

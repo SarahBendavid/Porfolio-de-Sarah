@@ -88,9 +88,14 @@
 
 .skill-icon {
   display: block;
-  width: clamp(26px, 3vw, 44px);
-  height: clamp(26px, 3vw, 44px);
+  width: clamp(26px, 3.5vw, 50px);
+  height: clamp(26px, 3.5vw, 50px);
   flex-shrink: 0;
+}
+
+.skill-icon--sm {
+  width: clamp(26px, 3.3vw, 47px);
+  height: clamp(26px, 3.3vw, 47px);
 }
 
 .cadre-wrapper .frame-svg-overlay {
@@ -255,6 +260,16 @@
 
   .skill-title {
     font-size: clamp(1rem, 2.5vw, 2rem);
+  }
+
+  .skill-icon {
+    width: clamp(26px, 3.7vw, 50px);
+    height: clamp(26px, 3.7vw, 50px);
+  }
+
+  .skill-icon--sm {
+    width: clamp(26px, 3.5vw, 47px);
+    height: clamp(26px, 3.5vw, 47px);
   }
 
   .cadre-bot-lines {
@@ -434,6 +449,11 @@
   .skill-icon {
     width: 20px;
     height: 20px;
+  }
+
+  .skill-icon--sm {
+    width: 18px;
+    height: 18px;
   }
 
   .skill-row {

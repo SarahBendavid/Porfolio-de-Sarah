@@ -98,7 +98,7 @@ export default function HologramPortrait() {
               stroke="#c084fc" strokeWidth="0.8" strokeOpacity="0.4" className="header-glow"/>
         {/* 3 Dots dans l'en-tête */}
         <circle cx="14" cy={H_HEADER / 2} r="3" fill="#7c3aed" className="dot-p1"/>
-        <circle cx="24" cy={H_HEADER / 2} r="3" fill="#f7a8e0" className="dot-p2"/>
+        <circle cx="24" cy={H_HEADER / 2} r="3" fill="#a855f7" className="dot-p2"/>
         <circle cx="34" cy={H_HEADER / 2} r="3" fill="#c084fc" className="dot-p3"/>
 
         {/* ── CADRE PRINCIPAL (décalé de H_HEADER) ── */}
