@@ -98,8 +98,9 @@
   font-size: 11.5px;
   letter-spacing: 0.01em;
   text-align: justify;
-  hyphens: auto;
-  word-break: break-word;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
   display: block;
   width: 100%;
 }
@@ -311,8 +312,9 @@
 .ux-photo-lightbox__close:hover { opacity: 1; }
 
 .ux-photo-lightbox__img {
+  height: 90vh;
+  width: auto;
   max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
+  display: block;
   border-radius: 10px;
 }
