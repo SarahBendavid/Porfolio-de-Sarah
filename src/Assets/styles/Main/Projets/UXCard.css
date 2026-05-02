@@ -1,0 +1,272 @@
+/* ── Container ── */
+.ux-card {
+  position: relative;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.ux-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.25;
+}
+
+/* ── Header ── */
+.ux-header {
+  padding: 16px 20px 12px;
+  text-align: center;
+  position: relative;
+}
+
+.ux-header__title {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f0a0ff;
+  text-shadow: 0 0 14px rgba(240, 100, 255, 0.7);
+  white-space: nowrap;
+}
+
+/* ── Body ── */
+.ux-body {
+  padding: 0 20px 24px;
+  position: relative;
+}
+
+/* ── Section ── */
+.ux-section {
+  margin-bottom: 4px;
+}
+
+.ux-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ux-section__num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #c084fc;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 8px rgba(192, 132, 252, 0.5);
+  min-width: 16px;
+}
+
+.ux-section__title {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d8b4fe;
+  text-shadow: 0 0 10px rgba(216, 180, 254, 0.4);
+}
+
+/* ── Divider ── */
+.ux-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(190, 100, 255, 0.3), transparent);
+  margin: 18px 0;
+}
+
+/* ── Text ── */
+.ux-text {
+  font-size: 12.5px;
+  color: rgba(220, 190, 255, 0.85);
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.ux-text--just {
+  text-align: justify;
+  hyphens: auto;
+  word-break: break-word;
+  display: block;
+  width: 100%;
+}
+
+.ux-text--sm {
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  text-align: justify;
+  hyphens: auto;
+  word-break: break-word;
+  display: block;
+  width: 100%;
+}
+
+/* ── Bullets ── */
+.ux-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ux-bullet {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ux-star {
+  color: #f472b6;
+  font-size: 13px;
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(244, 114, 182, 0.7);
+  line-height: 1;
+}
+
+/* ── Phone rows ── */
+.ux-phone-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ux-phone-row:not(.ux-phone-row--3) .ux-step {
+  width: 42%;
+}
+
+.ux-phone-row--3 .ux-step {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Step ── */
+.ux-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.ux-step__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.ux-step__num {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ux-step__text {
+  font-size: 7px;
+  color: rgba(220, 190, 255, 0.85);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+/* ── Screens ── */
+.ux-screen {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  min-width: 0;
+}
+
+.ux-screen--lg {
+  height: 200px;
+}
+
+.ux-screen--sm {
+  height: 148px;
+}
+
+.ux-screen--light {
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.ux-screen--dark {
+  background: #111827;
+  display: flex;
+  flex-direction: column;
+}
+
+.ux-screen__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* ── MergedScreen inner zoom ── */
+.ux-merged {
+  flex: 1;
+  transform: scale(0.62);
+  transform-origin: top left;
+  width: 161%;
+  height: 161%;
+}
+
+/* ── Placeholder ── */
+.ux-placeholder {
+  min-height: 40px;
+  background: rgba(80, 30, 120, 0.2);
+  border: 1px dashed rgba(180, 100, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(190, 140, 255, 0.35);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* ── Links ── */
+.ux-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ux-link {
+  font-size: 12.5px;
+  font-family: 'Chakra Petch', sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.ux-link--pink {
+  font-style: italic;
+  color: #e879f9;
+  text-shadow: 0 0 10px rgba(232, 121, 249, 0.4);
+  text-decoration-color: rgba(232, 121, 249, 0.4);
+}
+
+.ux-link--purple {
+  color: #a78bfa;
+  text-decoration-color: rgba(167, 139, 250, 0.4);
+}

@@ -287,6 +287,11 @@
   margin: 0;
 }
 
+/* ── Full-width carousel (section web) ── */
+.projets-carousel-wrapper--full {
+  gap: 2px;
+}
+
 /* ── Responsive ── */
 
 /* tablette : 2 cartes visibles */
@@ -294,12 +299,20 @@
   .projet-card {
     flex: 0 0 calc(50% - 0.6rem);
   }
+
+  .projets-carousel--full .projet-card {
+    flex: 0 0 100%;
+  }
 }
 
 /* desktop : 3 cartes visibles */
 @media (min-width: 900px) {
   .projet-card {
     flex: 0 0 calc(33.333% - 0.8rem);
+  }
+
+  .projets-carousel--full .projet-card {
+    flex: 0 0 100%;
   }
 }
 

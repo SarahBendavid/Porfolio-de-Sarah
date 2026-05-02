@@ -8,6 +8,7 @@ import "../Assets/styles/Main/Projets/ProjetMain.css";
 import logoDigitalMarket from "../Assets/images/logo-digital market.png";
 import carteVisite from "../Assets/images/carte visite.jpg";
 import animationVideo from "../Assets/images/animation.mp4";
+import UXCard from "../Composants/Projets/UXCard.jsx";
 
 const SECTIONS = ["web", "video"];
 
@@ -195,70 +196,78 @@ export default function Projets() {
               {t(`projets.sections.${section}.title`)}
             </h2>
 
-            <div className="projets-carousel-wrapper">
-
-              <button
-                className={`projets-carousel-arrow projets-carousel-arrow--left${isAtStart(section) ? " arrow-hidden" : ""}`}
-                onClick={() => scrollLeft(section)}
-                aria-label="Reculer"
-              >
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-
-              <div
-                className="projets-carousel"
-                ref={(el) => { carouselRefs.current[section] = el; }}
-                onScroll={() => handleScroll(section)}
-              >
-                {Array.from({ length: CARD_COUNT }, (_, i) => (
-                  <div key={i} className="projet-card">
-                    <h3 className="projet-card-title">
-                      {t(`projets.sections.${section}.cards.${i}.title`)}
-                    </h3>
-                    <div className="projet-card-photo">
-                      {CARD_VIDEOS[section]?.[i] ? (
-                        <ChromaKeyVideo
-                          src={CARD_VIDEOS[section][i]}
-                          className="projet-card-video"
-                        />
-                      ) : CARD_IMAGES[section]?.[i] && (
-                        <a
-                          href={CARD_IMAGES[section][i]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={CARD_IMAGES[section][i]}
-                            alt={t(`projets.sections.${section}.cards.${i}.title`)}
-                          />
-                        </a>
-                      )}
-                    </div>
-                    <div className="projet-card-desc">
-                      <h4 className="projet-card-desc-title">
-                        {t(`projets.sections.${section}.cards.${i}.subtitle`)}
-                      </h4>
-                      <p className="projet-card-desc-text">
-                        {t(`projets.sections.${section}.cards.${i}.desc`)}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            {section === "web" ? (
+              <div className="projets-list">
+                <div className="projet-card">
+                  <UXCard />
+                </div>
               </div>
+            ) : (
+              <div className="projets-carousel-wrapper">
 
-              <button
-                className={`projets-carousel-arrow projets-carousel-arrow--right${isAtEnd(section) ? " arrow-hidden" : ""}`}
-                onClick={() => scrollRight(section)}
-                aria-label="Avancer"
-              >
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
+                <button
+                  className={`projets-carousel-arrow projets-carousel-arrow--left${isAtStart(section) ? " arrow-hidden" : ""}`}
+                  onClick={() => scrollLeft(section)}
+                  aria-label="Reculer"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
 
-            </div>
+                <div
+                  className="projets-carousel"
+                  ref={(el) => { carouselRefs.current[section] = el; }}
+                  onScroll={() => handleScroll(section)}
+                >
+                  {Array.from({ length: CARD_COUNT }, (_, i) => (
+                    <div key={i} className="projet-card">
+                      <h3 className="projet-card-title">
+                        {t(`projets.sections.${section}.cards.${i}.title`)}
+                      </h3>
+                      <div className="projet-card-photo">
+                        {CARD_VIDEOS[section]?.[i] ? (
+                          <ChromaKeyVideo
+                            src={CARD_VIDEOS[section][i]}
+                            className="projet-card-video"
+                          />
+                        ) : CARD_IMAGES[section]?.[i] && (
+                          <a
+                            href={CARD_IMAGES[section][i]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src={CARD_IMAGES[section][i]}
+                              alt={t(`projets.sections.${section}.cards.${i}.title`)}
+                            />
+                          </a>
+                        )}
+                      </div>
+                      <div className="projet-card-desc">
+                        <h4 className="projet-card-desc-title">
+                          {t(`projets.sections.${section}.cards.${i}.subtitle`)}
+                        </h4>
+                        <p className="projet-card-desc-text">
+                          {t(`projets.sections.${section}.cards.${i}.desc`)}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  className={`projets-carousel-arrow projets-carousel-arrow--right${isAtEnd(section) ? " arrow-hidden" : ""}`}
+                  onClick={() => scrollRight(section)}
+                  aria-label="Avancer"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+
+              </div>
+            )}
           </section>
         ))}
 
