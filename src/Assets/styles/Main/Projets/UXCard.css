@@ -80,7 +80,7 @@
 /* ── Text ── */
 .ux-text {
   font-size: 12.5px;
-  color: rgba(220, 190, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
   letter-spacing: 0.03em;
   margin: 0;
@@ -107,7 +107,6 @@
 
 .ux-text--intro {
   white-space: nowrap;
-  font-size: clamp(8px, 2.5vw, 12.5px);
   overflow: visible;
   padding-left: 21px;
 }
@@ -146,11 +145,13 @@
 
 .ux-phone-row:not(.ux-phone-row--3) .ux-step {
   width: 42%;
+  max-width: 160px;
 }
 
 .ux-phone-row--3 .ux-step {
   flex: 1;
   min-width: 0;
+  max-width: 130px;
 }
 
 /* ── Step ── */
@@ -168,14 +169,14 @@
 }
 
 .ux-step__num {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #7c3aed;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   color: #fff;
   line-height: 1;
@@ -183,8 +184,8 @@
 }
 
 .ux-step__text {
-  font-size: 7px;
-  color: rgba(220, 190, 255, 0.85);
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.88);
   text-align: center;
   line-height: 1.3;
   letter-spacing: 0.02em;
@@ -317,4 +318,85 @@
   max-width: 90vw;
   display: block;
   border-radius: 10px;
+}
+
+/* ── Responsive layouts ── */
+.ux-s123__photos {
+  padding-top: 8px;
+}
+
+@media (min-width: 550px) {
+  .ux-s123__photos .ux-phone-row {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 600px) {
+  .ux-screen--photo {
+    height: auto;
+    aspect-ratio: 863 / 1822;
+  }
+
+  .ux-phone-row--3 .ux-screen {
+    height: auto;
+    aspect-ratio: 863 / 1822;
+  }
+
+  .ux-s123__photos .ux-screen--photo {
+    aspect-ratio: 4 / 7;
+  }
+}
+
+@media (min-width: 850px) {
+  .ux-s123 {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    column-gap: 28px;
+  }
+
+  .ux-s123__text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ux-s123__photos {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: start;
+    padding-top: 0;
+  }
+
+  .ux-s123__photos .ux-phone-row {
+    justify-content: center;
+  }
+
+  .ux-s123__s2s3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .ux-s345 {
+    position: relative;
+    padding-right: calc(50% + 14px);
+    padding-bottom: 90px;
+  }
+
+  .ux-s345__s4 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(50% - 14px);
+  }
+
+  .ux-s345__s4 > .ux-divider {
+    display: none;
+  }
+
+  .ux-divider {
+    margin: 6px 0 20px;
+  }
+
+  .ux-s345__s4 .ux-phone-row--3 .ux-screen {
+    aspect-ratio: 4 / 7;
+  }
 }

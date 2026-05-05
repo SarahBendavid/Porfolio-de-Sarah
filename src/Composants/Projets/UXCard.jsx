@@ -146,84 +146,95 @@ export default function UXCard() {
 
       <div className="ux-body">
 
-        <Section number="1" title={t("uxcard.s1.title")}>
-          <p className="ux-text ux-text--intro">{t("uxcard.s1.intro")}</p>
-          <ul className="ux-bullets">
-            {[
-              t("uxcard.s1.b0"),
-              t("uxcard.s1.b1"),
-            ].map((text, i) => (
-              <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
-            ))}
-          </ul>
-          <div className="ux-phone-row">
-            <div className="ux-step">
-              <StepLabel number="1" title={t("uxcard.s1.step1")} />
-              <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--lg" />
-            </div>
-            <div className="ux-step">
-              <StepLabel number="2" title={t("uxcard.s1.step2")} />
-              <PhotoScreen src={i18n.language === "en" ? imgTrajetEN : imgTrajet} alt={t("uxcard.s1.step2")} size="ux-screen--lg" />
+        <div className="ux-s123">
+          <div className="ux-s123__text">
+            <Section number="1" title={t("uxcard.s1.title")}>
+              <p className="ux-text ux-text--intro">{t("uxcard.s1.intro")}</p>
+              <ul className="ux-bullets">
+                {[
+                  t("uxcard.s1.b0"),
+                  t("uxcard.s1.b1"),
+                ].map((text, i) => (
+                  <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
+                ))}
+              </ul>
+            </Section>
+          </div>
+          <div className="ux-s123__photos">
+            <div className="ux-phone-row">
+              <div className="ux-step">
+                <StepLabel number="1" title={t("uxcard.s1.step1")} />
+                <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--lg" />
+              </div>
+              <div className="ux-step">
+                <StepLabel number="2" title={t("uxcard.s1.step2")} />
+                <PhotoScreen src={i18n.language === "en" ? imgTrajetEN : imgTrajet} alt={t("uxcard.s1.step2")} size="ux-screen--lg" />
+              </div>
             </div>
           </div>
-        </Section>
+          <div className="ux-s123__s2s3">
+            <Divider />
+            <Section number="2" title={t("uxcard.s2.title")}>
+              <p className="ux-text ux-text--sm">{t("uxcard.s2.intro")}</p>
+              <ul className="ux-bullets">
+                {[
+                  t("uxcard.s2.b0"),
+                  t("uxcard.s2.b1"),
+                  t("uxcard.s2.b2"),
+                ].map((text, i) => (
+                  <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
+                ))}
+              </ul>
+            </Section>
 
-        <Divider />
-
-        <Section number="2" title={t("uxcard.s2.title")}>
-          <p className="ux-text ux-text--sm">{t("uxcard.s2.intro")}</p>
-          <ul className="ux-bullets">
-            {[
-              t("uxcard.s2.b0"),
-              t("uxcard.s2.b1"),
-              t("uxcard.s2.b2"),
-            ].map((text, i) => (
-              <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
-            ))}
-          </ul>
-        </Section>
-
-        <Divider />
-
-        <Section number="3" title={t("uxcard.s3.title")}>
-          <ul className="ux-bullets">
-            {[
-              t("uxcard.s3.b0"),
-              t("uxcard.s3.b1"),
-              t("uxcard.s3.b2"),
-            ].map((text, i) => (
-              <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
-            ))}
-          </ul>
-        </Section>
-
-        <Divider />
-
-        <Section number="4" title={t("uxcard.s4.title")}>
-          <div className="ux-phone-row ux-phone-row--3">
-            <div className="ux-step">
-              <StepLabel number="1" title={t("uxcard.s4.step1")} />
-              <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--sm" />
-            </div>
-            <div className="ux-step">
-              <StepLabel number="2" title={t("uxcard.s4.step2")} />
-              <ZoomWrapper><MergedScreen /></ZoomWrapper>
-            </div>
-            <div className="ux-step">
-              <StepLabel number="3" title={t("uxcard.s4.step3")} />
-              <ZoomWrapper><ExpiredScreen /></ZoomWrapper>
-            </div>
           </div>
-        </Section>
+        </div>
 
         <Divider />
 
-        <Section number="5" title={t("uxcard.s5.title")}>
-          <div className="ux-links">
-            <span className="ux-link ux-link--pink">{t("uxcard.s5.link1")}</span>
-            <span className="ux-link ux-link--purple">{t("uxcard.s5.link2")}</span>
+        <div className="ux-s345">
+          <div className="ux-s345__s3">
+            <Section number="3" title={t("uxcard.s3.title")}>
+              <ul className="ux-bullets">
+                {[
+                  t("uxcard.s3.b0"),
+                  t("uxcard.s3.b1"),
+                  t("uxcard.s3.b2"),
+                ].map((text, i) => (
+                  <li key={i} className="ux-bullet">{STAR}<span className="ux-text ux-text--sm">{text}</span></li>
+                ))}
+              </ul>
+            </Section>
           </div>
-        </Section>
+          <div className="ux-s345__s4">
+            <Divider />
+            <Section number="4" title={t("uxcard.s4.title")}>
+              <div className="ux-phone-row ux-phone-row--3">
+                <div className="ux-step">
+                  <StepLabel number="1" title={t("uxcard.s4.step1")} />
+                  <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--sm" />
+                </div>
+                <div className="ux-step">
+                  <StepLabel number="2" title={t("uxcard.s4.step2")} />
+                  <ZoomWrapper><MergedScreen /></ZoomWrapper>
+                </div>
+                <div className="ux-step">
+                  <StepLabel number="3" title={t("uxcard.s4.step3")} />
+                  <ZoomWrapper><ExpiredScreen /></ZoomWrapper>
+                </div>
+              </div>
+            </Section>
+          </div>
+          <div className="ux-s345__s5">
+            <Divider />
+            <Section number="5" title={t("uxcard.s5.title")}>
+              <div className="ux-links">
+                <span className="ux-link ux-link--pink">{t("uxcard.s5.link1")}</span>
+                <span className="ux-link ux-link--purple">{t("uxcard.s5.link2")}</span>
+              </div>
+            </Section>
+          </div>
+        </div>
 
       </div>
     </div>
