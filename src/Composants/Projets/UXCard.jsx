@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { createPortal } from "react-dom";
 
 import imgQR from "../../Assets/images/QR-FR.png";
+import imgQREN from "../../Assets/images/QR-EN.png";
 
 import imgTrajet from "../../Assets/images/Trajet-FR.png";
 import imgTrajetEN from "../../Assets/images/Trajet-EN.png";
@@ -164,7 +165,7 @@ export default function UXCard() {
             <div className="ux-phone-row">
               <div className="ux-step">
                 <StepLabel number="1" title={t("uxcard.s1.step1")} />
-                <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--lg" />
+                <PhotoScreen src={i18n.language === "en" ? imgQREN : imgQR} alt="Scan QR" size="ux-screen--lg" />
               </div>
               <div className="ux-step">
                 <StepLabel number="2" title={t("uxcard.s1.step2")} />
@@ -212,7 +213,7 @@ export default function UXCard() {
               <div className="ux-phone-row ux-phone-row--3">
                 <div className="ux-step">
                   <StepLabel number="1" title={t("uxcard.s4.step1")} />
-                  <PhotoScreen src={imgQR} alt="Scan QR" size="ux-screen--sm" />
+                  <PhotoScreen src={i18n.language === "en" ? imgQREN : imgQR} alt="Scan QR" size="ux-screen--sm" />
                 </div>
                 <div className="ux-step">
                   <StepLabel number="2" title={t("uxcard.s4.step2")} />

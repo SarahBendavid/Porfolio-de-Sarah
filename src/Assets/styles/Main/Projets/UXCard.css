@@ -106,6 +106,7 @@
 }
 
 .ux-text--intro {
+  font-size: 11.5px;
   white-space: nowrap;
   overflow: visible;
   padding-left: 21px;
@@ -325,9 +326,25 @@
   padding-top: 8px;
 }
 
-@media (min-width: 550px) {
-  .ux-s123__photos .ux-phone-row {
-    justify-content: flex-start;
+@media (max-width: 599px) {
+  .ux-phone-row:not(.ux-phone-row--3) .ux-step {
+    width: auto;
+    flex: 1;
+    max-width: 80px;
+  }
+
+  .ux-phone-row--3 .ux-step {
+    max-width: 80px;
+  }
+
+  .ux-phone-row--3 .ux-screen,
+  .ux-s123__photos .ux-screen--photo {
+    height: auto;
+    aspect-ratio: 4 / 7;
+  }
+
+  .ux-step__text {
+    white-space: nowrap;
   }
 }
 
@@ -341,13 +358,31 @@
     height: auto;
     aspect-ratio: 863 / 1822;
   }
+}
+
+@media (min-width: 600px) and (max-width: 849px) {
+  .ux-phone-row:not(.ux-phone-row--3) .ux-step {
+    max-width: 130px;
+  }
+
+  .ux-phone-row--3 .ux-screen {
+    aspect-ratio: 3 / 5;
+  }
 
   .ux-s123__photos .ux-screen--photo {
-    aspect-ratio: 4 / 7;
+    aspect-ratio: 3 / 5;
   }
 }
 
 @media (min-width: 850px) {
+  .ux-header__title {
+    margin-bottom: 28px;
+  }
+
+  .ux-body {
+    padding-bottom: 10px;
+  }
+
   .ux-s123 {
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -394,6 +429,10 @@
 
   .ux-divider {
     margin: 6px 0 20px;
+  }
+
+  .ux-s123__photos .ux-screen--photo {
+    aspect-ratio: 4 / 7;
   }
 
   .ux-s345__s4 .ux-phone-row--3 .ux-screen {
