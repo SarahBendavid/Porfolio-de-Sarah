@@ -230,7 +230,7 @@ export default function UXCard() {
             <Divider />
             <Section number="5" title={t("uxcard.s5.title")}>
               <div className="ux-links">
-                <span className="ux-link ux-link--pink">{t("uxcard.s5.link1")}</span>
+                <a className="ux-link ux-link--pink" href="https://sarahbendavid.github.io/Refonte-Trajet-Moovit-/" target="_blank" rel="noopener noreferrer">{t("uxcard.s5.link1")}</a>
                 <span className="ux-link ux-link--purple">{t("uxcard.s5.link2")}</span>
               </div>
             </Section>
