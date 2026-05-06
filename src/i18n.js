@@ -73,31 +73,91 @@ const resources = {
           web: {
             title: "Développement Web / Mobile",
             cards: {
-              0: { title: "Projet 1", subtitle: "Technologies", desc: "Description du projet." },
-              1: { title: "Projet 2", subtitle: "Technologies", desc: "Description du projet." },
-              2: { title: "Projet 3", subtitle: "Technologies", desc: "Description du projet." },
-              3: { title: "Projet 4", subtitle: "Technologies", desc: "Description du projet." },
-              4: { title: "Projet 5", subtitle: "Technologies", desc: "Description du projet." },
+              0: {
+                title: "Projet 1",
+                subtitle: "Technologies",
+                desc: "Description du projet.",
+              },
+              1: {
+                title: "Projet 2",
+                subtitle: "Technologies",
+                desc: "Description du projet.",
+              },
+              2: {
+                title: "Projet 3",
+                subtitle: "Technologies",
+                desc: "Description du projet.",
+              },
+              3: {
+                title: "Projet 4",
+                subtitle: "Technologies",
+                desc: "Description du projet.",
+              },
+              4: {
+                title: "Projet 5",
+                subtitle: "Technologies",
+                desc: "Description du projet.",
+              },
             },
           },
           video: {
             title: "Motion & Créations visuelles",
             cards: {
-              0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Création du logo de l'entreprise." },
-              1: { title: "Carte de visite", subtitle: "WELLNESS THERAPY", desc: "Création de la carte de visite d'une masseuse indépendante." },
-              2: { title: "Vidéo d'illustration", subtitle: "DIGITAL MARKET", desc: "Création d'une vidéo afin d'illustrer du contenu dans le thème de la programmation." },
-              3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
-              4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
+              0: {
+                title: "Logo",
+                subtitle: "DIGITAL MARKET",
+                desc: "Création du logo de l'entreprise.",
+              },
+              1: {
+                title: "Carte de visite",
+                subtitle: "WELLNESS THERAPY",
+                desc: "Création de la carte de visite d'une masseuse indépendante.",
+              },
+              2: {
+                title: "Vidéo d'illustration",
+                subtitle: "DIGITAL MARKET",
+                desc: "Création d'une vidéo afin d'illustrer du contenu dans le thème de la programmation.",
+              },
+              3: {
+                title: "Projet 4",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
+              4: {
+                title: "Projet 5",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
             },
           },
           visual: {
             title: "Créations visuelles",
             cards: {
-              0: { title: "Projet 1", subtitle: "Outils", desc: "Description du projet." },
-              1: { title: "Projet 2", subtitle: "Outils", desc: "Description du projet." },
-              2: { title: "Projet 3", subtitle: "Outils", desc: "Description du projet." },
-              3: { title: "Projet 4", subtitle: "Outils", desc: "Description du projet." },
-              4: { title: "Projet 5", subtitle: "Outils", desc: "Description du projet." },
+              0: {
+                title: "Projet 1",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
+              1: {
+                title: "Projet 2",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
+              2: {
+                title: "Projet 3",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
+              3: {
+                title: "Projet 4",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
+              4: {
+                title: "Projet 5",
+                subtitle: "Outils",
+                desc: "Description du projet.",
+              },
             },
           },
         },
@@ -163,7 +223,7 @@ const resources = {
         title: "Refonte UX d'un trajet sur M00VIT",
         s1: {
           title: "Problème identifié",
-          intro: "Lorsqu'un utilisateur scanne le QR code d'un bus :",
+          intro: "Lorsqu'un utilisateur scanne le QR code du bus :",
           b0: "Redirection immédiate vers une page de sélection de l'arrêt de destination.",
           b1: "Le trajet n'est pris en charge QUE lorsque l'utilisateur sélectionne l'arrêt de destination.",
           step1: "Scan du QR code",
@@ -171,7 +231,8 @@ const resources = {
         },
         s2: {
           title: "Impact",
-          intro: "Si l'utilisateur ferme l'application avant d'avoir sélectionné son arrêt de destination :",
+          intro:
+            "Si l'utilisateur ferme l'application avant d'avoir sélectionné son arrêt de destination :",
           b0: "Pas de prise en charge de son trajet.",
           b1: "Possibilité de fraude involontaire ou volontaire.",
           b2: "Possibilité de dette de régularisation ?",
@@ -188,7 +249,8 @@ const resources = {
           step2: "Choisir l'arrêt",
           step3: "À compléter",
           screenTitle: "Où allez-vous ?",
-          screenSub: "Sélectionnez l'arrêt de destination pour valider votre trajet.",
+          screenSub:
+            "Sélectionnez l'arrêt de destination pour valider votre trajet.",
           timer: "Temps restant pour valider",
           expired: "Session expirée",
           expiredDesc: "Veuillez scanner le QR code pour valider votre trajet.",
@@ -270,31 +332,91 @@ const resources = {
           web: {
             title: "Web / Mobile Development",
             cards: {
-              0: { title: "Project 1", subtitle: "Technologies", desc: "Project description." },
-              1: { title: "Project 2", subtitle: "Technologies", desc: "Project description." },
-              2: { title: "Project 3", subtitle: "Technologies", desc: "Project description." },
-              3: { title: "Project 4", subtitle: "Technologies", desc: "Project description." },
-              4: { title: "Project 5", subtitle: "Technologies", desc: "Project description." },
+              0: {
+                title: "Project 1",
+                subtitle: "Technologies",
+                desc: "Project description.",
+              },
+              1: {
+                title: "Project 2",
+                subtitle: "Technologies",
+                desc: "Project description.",
+              },
+              2: {
+                title: "Project 3",
+                subtitle: "Technologies",
+                desc: "Project description.",
+              },
+              3: {
+                title: "Project 4",
+                subtitle: "Technologies",
+                desc: "Project description.",
+              },
+              4: {
+                title: "Project 5",
+                subtitle: "Technologies",
+                desc: "Project description.",
+              },
             },
           },
           video: {
             title: "Motion & Visual Creations",
             cards: {
-              0: { title: "Logo", subtitle: "DIGITAL MARKET", desc: "Company logo creation." },
-              1: { title: "Business Card", subtitle: "WELLNESS THERAPY", desc: "Business card creation for an independent massage therapist." },
-              2: { title: "Illustration Video", subtitle: "DIGITAL MARKET", desc: "Creation of a video to illustrate content on the theme of programming." },
-              3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
-              4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
+              0: {
+                title: "Logo",
+                subtitle: "DIGITAL MARKET",
+                desc: "Company logo creation.",
+              },
+              1: {
+                title: "Business Card",
+                subtitle: "WELLNESS THERAPY",
+                desc: "Business card creation for an independent massage therapist.",
+              },
+              2: {
+                title: "Illustration Video",
+                subtitle: "DIGITAL MARKET",
+                desc: "Creation of a video to illustrate content on the theme of programming.",
+              },
+              3: {
+                title: "Project 4",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
+              4: {
+                title: "Project 5",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
             },
           },
           visual: {
             title: "Visual Creations",
             cards: {
-              0: { title: "Project 1", subtitle: "Tools", desc: "Project description." },
-              1: { title: "Project 2", subtitle: "Tools", desc: "Project description." },
-              2: { title: "Project 3", subtitle: "Tools", desc: "Project description." },
-              3: { title: "Project 4", subtitle: "Tools", desc: "Project description." },
-              4: { title: "Project 5", subtitle: "Tools", desc: "Project description." },
+              0: {
+                title: "Project 1",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
+              1: {
+                title: "Project 2",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
+              2: {
+                title: "Project 3",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
+              3: {
+                title: "Project 4",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
+              4: {
+                title: "Project 5",
+                subtitle: "Tools",
+                desc: "Project description.",
+              },
             },
           },
         },
@@ -370,7 +492,8 @@ const resources = {
         },
         s2: {
           title: "Impact",
-          intro: "If the user closes the app before selecting their destination stop:",
+          intro:
+            "If the user closes the app before selecting their destination stop:",
           b0: "The trip is not covered.",
           b1: "Risk of involuntary or deliberate fraud.",
           b2: "Possible debt from fare evasion?",
