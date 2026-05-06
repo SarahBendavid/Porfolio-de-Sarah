@@ -231,7 +231,7 @@ export default function UXCard() {
             <Section number="5" title={t("uxcard.s5.title")}>
               <div className="ux-links">
                 <a className="ux-link ux-link--pink" href="https://sarahbendavid.github.io/Refonte-Trajet-Moovit-/" target="_blank" rel="noopener noreferrer">{t("uxcard.s5.link1")}</a>
-                <span className="ux-link ux-link--purple">{t("uxcard.s5.link2")}</span>
+                <a className="ux-link ux-link--purple" href="https://github.com/SarahBendavid/Refonte-Trajet-Moovit-" target="_blank" rel="noopener noreferrer">{t("uxcard.s5.link2")}</a>
               </div>
             </Section>
           </div>
