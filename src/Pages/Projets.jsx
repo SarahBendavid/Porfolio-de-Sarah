@@ -3,14 +3,15 @@ import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../Composants/Header/Header.jsx";
 import FooterBand from "../Composants/Global/FooterBand.jsx";
+import MoovitCard from "../Composants/Projets/MoovitCard.jsx";
 import "../Assets/styles/Main/Projets/ProjetMain.css";
 
 import logoDigitalMarket from "../Assets/images/logo-digital market.png";
 import carteVisite from "../Assets/images/carte visite.jpg";
 import animationVideo from "../Assets/images/animation.mp4";
-import UXCard from "../Composants/Projets/UXCard.jsx";
 
 const SECTIONS = ["web", "video"];
+const CARD_COUNTS = { web: 3, video: 4 };
 
 const CARD_IMAGES = {
   video: {
@@ -25,8 +26,7 @@ const CARD_VIDEOS = {
   },
 };
 
-const CARD_COUNT = 5;
-const CHROMA_FPS  = 30;
+const CHROMA_FPS = 30;
 const CHROMA_INTERVAL = 1000 / CHROMA_FPS;
 
 function ChromaCanvas({ src, className }) {
@@ -35,7 +35,7 @@ function ChromaCanvas({ src, className }) {
   const rafRef     = useRef(null);
   const lastTsRef  = useRef(0);
   const visibleRef = useRef(true);
-  const offRef     = useRef(null); // offscreen canvas for half-res processing
+  const offRef     = useRef(null);
 
   useEffect(() => {
     const video  = videoRef.current;
@@ -55,7 +55,6 @@ function ChromaCanvas({ src, className }) {
 
       if (video.readyState < 2 || video.videoWidth === 0) return;
 
-      // Traitement à demi-résolution (4× moins de pixels)
       const hw = Math.floor(video.videoWidth  / 2);
       const hh = Math.floor(video.videoHeight / 2);
       const off = offRef.current;
@@ -72,7 +71,6 @@ function ChromaCanvas({ src, className }) {
       offCtx.putImageData(frame, 0, 0);
       offCtx.clearRect(0, 0, Math.round(hw * 0.22), Math.round(hh * 0.16));
 
-      // Upscale vers le canvas d'affichage
       if (canvas.width  !== video.videoWidth)  canvas.width  = video.videoWidth;
       if (canvas.height !== video.videoHeight) canvas.height = video.videoHeight;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -81,7 +79,6 @@ function ChromaCanvas({ src, className }) {
 
     rafRef.current = requestAnimationFrame(draw);
 
-    // Pause quand la carte sort du viewport
     const observer = new IntersectionObserver(
       ([entry]) => { visibleRef.current = entry.isIntersecting; },
       { threshold: 0 }
@@ -160,6 +157,13 @@ export default function Projets() {
     });
   }, []);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      SECTIONS.forEach(section => handleScroll(section));
+    }, 60);
+    return () => clearTimeout(timeout);
+  }, [handleScroll]);
+
   const getStep = (section) => {
     const el = carouselRefs.current[section];
     if (!el) return 280;
@@ -180,6 +184,55 @@ export default function Projets() {
     el.scrollTo({ left: el.scrollLeft - getStep(section), behavior: "smooth" });
   };
 
+  const renderWebCard = (i) => {
+    if (i === 0) return <MoovitCard />;
+    const key = i === 1 ? "card1" : "card2";
+    return (
+      <>
+        <h3 className="projet-card-title">
+          {t(`projets.webCards.${key}.title`)}
+        </h3>
+        <div className="projet-card-photo" />
+        <div className="projet-card-desc">
+          <p className="projet-card-desc-text">
+            {t(`projets.webCards.${key}.desc`)}
+          </p>
+        </div>
+      </>
+    );
+  };
+
+  const renderVideoCard = (i, section) => (
+    <>
+      <h3 className="projet-card-title">
+        {t(`projets.sections.${section}.cards.${i}.title`)}
+      </h3>
+      <div className="projet-card-photo">
+        {CARD_VIDEOS[section]?.[i] ? (
+          <ChromaKeyVideo
+            src={CARD_VIDEOS[section][i]}
+            className="projet-card-video"
+          />
+        ) : CARD_IMAGES[section]?.[i] && (
+          <a href={CARD_IMAGES[section][i]} target="_blank" rel="noopener noreferrer">
+            <img
+              src={CARD_IMAGES[section][i]}
+              alt={t(`projets.sections.${section}.cards.${i}.title`)}
+            />
+          </a>
+        )}
+      </div>
+      <div className="projet-card-desc">
+        <h4 className="projet-card-desc-title">
+          {t(`projets.sections.${section}.cards.${i}.subtitle`)}
+        </h4>
+        <p className="projet-card-desc-text">
+          {t(`projets.sections.${section}.cards.${i}.desc`)}
+        </p>
+      </div>
+    </>
+  );
+
   return (
     <div className="projets-page">
       <Header showTitles={false} />
@@ -196,78 +249,41 @@ export default function Projets() {
               {t(`projets.sections.${section}.title`)}
             </h2>
 
-            {section === "web" ? (
-              <div className="projets-list">
-                <div className="projet-card">
-                  <UXCard />
-                </div>
+            <div className="projets-carousel-wrapper">
+
+              <button
+                className={`projets-carousel-arrow projets-carousel-arrow--left${isAtStart(section) ? " arrow-hidden" : ""}`}
+                onClick={() => scrollLeft(section)}
+                aria-label="Reculer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+
+              <div
+                className="projets-carousel"
+                ref={(el) => { carouselRefs.current[section] = el; }}
+                onScroll={() => handleScroll(section)}
+              >
+                {Array.from({ length: CARD_COUNTS[section] }, (_, i) => (
+                  <div key={i} className="projet-card">
+                    {section === "web" ? renderWebCard(i) : renderVideoCard(i, section)}
+                  </div>
+                ))}
               </div>
-            ) : (
-              <div className="projets-carousel-wrapper">
 
-                <button
-                  className={`projets-carousel-arrow projets-carousel-arrow--left${isAtStart(section) ? " arrow-hidden" : ""}`}
-                  onClick={() => scrollLeft(section)}
-                  aria-label="Reculer"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
+              <button
+                className={`projets-carousel-arrow projets-carousel-arrow--right${isAtEnd(section) ? " arrow-hidden" : ""}`}
+                onClick={() => scrollRight(section)}
+                aria-label="Avancer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
 
-                <div
-                  className="projets-carousel"
-                  ref={(el) => { carouselRefs.current[section] = el; }}
-                  onScroll={() => handleScroll(section)}
-                >
-                  {Array.from({ length: CARD_COUNT }, (_, i) => (
-                    <div key={i} className="projet-card">
-                      <h3 className="projet-card-title">
-                        {t(`projets.sections.${section}.cards.${i}.title`)}
-                      </h3>
-                      <div className="projet-card-photo">
-                        {CARD_VIDEOS[section]?.[i] ? (
-                          <ChromaKeyVideo
-                            src={CARD_VIDEOS[section][i]}
-                            className="projet-card-video"
-                          />
-                        ) : CARD_IMAGES[section]?.[i] && (
-                          <a
-                            href={CARD_IMAGES[section][i]}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <img
-                              src={CARD_IMAGES[section][i]}
-                              alt={t(`projets.sections.${section}.cards.${i}.title`)}
-                            />
-                          </a>
-                        )}
-                      </div>
-                      <div className="projet-card-desc">
-                        <h4 className="projet-card-desc-title">
-                          {t(`projets.sections.${section}.cards.${i}.subtitle`)}
-                        </h4>
-                        <p className="projet-card-desc-text">
-                          {t(`projets.sections.${section}.cards.${i}.desc`)}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <button
-                  className={`projets-carousel-arrow projets-carousel-arrow--right${isAtEnd(section) ? " arrow-hidden" : ""}`}
-                  onClick={() => scrollRight(section)}
-                  aria-label="Avancer"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-
-              </div>
-            )}
+            </div>
           </section>
         ))}
 

@@ -9,8 +9,8 @@ import imgQREN from "../../Assets/images/QR-EN.png";
 import imgTrajet from "../../Assets/images/Trajet-FR.png";
 import imgTrajetEN from "../../Assets/images/Trajet-EN.png";
 
-const STOPS = ["Charles de Gaulle – Étoile", "Ternes", "Wagram", "Malesherbes", "Monceau", "Villiers"];
-const STOPS_EN = ["Yad Eliyahu", "Rothschild Blvd / Allenby St", "Bialik St", "Dizengoff Center", "Ben Yehuda St / Frishman St", "Arlozorov St", "HaYarkon St / Ibn Gabirol St", "Kikar Rabin"];
+export const STOPS = ["Charles de Gaulle – Étoile", "Ternes", "Wagram", "Malesherbes", "Monceau", "Villiers"];
+export const STOPS_EN = ["Yad Eliyahu", "Rothschild Blvd / Allenby St", "Bialik St", "Dizengoff Center", "Ben Yehuda St / Frishman St", "Arlozorov St", "HaYarkon St / Ibn Gabirol St", "Kikar Rabin"];
 
 function Divider() {
   return <div className="ux-divider" aria-hidden="true" />;
@@ -28,7 +28,7 @@ function Section({ number, title, children }) {
   );
 }
 
-function StepLabel({ number, title }) {
+export function StepLabel({ number, title }) {
   return (
     <div className="ux-step__label">
       <div className="ux-step__num">{number}</div>
@@ -39,7 +39,7 @@ function StepLabel({ number, title }) {
 
 const STAR = <span className="ux-star" aria-hidden="true">✦</span>;
 
-function PhotoScreen({ src, alt, size }) {
+export function PhotoScreen({ src, alt, size }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     if (!open) return;
@@ -63,7 +63,7 @@ function PhotoScreen({ src, alt, size }) {
   );
 }
 
-function ZoomWrapper({ children }) {
+export function ZoomWrapper({ children }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     if (!open) return;
@@ -89,7 +89,7 @@ function ZoomWrapper({ children }) {
   );
 }
 
-function MergedScreen() {
+export function MergedScreen() {
   const { t, i18n } = useTranslation();
   const stops = i18n.language === "en" ? STOPS_EN : STOPS;
   return (
@@ -120,7 +120,7 @@ function MergedScreen() {
   );
 }
 
-function ExpiredScreen() {
+export function ExpiredScreen() {
   const { t } = useTranslation();
   return (
     <div className="ux-screen ux-screen--sm ux-screen--dark">

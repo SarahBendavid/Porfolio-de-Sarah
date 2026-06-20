@@ -11,6 +11,7 @@ import MentionsLegales from "./Pages/Mentions-legales.jsx";
 import Confidentialite from "./Pages/Confidentialite.jsx";
 import LegalNotice from "./Pages/Legal-notice.jsx";
 import PrivacyPolicy from "./Pages/Privacy-policy.jsx";
+import MoovitDetail from "./Pages/MoovitDetail.jsx";
 
 function NotFound() {
   return <h1>404 - Page non trouvée</h1>;
@@ -34,6 +35,7 @@ function App() {
     
       <Route path="/" element={<Accueil />} />
       <Route path="/projets" element={<Projets />} />
+      <Route path="/projets/moovit" element={<MoovitDetail />} />
       <Route path="/contact" element={<Contact />} />
 
 

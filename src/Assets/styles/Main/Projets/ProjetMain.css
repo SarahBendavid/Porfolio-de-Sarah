@@ -287,6 +287,52 @@
   margin: 0;
 }
 
+/* ── Screens area inside condensed card (Moovit) ── */
+.projet-card-screens {
+  padding: 0.6rem 0.85rem 0.4rem;
+  flex: 1;
+}
+
+/* Override UXCard screen heights to fit inside the condensed card */
+.projet-card .projet-card-screens .ux-screen {
+  height: 120px;
+}
+
+@media (min-width: 600px) {
+  .projet-card .projet-card-screens .ux-screen {
+    height: 120px;
+    aspect-ratio: unset;
+  }
+}
+
+/* ── Links area at the bottom of web cards ── */
+.projet-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0.75rem 1rem 1.1rem;
+}
+
+.projet-card-link {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.projet-card-link--pink {
+  font-style: italic;
+  color: #e879f9;
+  text-shadow: 0 0 10px rgba(232, 121, 249, 0.4);
+  text-decoration-color: rgba(232, 121, 249, 0.4);
+}
+
+.projet-card-link--purple {
+  color: #a78bfa;
+  text-decoration-color: rgba(167, 139, 250, 0.4);
+}
+
 /* ── Full-width carousel (section web) ── */
 .projets-carousel-wrapper--full {
   gap: 2px;

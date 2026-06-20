@@ -1,0 +1,38 @@
+.moovit-detail-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.moovit-detail-main {
+  flex: 1;
+  padding: 2rem 1.5rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.moovit-back {
+  display: inline-block;
+  margin-bottom: 1.8rem;
+  color: #a78bfa;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 0.82rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.moovit-back:hover {
+  color: #e879f9;
+}
+
+.moovit-detail-card {
+  background: rgba(12, 5, 30, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(180, 100, 255, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+}

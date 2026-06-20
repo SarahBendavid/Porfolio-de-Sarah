@@ -17,13 +17,6 @@ export default function Header({ showTitles = true }) {
           <h1>Sarah Bendavid</h1>
           <div className="header-glow-line" aria-hidden="true"></div>
           <h2>{t("header.subtitle")}</h2>
-          <h3 className="titre3">
-            {t("header.tagline").split("&").map((part, i, arr) =>
-              i < arr.length - 1
-                ? <span key={i}>{part}<span className="ampersand">&amp;</span></span>
-                : <span key={i}>{part}</span>
-            )}
-          </h3>
         </div>
       )}
     </header>

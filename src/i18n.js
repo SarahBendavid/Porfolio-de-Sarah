@@ -7,8 +7,7 @@ const resources = {
   fr: {
     translation: {
       header: {
-        subtitle: "Développeuse front-end",
-        tagline: "UI, Motion & Création visuelle",
+        subtitle: "Product Engineer • UX/UI Designer",
         language: "Langue",
       },
       nav: {
@@ -69,36 +68,24 @@ const resources = {
 
       projets: {
         pageTitle: "Mes projets",
+        backToProjects: "Retour aux projets",
+        webCards: {
+          moovit: {
+            linkProto: "Voir le prototype",
+            linkDetail: "Voir l'approche détaillée",
+          },
+          card1: {
+            title: "Projet 2",
+            desc: "Bientôt disponible...",
+          },
+          card2: {
+            title: "Projet 3",
+            desc: "Bientôt disponible...",
+          },
+        },
         sections: {
           web: {
             title: "Développement Web / Mobile",
-            cards: {
-              0: {
-                title: "Projet 1",
-                subtitle: "Technologies",
-                desc: "Description du projet.",
-              },
-              1: {
-                title: "Projet 2",
-                subtitle: "Technologies",
-                desc: "Description du projet.",
-              },
-              2: {
-                title: "Projet 3",
-                subtitle: "Technologies",
-                desc: "Description du projet.",
-              },
-              3: {
-                title: "Projet 4",
-                subtitle: "Technologies",
-                desc: "Description du projet.",
-              },
-              4: {
-                title: "Projet 5",
-                subtitle: "Technologies",
-                desc: "Description du projet.",
-              },
-            },
           },
           video: {
             title: "Motion & Créations visuelles",
@@ -267,8 +254,7 @@ const resources = {
   en: {
     translation: {
       header: {
-        subtitle: "Front-end Developer",
-        tagline: "UI, Motion & Visual creation",
+        subtitle: "Product Engineer • UX/UI Designer",
         language: "Language",
       },
       nav: {
@@ -328,36 +314,24 @@ const resources = {
 
       projets: {
         pageTitle: "My Projects",
+        backToProjects: "Back to projects",
+        webCards: {
+          moovit: {
+            linkProto: "See the prototype",
+            linkDetail: "See detailed approach",
+          },
+          card1: {
+            title: "Project 2",
+            desc: "Coming soon...",
+          },
+          card2: {
+            title: "Project 3",
+            desc: "Coming soon...",
+          },
+        },
         sections: {
           web: {
             title: "Web / Mobile Development",
-            cards: {
-              0: {
-                title: "Project 1",
-                subtitle: "Technologies",
-                desc: "Project description.",
-              },
-              1: {
-                title: "Project 2",
-                subtitle: "Technologies",
-                desc: "Project description.",
-              },
-              2: {
-                title: "Project 3",
-                subtitle: "Technologies",
-                desc: "Project description.",
-              },
-              3: {
-                title: "Project 4",
-                subtitle: "Technologies",
-                desc: "Project description.",
-              },
-              4: {
-                title: "Project 5",
-                subtitle: "Technologies",
-                desc: "Project description.",
-              },
-            },
           },
           video: {
             title: "Motion & Visual Creations",
