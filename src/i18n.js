@@ -70,17 +70,20 @@ const resources = {
         pageTitle: "Mes projets",
         backToProjects: "Retour aux projets",
         webCards: {
+          marketplace: {
+            title: "Marketplace de réservation beauté",
+            linkDownload: "Télécharger l'application",
+            linkProto: "Voir le prototype en ligne",
+            linkDetail: "Voir mon approche détaillée",
+          },
+          crm: {
+            title: "Développement de CRM pour un organisme de tourisme",
+            linkFigma: "Voir les pages du CRM sur Figma",
+            linkDetail: "Voir mon approche détaillée",
+          },
           moovit: {
             linkProto: "Voir le prototype",
             linkDetail: "Voir l'approche détaillée",
-          },
-          card1: {
-            title: "Projet 2",
-            desc: "Bientôt disponible...",
-          },
-          card2: {
-            title: "Projet 3",
-            desc: "Bientôt disponible...",
           },
         },
         sections: {
@@ -316,17 +319,20 @@ const resources = {
         pageTitle: "My Projects",
         backToProjects: "Back to projects",
         webCards: {
+          marketplace: {
+            title: "Beauty Booking Marketplace",
+            linkDownload: "Download the app",
+            linkProto: "See the prototype online",
+            linkDetail: "See my detailed approach",
+          },
+          crm: {
+            title: "CRM Development for a Tourism Organization",
+            linkFigma: "View CRM pages on Figma",
+            linkDetail: "See my detailed approach",
+          },
           moovit: {
             linkProto: "See the prototype",
-            linkDetail: "See detailed approach",
-          },
-          card1: {
-            title: "Project 2",
-            desc: "Coming soon...",
-          },
-          card2: {
-            title: "Project 3",
-            desc: "Coming soon...",
+            linkDetail: "See the detailed approach",
           },
         },
         sections: {

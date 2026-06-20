@@ -3,6 +3,8 @@ import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import Header from "../Composants/Header/Header.jsx";
 import FooterBand from "../Composants/Global/FooterBand.jsx";
+import MarketplaceCard from "../Composants/Projets/MarketplaceCard.jsx";
+import CRMCard from "../Composants/Projets/CRMCard.jsx";
 import MoovitCard from "../Composants/Projets/MoovitCard.jsx";
 import "../Assets/styles/Main/Projets/ProjetMain.css";
 
@@ -185,21 +187,9 @@ export default function Projets() {
   };
 
   const renderWebCard = (i) => {
-    if (i === 0) return <MoovitCard />;
-    const key = i === 1 ? "card1" : "card2";
-    return (
-      <>
-        <h3 className="projet-card-title">
-          {t(`projets.webCards.${key}.title`)}
-        </h3>
-        <div className="projet-card-photo" />
-        <div className="projet-card-desc">
-          <p className="projet-card-desc-text">
-            {t(`projets.webCards.${key}.desc`)}
-          </p>
-        </div>
-      </>
-    );
+    if (i === 0) return <MarketplaceCard />;
+    if (i === 1) return <CRMCard />;
+    return <MoovitCard />;
   };
 
   const renderVideoCard = (i, section) => (
