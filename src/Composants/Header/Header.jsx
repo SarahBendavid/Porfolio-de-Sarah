@@ -16,7 +16,11 @@ export default function Header({ showTitles = true }) {
         <div className="headerTitles">
           <h1>Sarah Bendavid</h1>
           <div className="header-glow-line" aria-hidden="true"></div>
-          <h2>{t("header.subtitle")}</h2>
+          <h2>
+            {t("header.subtitle").split("•").map((part, i) => (
+              <span key={i} style={{ display: "block" }}>{part.trim()}</span>
+            ))}
+          </h2>
         </div>
       )}
     </header>
